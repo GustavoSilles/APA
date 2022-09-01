@@ -14,6 +14,7 @@ const Home2 = () => {
                 </div>
             </div>
         </div>
+
     )
 }
 

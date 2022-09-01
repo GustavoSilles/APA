@@ -13,7 +13,7 @@ const Navbar = () => {
         <div name='top' className='navbar'>
             <div className="container">
                 <div className="logo">
-                    <SiPug className='icon' />
+                    
                     <h1>APA</h1>
                 </div>
 
