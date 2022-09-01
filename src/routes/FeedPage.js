@@ -1,17 +1,17 @@
 import React from 'react'
 
 import Navbar from '../components/navbar/Navbar'
-import Recovery from '../components/feed/Feed'
+import Feed from '../components/feed/Feed'
 import Footer from '../components/footer/Footer'
 
-const RecoveryPage = () => {
+const FeedPage = () => {
     return (
         <>
            <Navbar /> 
-           <Recovery />
+           <Feed />
            <Footer />
         </>
     )
 }
 
-export default RecoveryPage
+export default FeedPage
