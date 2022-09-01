@@ -18,7 +18,7 @@ const Cadastro = () => {
                 <input
                   className={name !== "" ? "has-val input" : "input"}
                   type="name"
-                  //value={name}
+                  value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
                 <span className="focus-input" data-placeholder="Name"></span>
