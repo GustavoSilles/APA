@@ -16,15 +16,18 @@
     align-items: center;
 }
 
-.navbar .logo {
+.logo {
     display: flex;
     align-items: center;
     color: #E6E6E6;
     margin: 1rem;
     content: '';
     background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
-    height: 100%;
-    width: 10%;
+    height: 5rem;
+    width: 5rem;
+}
+.textlogo{
+    margin-left: 120%;
 }
 
 .navbar .logo .icon {

@@ -13,8 +13,7 @@ const Navbar = () => {
         <div name='top' className='navbar'>
             <div className="container">
                 <div className="logo">
-                    
-                    <h1>APA</h1>
+                    <h1 className='textlogo'>APA</h1>
                 </div>
 
                 <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
