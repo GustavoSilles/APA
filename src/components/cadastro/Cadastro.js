@@ -2,7 +2,8 @@ import {useState} from "react";
 import "./Cadastro.css";
 
 const Cadastro = () => {
-  
+
+    const  [username, setUsername] = useState("");
     const  [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -13,6 +14,16 @@ const Cadastro = () => {
           <div className="wrap-login">
             <form className="login-form">
               <span className="login-form-title"> Cadastro </span>
+
+              <div className="wrap-input">
+                <input
+                  className={username !== "" ? "has-val input" : "input"}
+                  type="user name"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                />
+                <span className="focus-input" data-placeholder="User name"></span>
+              </div>
 
               <div className="wrap-input">
                 <input
