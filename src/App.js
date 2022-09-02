@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Cadastro from "./components/Cadastro/cadastro"
 import Feed from "./components/Feed/feed"
@@ -10,10 +11,22 @@ import Login from "./components/Login/login"
 import Navbar from "./components/Navbar/navbar"
 import Perfil from "./components/Perfil/perfil"
 
+=======
+import React from 'react'
+import Login from './components/login/Login';
+import Cadastro from './components/cadastro/Cadastro';
+import Home2 from './components/home2/Home2';
+import Home from './components/home/Home';
+import Navbar from './components/navbar/Navbar';
+import Home3 from './components/home3/Home3'
+import Footer from './components/footer/Footer';
+import Landingpage from './components/landingpage/Landingpage';
+>>>>>>> 660a7c54a933b15a1d2ac886b332a2a414eb4c68
 
 
 function App(){
   return (
+<<<<<<< HEAD
     <Router>
       <Routes>
           <Route path="/cadastro" element={<Cadastro />} />
@@ -29,6 +42,19 @@ function App(){
       </Routes>
     </Router>
   )
+=======
+    <>
+       <Landingpage/> 
+       <Login /> 
+      <Cadastro />
+       <Navbar />
+      <Home />
+      <Home2 />
+      <Home3 />
+      <Footer /> 
+    </>
+  );
+>>>>>>> 660a7c54a933b15a1d2ac886b332a2a414eb4c68
 }
 
 export default App
