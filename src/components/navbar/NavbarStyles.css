@@ -29,6 +29,12 @@
 .textlogo{
     margin-left: 120%;
 }
+.conteudo-principal-imagem{
+    content: '';
+    background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
+    height: 25rem;
+    width: 25rem;
+}
 
 .navbar .logo .icon {
     font-size: 3rem;

@@ -6,19 +6,19 @@ import Home from './components/home/Home';
 import Navbar from './components/navbar/Navbar';
 import Home3 from './components/home3/Home3'
 import Footer from './components/footer/Footer';
-
+import Landingpage from './components/landingpage/Landingpage';
 
 function App() {
   return (
     <>
-    
-      <Cadastro/>
-      {/* <Login/>
-      <Navbar />
+       <Landingpage/> 
+       <Login /> 
+      <Cadastro />
+       <Navbar />
       <Home />
       <Home2 />
       <Home3 />
-      <Footer /> */}
+      <Footer /> 
     </>
   );
 }
