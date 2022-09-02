@@ -1,5 +1,5 @@
 import React from 'react'
-import './Home3Styles.css'
+import './home3Styles.css'
 
 const Home3 = () => {
     return (

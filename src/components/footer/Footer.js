@@ -2,7 +2,7 @@ import React from 'react'
 import { SiPug } from 'react-icons/si'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 import { FiMail, FiFacebook, FiGithub, FiInstagram, FiLinkedin} from 'react-icons/fi'
-import './FooterStyles.css'
+import './footerStyles.css'
 
 import { Link } from 'react-scroll'
 
