@@ -1,14 +1,42 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
+import React, {StrictMode} from 'react';
+import {createRoot} from 'react-dom/client';
 
-const root = ReactDOM.createRoot(document.getElementById('root')
-);
+import App from './App';
+
+// 👇️ IMPORTANT: use correct ID of your root element
+// this is the ID of the div in your index.html file
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
 root.render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-  </React.StrictMode>
-)
+  </StrictMode>,
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react'
+// import ReactDOM from 'react-dom/client'
+// import App from './App'
+
+// const root = ReactDOM.createRoot(document.getElementById('root')
+// );
+// root.render(
+//   <React.StrictMode>
+//     <App />
+//   </React.StrictMode>
+// )
 
 
 
