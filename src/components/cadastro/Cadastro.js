@@ -1,5 +1,6 @@
-import {useState} from "react";
+import React, {useState} from "react";
 import "./cadastro.css";
+import {Link} from 'react-router-dom'
 
 const Cadastro = () => {
 
@@ -61,9 +62,7 @@ const Cadastro = () => {
   
               <div className="text-center">
                 <span className="txt1">já possui conta? </span>
-                <a className="txt2" href="#">
-                  Fazer login
-                </a>
+                <Link to='/login'> <p className="txt2">Fazer login</p></Link>
               </div>
             </form>
           </div>

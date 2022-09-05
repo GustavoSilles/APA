@@ -1,8 +1,14 @@
 import React from 'react'
 import './homeStyles.css'
+import Home2 from '../Home2/home2'
+import Home3 from '../Home3/home3'
+import Navbar from '../Navbar/navbar'
+import Footer from '../Footer/footer'
 
 const Home = () => {
     return (
+        <>
+        <Navbar/>
         <div className='home'>
             <div className="container">
                 <div className="content">
@@ -13,6 +19,12 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        <Home2/>
+        <Home3/>
+        <Footer/>
+        </>
+        
+        
     )
 }
 

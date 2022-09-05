@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
 
-body {
-  font-size: 100%;
+
+.landingpage{
+  width: 100%;
+  height: 141.5vh;
   background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
 }
 
@@ -23,8 +19,9 @@ body {
 .cabecalho-imagem {
     content: '';
     background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
-    height: 5rem;
-    width: 5rem;
+    height: 10vh;
+    width: 6rem;
+    height: 13vh;
 }
 
 .cabecalho-menu {
@@ -73,8 +70,11 @@ body {
 
 .conteudo-principal-escrito-botao {
   background-color: #ECD6C4;
-  width: 160px;
-  height: 60px;
+  width: 20%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
@@ -123,12 +123,13 @@ body {
 }
 
 .rodape-imagem {
-    content: '';
-    background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
-    height: 5rem;
-    width: 5rem;
     display: block;
     margin: 0 auto;
+    content: '';
+    background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
+    height: 10vh;
+    width: 6rem;
+    height: 13vh;
 }
 
 

@@ -1,5 +1,6 @@
 import "./login.css";
-import {useState} from "react";
+import {Link} from 'react-router-dom'
+import React, {useState} from "react";
 
   
   const Login = () => {
@@ -39,14 +40,13 @@ import {useState} from "react";
                 </div>
     
                 <div className="container-login-form-btn">
-                  <button className="login-form-btn">Login</button>
+                  <Link className="login-form-btn" to='/home'><button className="login-form-btn">Login</button></Link>
                 </div>
     
                 <div className="text-center">
                   <span className="txt1">Não possui conta? </span>
-                  <a className="txt2" href="#">
-                    Criar conta
-                  </a>
+                 
+                  <Link to='/cadastro'><p className="txt2">Criar conta</p></Link>
                 </div>
               </form>
             </div>

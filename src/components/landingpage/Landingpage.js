@@ -1,24 +1,25 @@
 import React from 'react'
-import './Landingpage.css'
+import './landingpage.css'
+import {Link} from 'react-router-dom'
+
 const Landingpage = () => {
     return (
-     <div>
+     <div className='landingpage'>
   <header className="cabecalho">
     <div className="cabecalho-imagem"></div>
     <nav className="cabecalho-menu">
-      <a className="cabecalho-menu-item">Comunidade APA</a>
-      <a className="cabecalho-menu-item">Tutorial</a>
-      <a className="cabecalho-menu-item">objetivo</a>
-      <a className="cabecalho-menu-item">creditos</a>
+      <p className="cabecalho-menu-item">Comunidade APA</p>
+      <p className="cabecalho-menu-item">objetivo</p>
+      <p className="cabecalho-menu-item">creditos</p>
     </nav>
   </header>
-
+  <div>
   <main className="conteudo">
     <section className="conteudo-principal">
       <div className="conteudo-principal-escrito">
         <h1 className="conteudo-principal-escrito-titulo">APA</h1>
         <h2 className="conteudo-principal-escrito-subtitulo">Aqui voce vai fazer a diferença, ajudando animais abandonados e necessitados</h2>
-        <button className="conteudo-principal-escrito-botao">Faça login</button>
+        <Link to='/login'><button className="conteudo-principal-escrito-botao">Faça Login</button></Link>
       </div>
       <div className="conteudo-principal-imagem"></div>
     </section>
@@ -34,6 +35,7 @@ const Landingpage = () => {
   <footer className="rodape">
     <div className="rodape-imagem"></div>
   </footer>
+  </div>
   </div>
     )
 }
