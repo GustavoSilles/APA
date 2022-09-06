@@ -25,29 +25,29 @@ const Footer = () => {
                         <h3>Navigation</h3>
                         <p>Home</p>
                         <p>Feed</p>
-                        <p>bglh do maps</p>
+                        <p>Bglh do maps</p>
                         <p>Perfil</p>
                     </div>
                     <div className="col">
                         <h3>My Account</h3>
-                        <p>logout</p>
-                        <p>config</p>
-                        <p>ajuda</p>
-                        <p>termos</p>
+                        <p>Logout</p>
+                        <p>Config</p>
+                        <p>Ajuda</p>
+                        <p>Termos</p>
                     </div>
                     <div className="col">
-                        <h3>Information</h3>
-                        <p>resgate um animal</p>
-                        <p>learn more</p>
-                        <p>home</p>
+                        <h3>Informações</h3>
+                        <p>Resgate um animal</p>
+                        <p>Leia mais</p>
+                        <p>Home</p>
                         <p>Contact</p>
                     </div>
                     <div className="col">
-                        <h3>creditos</h3>
+                        <h3>Créditos</h3>
+                        <p> Equipe TheBoys</p>
                         <p>Gustavo</p>
                         <p>Abilio</p>
                         <p>Basitt</p>
-                        <p>Dai ana</p>
                     </div>
                     <form>
                         <h3>Redes sociais</h3>

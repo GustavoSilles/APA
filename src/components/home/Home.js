@@ -12,10 +12,11 @@ const Home = () => {
         <div className='home'>
             <div className="container">
                 <div className="content">
-                    <h1>Ei</h1>
-                    <h1 className='marrom'>Proteja</h1>
-                    <h1>os animais</h1>
-                    <div><button>Learn More</button></div>
+                <h1 className='marrom'>Quer saber como</h1>
+                    <h1>você pode</h1>
+                    <h1 className='marrom'>Proteger</h1>
+                    <h1>os animais?</h1>
+                    <div><button>Leia mais</button></div>
                 </div>
             </div>
         </div>
