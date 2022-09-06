@@ -1,18 +1,24 @@
 import React from 'react'
-import './home3Styles.css'
+import './apiMapaStyles.css'
+import Footer from '../Footer/footer'
+import Navbar from '../Navbar/navbar'
 
-const Home3 = () => {
+const ApiMapa = () => {
     return (
+        <>
+        <Navbar/>
         <div className='home3'>
             <div className="container">
                 <div className="content">
-                    <h2><span>Ame</span> os animais</h2>
+                    <h2><span>ame</span> os animais</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus at veritatis quisquam voluptatem nostrum reprehenderit, tempore sint placeat, aperiam alias, facilis voluptate quod itaque deleniti molestiae non odit esse necessitatibus.</p>
-                <div><button>Contatar</button></div>
+                <div><button>contact</button></div>
                 </div>
             </div>
         </div>
+        <Footer/>
+        </>
     )
 }
 
-export default Home3
+export default ApiMapa

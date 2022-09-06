@@ -11,12 +11,14 @@ import Login from "./components/Login/login"
 import Navbar from "./components/Navbar/navbar"
 import Perfil from "./components/Perfil/perfil"
 import './index.css';
+import ApiMapa from './components/ApiMapa/apiMapa'
 
 function App(){
   return (
     <Router>
       <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/apimapa" element={<ApiMapa />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/feed" element={<Feed />} />
           <Route path="/footer" element={<Footer />} />
