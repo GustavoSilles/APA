@@ -20,7 +20,7 @@ const Navbar = () => {
                     <li><Link to='/feed'>Feed</Link> </li>
                     <li><Link to='/apimapa'>bglh do maps</Link></li>
                     <li><Link to='/perfil'>Perfil</Link></li>
-                    <button className='navbtn'>Logout</button>
+                    <Link to='/login'><button className='navbtn'>Logout</button></Link>
                 </ul>
                 <div className="hamburger" onClick={handleNav}>
                     {!nav ? (<FaBars className='icon' />) : (<FaTimes className='icon' />)}
