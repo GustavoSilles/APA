@@ -7,11 +7,11 @@ const Landingpage = () => {
      <div className='landingpage'>
   <header className="cabecalho">
     <div className="cabecalho-imagem"></div>
-    <nav className="cabecalho-menu">
-      <p className="cabecalho-menu-item">Comunidade APA</p>
-      <p className="cabecalho-menu-item">objetivo</p>
-      <p className="cabecalho-menu-item">creditos</p>
-    </nav>
+    <div className='divMainLandingPageNavbar'>
+                <button  className="conteudo-principal-escrito-botao">Entrar</button>
+                <button  className="conteudo-principal-escrito-botao">Cadastrar-se</button>
+    </div>
+    
   </header>
   <div>
   <main className="conteudo">

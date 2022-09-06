@@ -11,7 +11,7 @@ const Cadastro = () => {
   
     return (
       <div className="cadastro">
-        <div className="container-login">
+        <div className="container-cadastro">
           <div className="wrap-login">
             <form className="login-form">
               <span className="login-form-title"> Cadastro </span>
