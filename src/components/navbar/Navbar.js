@@ -18,7 +18,7 @@ const Navbar = () => {
                 <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
                     <li><Link to='/home'>Home</Link></li>
                     <li><Link to='/feed'>Feed</Link> </li>
-                    <li><Link to='/home3'>bglh do maps</Link></li>
+                    <li><Link to='/apimapa'>bglh do maps</Link></li>
                     <li><Link to='/perfil'>Perfil</Link></li>
                     <button className='navbtn'>Logout</button>
                 </ul>

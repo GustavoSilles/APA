@@ -29,9 +29,9 @@ const Footer = () => {
                         <p>Perfil</p>
                     </div>
                     <div className="col">
-                        <h3>My Account</h3>
+                        <h3>Minha Conta</h3>
                         <p>Logout</p>
-                        <p>Config</p>
+                        <p>Configurações</p>
                         <p>Ajuda</p>
                         <p>Termos</p>
                     </div>
@@ -40,11 +40,11 @@ const Footer = () => {
                         <p>Resgate um animal</p>
                         <p>Leia mais</p>
                         <p>Home</p>
-                        <p>Contact</p>
+                        <p>Contatar</p>
                     </div>
                     <div className="col">
                         <h3>Créditos</h3>
-                        <p> Equipe TheBoys</p>
+                        <p> Equipe TheBoys:</p>
                         <p>Gustavo</p>
                         <p>Abilio</p>
                         <p>Basitt</p>
