@@ -8,8 +8,8 @@ const Landingpage = () => {
   <header className="cabecalho">
     <div className="cabecalho-imagem"></div>
     <div className='divMainLandingPageNavbar'>
-                <button  className="conteudo-principal-escrito-botao">Entrar</button>
-                <button  className="conteudo-principal-escrito-botao">Cadastrar-se</button>
+    <Link to='/login' className="conteudo-principal-escrito-botao">Entrar</Link>
+    <Link to='/cadastro'id='cadastro' className="conteudo-principal-escrito-botao">Cadastre-se</Link>
     </div>
     
   </header>
@@ -19,7 +19,6 @@ const Landingpage = () => {
       <div className="conteudo-principal-escrito">
         <h1 className="conteudo-principal-escrito-titulo">APA</h1>
         <h2 className="conteudo-principal-escrito-subtitulo">Aqui voce vai fazer a diferença, ajudando animais abandonados e necessitados</h2>
-        <Link to='/login'><button className="conteudo-principal-escrito-botao">Faça Login</button></Link>
       </div>
       <div className="conteudo-principal-imagem"></div>
     </section>

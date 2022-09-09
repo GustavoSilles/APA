@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 
-
-
 .landingpage{
   width: 100%;
-  height: 141.5vh;
+  height: auto;
   background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
 }
 
@@ -21,11 +19,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 24px;
+  padding: 5px;
 }
 
 .cabecalho-imagem {
     content: '';
+    margin-left: 5%;
     background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
     width: 6rem;
     height: 13vh;
@@ -80,15 +79,18 @@
   background-color: #ECD6C4;
   width: 10%;
   display: flex;
+  padding: 10px;
   align-items: center;
   justify-content: center;
   border: none;
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  font-family: 'Sarala', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #2F2325;
+}
+#cadastro{
+  margin-right: 5%;
 }
 
 .conteudo-principal-escrito-botao:hover {
