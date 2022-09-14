@@ -17,7 +17,7 @@ const Landingpage = () => {
   <main className="conteudo">
     <section className="conteudo-principal">
       <div className="conteudo-principal-escrito">
-        <h1 className="conteudo-principal-escrito-titulo">APA</h1>
+        <h1 className="conteudo-principal-escrito-titulo">AP</h1>
         <h2 className="conteudo-principal-escrito-subtitulo">Aqui voce vai fazer a diferença, ajudando animais abandonados e necessitados</h2>
       </div>
       <div className="conteudo-principal-imagem"></div>
