@@ -9,7 +9,8 @@ const Navbar = () => {
 
 
     return (
-        <div name='top' className='navbar'>
+        <div name='top'>
+        <div  className='navbar'>
             <div className="container">
                 <div className="logo">
                     <h1 className='textlogo'>APA</h1>
@@ -25,6 +26,7 @@ const Navbar = () => {
                     {!nav ? (<FaBars className='icon' />) : (<FaTimes className='icon' />)}
                 </div>
             </div>
+        </div>
         </div>
     )
 }
