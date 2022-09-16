@@ -13,6 +13,7 @@ create table postagem (
  titulo varchar(100),
  descricao varchar(300),
  localizacao varchar(300),
+ comentario varchar(200),
  idpessoa int,
  foreign key(idpessoa) references pessoa(idpessoa)
 )
