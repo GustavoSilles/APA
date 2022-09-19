@@ -13,27 +13,78 @@
     z-index: -1;
 }
 
-.feed .content {
-    position: absolute;
-    top: 30%;
+
+.divpost{
     width: 50%;
-    left: 0;
-    padding: 1rem;
+    display: flex;
+    border-radius: 12px;
+    height: 25vh;
+    background: #E6E6E6;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.fotopost{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.btnpost{
+    width: 80%;
+    border: 1px solid #532E1C;
+    background-color: #E6E6E6;
+    color: #333;
+    border-radius: 20px;
+    padding: 15px;
+}
+.btnpost:hover{
+    background-color: #c5a880c0;
+}
+.bagulhinhos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.localização{
+    flex-direction: row;
+    display: flex;
+    padding: 15px 5px 15px 5px;
+    gap: 5px;
+    align-items: center;
 }
 
-.feed h2 {
-    color: #E6E6E6;
+.localização:hover{
+    background-color: #c5a880c0;
+    border-radius: 10px;
+    
+}
+.foto-icon{
+    display: flex;
+    align-items: center;
+    padding: 15px 5px 15px 5px;
+    gap: 5px;
+    flex-direction: row;
+}
+.foto-icon:hover{
+    background-color: #c5a880c0;
+    border-radius: 10px;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.foto{
+    background: url('../../assets/Gato\ Bom.jpg') no-repeat center center/cover;
+    content: '';
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius:50%;
 }
 
-.feed p {
-    color: #E6E6E6;
-    margin: 1rem 0;
-}
 
-@media screen and (max-width:940px) {
-    .feed .content {
-    width: 100%;
-    }
-}
 
 

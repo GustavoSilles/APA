@@ -1,22 +1,32 @@
 import React from 'react'
 import './feedStyles.css'
-import Footer from '../Footer/footer'
 import Navbar from '../Navbar/navbar'
-
+import {FiMapPin} from "react-icons/fi"
+import {HiPhotograph} from "react-icons/hi"
 const Feed = () => {
     return (
         <>
         <Navbar/>
-        <div className='perfil'>
+        <div className='feed'>
             <div className="container">
-                <div className="form-container">
-                    <form>
-                       
-                    </form>
+                <div className='divpost'>
+                    <div className='fotopost'>
+                    <div className='foto'></div>
+                    <button className='btnpost'>Começar a publicação</button>
+                    </div>
+                    <div className='bagulhinhos'>
+                     <div className='localização'>
+                    <FiMapPin className='map-icon' />
+                    <div>Localização</div>
+                    </div>
+                    <div className='foto-icon'>
+                    <HiPhotograph className = 'img-icon' />   
+                    <div>Foto</div>
+                    </div> 
+                    </div>
+                </div>
                 </div>
             </div>
-        </div>
-        <Footer/>
         </>
     )
 }
