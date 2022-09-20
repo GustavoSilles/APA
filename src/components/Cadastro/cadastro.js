@@ -4,11 +4,47 @@ import {Link} from 'react-router-dom'
 
 const Cadastro = () => {
 
-    const  [username, setUsername] = useState("");
-    const  [name, setName] = useState("");
+    const [username, setUsername] = useState("");
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-  
+
+    const handleUsernameChange = username => setUsername(username)
+    const handleNameChange = name => setName(name)
+    const handleEmailChange = email=> setEmail(email)
+    const handlePasswordChange = password => setPassword(password)
+
+    const postUser = async () => {  
+
+      if (username && name && email && password != "") {
+          try {
+              const requestOptions = {
+                  method: 'POST',
+                  headers: { 'Content-type': 'application/json' },
+                  body: JSON.stringify({
+                      username: username,
+                      name: name,
+                      email: email,
+                      password: password
+                  })
+              }
+              await fetch('http://localhost:3000/api/user', requestOptions)
+         
+             
+          }catch( error){
+              console.log(error)
+              setUsername('')
+              setName('')
+              setEmail('')
+              setPassword('')
+          }
+      }else{
+          <Alert severity="error">Erro!","Não foi possivel efetuar o cadastro!</Alert>
+          }
+      }
+
+
+
     return (
       <div className="cadastro">
         <div className="container-cadastro">
@@ -22,6 +58,7 @@ const Cadastro = () => {
                   type="user name"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
+                  onChangeText={handleUsernameChange}
                 />
                 <span className="focus-input" data-placeholder="User name"></span>
               </div>
@@ -32,6 +69,7 @@ const Cadastro = () => {
                   type="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  onChangeText={handleNameChange}
                 />
                 <span className="focus-input" data-placeholder="Name"></span>
               </div>
@@ -42,6 +80,7 @@ const Cadastro = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  onChangeText={handleEmailChange}
                 />
                 <span className="focus-input" data-placeholder="Email"></span>
               </div>
@@ -52,12 +91,13 @@ const Cadastro = () => {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  onChangeText={handlePasswordChange}
                 />
                 <span className="focus-input" data-placeholder="Password"></span>
               </div>
   
               <div className="container-login-form-btn">
-                <button className="login-form-btn">Cadastre-se</button>
+                <button  onClick={postUser} className="login-form-btn">Cadastre-se</button>
               </div>
   
               <div className="text-center">
