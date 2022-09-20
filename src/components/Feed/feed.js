@@ -3,12 +3,13 @@ import './feedStyles.css'
 import Navbar from '../Navbar/navbar'
 import {FiMapPin} from "react-icons/fi"
 import {HiPhotograph} from "react-icons/hi"
+
 const Feed = () => {
     return (
         <>
-        <Navbar/>
+          <Navbar/>
         <div className='feed'>
-            <div className="container">
+            <div className="container-feed">
                 <div className='divpost'>
                     <div className='fotopost'>
                     <div className='foto'></div>
@@ -17,11 +18,11 @@ const Feed = () => {
                     <div className='bagulhinhos'>
                      <div className='localização'>
                     <FiMapPin className='map-icon' />
-                    <div>Localização</div>
+                    <div className='teixto'>Localização</div>
                     </div>
                     <div className='foto-icon'>
                     <HiPhotograph className = 'img-icon' />   
-                    <div>Foto</div>
+                    <div className='teixto2'>Foto</div>
                     </div> 
                     </div>
                 </div>

@@ -17,8 +17,8 @@
 .divpost{
     width: 50%;
     display: flex;
-    border-radius: 12px;
-    height: 25vh;
+    border-radius:12px;
+    height: 22vh;
     background: #E6E6E6;
     flex-direction: column;
     flex-wrap: wrap;
@@ -35,6 +35,7 @@
     border: 1px solid #532E1C;
     background-color: #E6E6E6;
     color: #333;
+    cursor: pointer;
     border-radius: 20px;
     padding: 15px;
 }
@@ -47,44 +48,38 @@
     justify-content: space-around;
     align-items: center;
 }
+
 .localização{
     flex-direction: row;
     display: flex;
-    padding: 15px 5px 15px 5px;
+    cursor: pointer;
+    padding: 15px;
     gap: 5px;
     align-items: center;
 }
 
-.localização:hover{
-    background-color: #c5a880c0;
-    border-radius: 10px;
-    
-}
+
 .foto-icon{
     display: flex;
     align-items: center;
-    padding: 15px 5px 15px 5px;
+    cursor: pointer;
+    padding: 15px;
     gap: 5px;
     flex-direction: row;
 }
-.foto-icon:hover{
-    background-color: #c5a880c0;
-    border-radius: 10px;
-    
-}
-.container{
+
+.container-feed{
+    padding-top: 104px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 }
 .foto{
     background: url('../../assets/Gato\ Bom.jpg') no-repeat center center/cover;
     content: '';
     width: 3.5rem;
     height: 3.5rem;
+    cursor: pointer;
     border-radius:50%;
 }
-
-
-
 
