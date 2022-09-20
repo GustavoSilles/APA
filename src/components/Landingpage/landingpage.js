@@ -4,12 +4,13 @@ import {Link} from 'react-router-dom'
 
 const Landingpage = () => {
     return (
+      <>
      <div className='landingpage'>
   <header className="cabecalho">
-    <div className="cabecalho-imagem"></div>
+    <h1 className="cabecalho-imagem">APA</h1>
     <div className='divMainLandingPageNavbar'>
-                <button  className="conteudo-principal-escrito-botao">Entrar</button>
-                <button  className="conteudo-principal-escrito-botao">Cadastrar-se</button>
+    <Link to='/login' className="conteudo-principal-escrito-botao">Entrar</Link>
+    <Link to='/cadastro'id='cadastro' className="conteudo-principal-escrito-botao">Cadastre-se</Link>
     </div>
     
   </header>
@@ -17,9 +18,8 @@ const Landingpage = () => {
   <main className="conteudo">
     <section className="conteudo-principal">
       <div className="conteudo-principal-escrito">
-        <h1 className="conteudo-principal-escrito-titulo">APA</h1>
+        <h1 className="conteudo-principal-escrito-titulo">Animais Precisam de Atenção</h1>
         <h2 className="conteudo-principal-escrito-subtitulo">Aqui voce vai fazer a diferença, ajudando animais abandonados e necessitados</h2>
-        <Link to='/login'><button className="conteudo-principal-escrito-botao">Faça Login</button></Link>
       </div>
       <div className="conteudo-principal-imagem"></div>
     </section>
@@ -29,14 +29,14 @@ const Landingpage = () => {
       <p className="conteudo-secundario-paragrafo">1. Voce pode <strong>criar varios posts</strong> mostrando animais que precisam de ajuda</p>
       <p className="conteudo-secundario-paragrafo">2. Possui uma <strong>interface facil e simples</strong> de se usar</p>
       <p className="conteudo-secundario-paragrafo">3. <strong>sistema de localização com o google maps</strong>, para pessoas postarem a localização do animal</p>
+      
     </section>
   </main>
 
-  <footer className="rodape">
-    <div className="rodape-imagem"></div>
-  </footer>
+ 
   </div>
   </div>
+  </>
     )
 }
 

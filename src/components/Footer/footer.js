@@ -2,8 +2,9 @@ import React from 'react'
 import { SiPug } from 'react-icons/si'
 import { BsFillArrowUpCircleFill } from 'react-icons/bs'
 import { FiMail, FiFacebook, FiGithub, FiInstagram, FiLinkedin} from 'react-icons/fi'
-import './footerStyles.css'
 
+
+import './footerStyles.css'
 import { Link } from 'react-scroll'
 
 const Footer = () => {
@@ -15,9 +16,11 @@ const Footer = () => {
                         <SiPug className='icon' />
                         <h2>APA.</h2>
                     </div>
-                    <Link to="home" spy={true} smooth={true} duration={500} >
+                    <Link to="top" spy={true} smooth={true} duration={500} >
                         <BsFillArrowUpCircleFill className='icon' color='#532E1C'/>
                     </Link>
+                   
+                   
 
                 </div>
                 <div className="col-container">

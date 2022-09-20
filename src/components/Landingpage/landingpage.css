@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
 
-
-
 .landingpage{
   width: 100%;
-  height: 141.5vh;
+  height: 100vh;
   background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
 }
 
@@ -21,14 +19,17 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 24px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 5px;
 }
 
 .cabecalho-imagem {
     content: '';
-    background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
-    width: 6rem;
-    height: 13vh;
+    margin-left: 5%;
+    font-weight: 400;
+    font-size: 64px;
+    color: #FFF2E7;
+
 }
 
 .cabecalho-menu {
@@ -78,17 +79,22 @@
 
 .conteudo-principal-escrito-botao {
   background-color: #ECD6C4;
-  width: 10%;
+  width: 150px;
   display: flex;
+  padding: 15px;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   align-items: center;
   justify-content: center;
   border: none;
   box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
   border-radius: 20px;
-  font-family: 'Sarala', sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #2F2325;
+}
+#cadastro{
+  margin-right: 5%;
 }
 
 .conteudo-principal-escrito-botao:hover {
@@ -96,15 +102,18 @@
 }
 
 .conteudo-principal-imagem {
-  height: 430px;
+  height: 300px;
+  width: 19%;
+  margin-top: 30px;
 }
 
 .conteudo-secundario {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 80px;
   gap: 24px;
-  margin-top: 48px;
+ 
 }
 
 .conteudo-secundario-titulo {
@@ -114,7 +123,6 @@
   font-weight: 400;
   font-size: 24px;
   color: #FFF2EF;
-  margin-bottom: 16px;
 }
 
 .conteudo-secundario-paragrafo {
@@ -123,22 +131,69 @@
   font-size: 18px;
   color: #ECD6C4;
 }
+@media screen and (max-width:940px) {
+  
+  body{
+    width: 100%!important;
+    height: auto!important;
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%)!important;
+  }
+  .landingpage{
+    height: auto;
+  }
+ 
+  .conteudo-principal-escrito-botao {
+    background-color: #ECD6C4;
+    width: 110px;
+    display: flex;
+    padding: 15px;
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    color: #2F2325;
+  }
+  .conteudo-principal-imagem {
+    height: 200px;
+    width: 190px;
+  }
+  .conteudo-principal{
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+  
+  }
 
-.rodape {
-    padding: 32px;
-    border-top: 0.4px solid #FFF2E7;
+  .conteudo-principal-escrito-titulo {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 40px;
+    color: #FFF2E7;
+  }
+ 
+  .conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 45px;
+    gap: 24px;
+   
+  }
+  
+  
+  
 }
-
-.rodape-imagem {
-    display: block;
-    margin: 0 auto;
-    content: '';
-    background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
-    height: 10vh;
-    width: 6rem;
-    height: 13vh;
+@media screen and (max-width:1400px) {
+  .conteudo-principal-imagem {
+    height: 200px;
+    width: 190px;
+  }
 }
-
 
 
 
