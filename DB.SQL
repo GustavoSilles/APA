@@ -15,4 +15,4 @@ create table postagem (
  localizacao varchar(300),
  idpessoa int,
  foreign key(idpessoa) references pessoa(idpessoa)
-)
+),
