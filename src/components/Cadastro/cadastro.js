@@ -9,10 +9,10 @@ const Cadastro = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-    const handleUsernameChange = username => setUsername(username)
-    const handleNameChange = name => setName(name)
-    const handleEmailChange = email=> setEmail(email)
-    const handlePasswordChange = password => setPassword(password)
+    // const handleUsernameChange = username => setUsername(username)
+    // const handleNameChange = name => setName(name)
+    // const handleEmailChange = email=> setEmail(email)
+    // const handlePasswordChange = password => setPassword(password)
 
     const postUser = async () => {  
 
@@ -39,7 +39,7 @@ const Cadastro = () => {
               setPassword('')
           }
       }else{
-          <Alert severity="error">Erro!","Não foi possivel efetuar o cadastro!</Alert>
+         console.log("deu erro");
           }
       }
 
@@ -58,7 +58,7 @@ const Cadastro = () => {
                   type="user name"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  onChangeText={handleUsernameChange}
+                  //onChangeText={handleUsernameChange}
                 />
                 <span className="focus-input" data-placeholder="User name"></span>
               </div>
@@ -69,7 +69,7 @@ const Cadastro = () => {
                   type="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  onChangeText={handleNameChange}
+                  //onChangeText={handleNameChange}
                 />
                 <span className="focus-input" data-placeholder="Name"></span>
               </div>
@@ -80,7 +80,7 @@ const Cadastro = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  onChangeText={handleEmailChange}
+                  //onChangeText={handleEmailChange}
                 />
                 <span className="focus-input" data-placeholder="Email"></span>
               </div>
@@ -91,7 +91,7 @@ const Cadastro = () => {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  onChangeText={handlePasswordChange}
+                  //onChangeText={handlePasswordChange}
                 />
                 <span className="focus-input" data-placeholder="Password"></span>
               </div>
