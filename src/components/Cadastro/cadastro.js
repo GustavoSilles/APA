@@ -39,7 +39,7 @@ const Cadastro = () => {
               setPassword('')
           }
       }else{
-         console.log("deu erro");
+        alert("preencha todos os campos")
           }
       }
 
