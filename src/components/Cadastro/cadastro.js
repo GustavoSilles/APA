@@ -30,7 +30,7 @@ const Cadastro = () => {
               }
               await fetch('http://localhost:3000/api/user', requestOptions)
          
-             
+              
           }catch( error){
               console.log(error)
               setUsername('')
@@ -102,7 +102,7 @@ const Cadastro = () => {
   
               <div className="text-center">
                 <span className="txt1">já possui conta? </span>
-                <Link to='/login'> <p className="txt2">Fazer login</p></Link>
+                //<Link to='/login'> <p className="txt2">Fazer login</p></Link>
               </div>
             </form>
           </div>
