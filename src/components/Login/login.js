@@ -4,11 +4,35 @@ import React, {useState} from "react";
 
   
   const Login = () => {
-    
-  
-      const [email, setEmail] = useState("");
-      const [password, setPassword] = useState("");
-    
+            
+          const [email, setEmail] = useState("");
+          const [password, setPassword] = useState("");
+          const [users, setUsers] = useState([])
+     
+      //     const handleEmailChange = email => setEmail(email)
+      //     const handleSenhaChange = senha => setSenha(senha)
+          const getUsers = async () => {
+              if (email && password != "") {
+              try{
+                  const requestOptions = {
+                      method: 'GET',
+                      headers: { 'Content-type': 'application/json' },
+                      body: JSON.stringify({
+                          email: email,
+                          password: password
+                      })
+                  }
+                  const response = await fetch('http://localhost:3000/api/login/user', requestOptions)
+                  if(response.status === 400){
+                  alert("Erro!","Usuário não encontrado")
+                  }else{
+                      //const data = await response.json()
+                      //setUsers(data)
+                      }
+              }catch(error){
+                  console.log("error")
+                      }
+         }}   
       return (
         <div className="login">
           <div className="container-login">
@@ -25,6 +49,7 @@ import React, {useState} from "react";
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    
                   />
                   <span className="focus-input" data-placeholder="Email"></span>
                 </div>
@@ -39,7 +64,8 @@ import React, {useState} from "react";
                 </div>
     
                 <div className="container-login-form-btn">
-                  <Link className="login-form-btn" to='/home'><button className="login-form-btn">Login</button></Link>
+                  <Link className="login-form-btn" to='/home'>
+                    <button onClick={getUsers} className="login-form-btn">Login</button></Link>
                 </div>
     
                 <div className="text-center">
