@@ -1,21 +1,37 @@
 import React from 'react'
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import './apiMapaStyles.css'
 import Footer from '../Footer/footer'
 import Navbar from '../Navbar/navbar'
 
+
+const containerStyle = {
+    width: '400px',
+    height: '400px'
+  };
+  
+  const center = {
+    lat: -3.745,
+    lng: -38.523
+  };
+  
 const ApiMapa = () => {
+    
     return (
         <>
-        <Navbar/>
-        <div className='home3'>
-            <div className="container">
-                <div className="content">
-                    <h2><span>ame</span> os animais</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus at veritatis quisquam voluptatem nostrum reprehenderit, tempore sint placeat, aperiam alias, facilis voluptate quod itaque deleniti molestiae non odit esse necessitatibus.</p>
-                <div><button>contact</button></div>
-                </div>
-            </div>
-        </div>
+    <Navbar/>
+    <LoadScript
+      googleMapsApiKey="AIzaSyBR9lQa8zmcvvzbh1mbbetR7t59-pjCSxk"
+    >
+      <GoogleMap
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={10}
+      >
+        { /* Child components, such as markers, info windows, etc. */ }
+        <></>
+      </GoogleMap>
+    </LoadScript>
         <Footer/>
         </>
     )

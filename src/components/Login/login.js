@@ -28,7 +28,6 @@ import React, {useState} from "react";
                   />
                   <span className="focus-input" data-placeholder="Email"></span>
                 </div>
-    
                 <div className="wrap-input">
                   <input
                     className={password !== "" ? "has-val input" : "input"}
