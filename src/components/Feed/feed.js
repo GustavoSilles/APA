@@ -3,6 +3,7 @@ import './feedStyles.css'
 import Navbar from '../Navbar/navbar'
 import {FiMapPin} from "react-icons/fi"
 import {HiPhotograph} from "react-icons/hi"
+import Posts from "../Posts/posts"
 
 const Feed = () => {
     return (
@@ -27,7 +28,19 @@ const Feed = () => {
                     </div>
                 </div>
                 </div>
+             
+             <Posts/>
+             <Posts/>
+             <Posts/>
+             <Posts/>
+             <Posts/>
+             
+           
+
             </div>
+          
+
+                
         </>
     )
 }
