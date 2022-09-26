@@ -24,7 +24,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 1%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 .fotopost{
     display: flex;
@@ -83,5 +84,20 @@
     height: 3.5rem;
     cursor: pointer;
     border-radius:50%;
+}
+@media screen and (max-width: 940px) {
+    .divpost{
+        width: 95%;
+        display: flex;
+        border-radius:12px;
+        color: #532E1C;
+        height: 11rem;
+        background: #E6E6E6;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 

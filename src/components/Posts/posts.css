@@ -4,7 +4,7 @@
     border-radius:12px;
     margin-top: 20px;
     background: #E6E6E6;
-    margin-bottom: 1%;
+    margin-bottom: 1rem;
 
 }
 .postzao{
@@ -24,6 +24,7 @@
     cursor: pointer;
     border-radius:50%;
 }
+
 .nominho{
     color: #532E1C;
     margin-left: 2%;
@@ -81,4 +82,17 @@
     border-radius:12px 12px 0 0;
     height: 4.5rem;
 }
+@media screen and (max-width: 940px) {
+    .box{
+        width: 95%;
+        height: auto;
+        border-radius:12px;
+        margin-top: 20px;
+        background: #E6E6E6;
+        margin-bottom: 1rem;
+    
+    }
+}
+
+
 
