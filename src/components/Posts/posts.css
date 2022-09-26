@@ -1,13 +1,14 @@
 .box{
     width: 50%;
-    height: 30rem;
+    height: auto;
     border-radius:12px;
     margin-top: 20px;
     background: #E6E6E6;
+    margin-bottom: 1%;
 
 }
 .postzao{
-    height: 33rem;
+    height: auto;
 }
 .posixion{
     display: flex;
@@ -29,21 +30,23 @@
 }
 .descricao{
     width: 100%;
-    height: 3rem;
-    align-items: center;
+    height: auto;
+    min-height: 5vh;
     display: flex;
     background-color: #E6E6E6;
     color: #532E1C;
 }
 .descrison{
     margin-left: 2%;
+    font-size: clamp(1em, 1em + 1vw, 1.2em);
 }
 .propriafoto{
-    background: url('../../assets/funny-cat-videos-wide.jpg') no-repeat center center/cover;
+    background: url('../../assets//funny-cat-videos-wide.jpg') no-repeat center center/cover;
     content: '';
     width: 100%;
     height: 20rem;
 }
+
 .footerbox{
     width: 100%;
     background-color: #E6E6E6;
@@ -70,10 +73,9 @@
     flex-direction: row;
 }
 .navbox{
-   display: flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
-    border-bottom: 1px solid #532E1C;
     background-color:#E6E6E6;
     width: 100%;
     border-radius:12px 12px 0 0;

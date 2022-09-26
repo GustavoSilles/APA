@@ -24,6 +24,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 1%;
 }
 .fotopost{
     display: flex;
