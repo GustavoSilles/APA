@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div name='top'>
         <div  className='navbar'>
-            <div className="container">
+         
                 <div className="logo">
                     <h1 className='textlogo'>APA</h1>
                 </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
                 <div className="hamburger" onClick={handleNav}>
                     {!nav ? (<FaBars className='icon' />) : (<FaTimes className='icon' />)}
                 </div>
-            </div>
+           
         </div>
         </div>
     )

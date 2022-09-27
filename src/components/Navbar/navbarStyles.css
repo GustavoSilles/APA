@@ -8,6 +8,9 @@
     backdrop-filter: blur( 13.5px );
     -webkit-backdrop-filter: blur( 13.5px );
     border: 1px solid rgba(0, 0, 0, 0.18);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .fotopost3{
     background: url('../../assets/Gato\ Bom.jpg') no-repeat center center/cover;
@@ -26,11 +29,7 @@
 
 }
 
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 .logo {
     display: flex;
