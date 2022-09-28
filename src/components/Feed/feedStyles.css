@@ -60,6 +60,12 @@
     gap: 5px;
     align-items: center;
 }
+.localização:hover{
+    color: #c5a880c0;
+}
+.foto-icon:hover{
+    color:#c5a880c0;
+}
 
 
 .foto-icon{
@@ -78,7 +84,7 @@
     
 }
 .foto{
-    background: url('../../assets/Gato\ Bom.jpg') no-repeat center center/cover;
+    background: url('../../assets/WIN_20220927_16_51_31_Pro.jpg') no-repeat center center/cover;
     content: '';
     width: 3.5rem;
     height: 3.5rem;
