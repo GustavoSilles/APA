@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from "react";
 import './feedStyles.css'
 import Navbar from '../Navbar/navbar'
 import {FiMapPin} from "react-icons/fi"
 import {HiPhotograph} from "react-icons/hi"
 import Posts from "../Posts/posts"
+import Modal from '../Modal/modal'
 
 const Feed = () => {
+    const [modalOpen, setModalOpen] = useState(false);
+
     return (
         <>
           <Navbar/>
@@ -14,8 +17,10 @@ const Feed = () => {
                 <div className='divpost'>
                     <div className='fotopost'>
                     <div className='foto'></div>
-                    <button className='btnpost'>Começar a publicação</button>
+                    <button  className="btnpost"  onClick={() => {setModalOpen(true)}}>Começar a publicação</button>
+                   
                     </div>
+                    
                     <div className='bagulhinhos'>
                      <div className='localização'>
                     <FiMapPin className='map-icon' />
@@ -27,8 +32,9 @@ const Feed = () => {
                     </div> 
                     </div>
                 </div>
+                {modalOpen && <Modal setOpenModal={setModalOpen} />}
                 </div>
-             
+                
              <Posts/>
              <Posts/>
              <Posts/>
@@ -36,7 +42,7 @@ const Feed = () => {
              <Posts/>
              
            
-
+           
             </div>
           
 

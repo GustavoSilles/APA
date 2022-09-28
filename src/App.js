@@ -28,10 +28,18 @@ function App(){
           <Route path="/login" element={<Login />} />
           <Route path="/navbar" element={<Navbar />} />
           <Route path="/perfil" element={<Perfil />} />
+
+        
+  
       </Routes>
     </Router>
   )
 }
+
+
+
+ 
+
 
   export default App
 
