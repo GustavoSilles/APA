@@ -28,7 +28,7 @@ const Footer = () => {
                         <h3>Navigation</h3>
                         <p>Home</p>
                         <p>Feed</p>
-                        <p>Bglh do maps</p>
+                        <p>Locais de Ajuda</p>
                         <p>Perfil</p>
                     </div>
                     <div className="col">
