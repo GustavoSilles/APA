@@ -1,11 +1,12 @@
 import React from 'react'
 import { SiPug } from 'react-icons/si'
-import { BsFillArrowUpCircleFill } from 'react-icons/bs'
+// import { BsFillArrowUpCircleFill } from 'react-icons/bs'
+import {Link} from 'react-router-dom'
 import { FiMail, FiFacebook, FiGithub, FiInstagram, FiLinkedin} from 'react-icons/fi'
 
 
 import './footerStyles.css'
-import { Link } from 'react-scroll'
+// import { Link } from 'react-scroll'
 
 const Footer = () => {
     return (
@@ -16,9 +17,9 @@ const Footer = () => {
                         <SiPug className='icon' />
                         <h2>APA.</h2>
                     </div>
-                    <Link to="top" spy={true} smooth={true} duration={500} >
+                    {/* <Link to="top" spy={true} smooth={true} duration={500} >
                         <BsFillArrowUpCircleFill className='icon' color='#532E1C'/>
-                    </Link>
+                    </Link> */}
                    
                    
 
@@ -26,31 +27,33 @@ const Footer = () => {
                 <div className="col-container">
                     <div className="col">
                         <h3>Navigation</h3>
-                        <p>Home</p>
-                        <p>Feed</p>
-                        <p>Locais de Ajuda</p>
-                        <p>Perfil</p>
+                        
+                        <p><Link className='textoFooter' to='/home'>Home</Link></p>
+                        <p><Link className='textoFooter' to='/feed'>Feed</Link></p>
+                        <p><Link className='textoFooter' to='/apimapa'>Locais de Ajuda</Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Perfil</Link></p>
+                       
                     </div>
                     <div className="col">
                         <h3>Minha Conta</h3>
-                        <p>Logout</p>
-                        <p>Configurações</p>
-                        <p>Ajuda</p>
-                        <p>Termos</p>
+                        <p><Link  className='textoFooter' to='/perfil'>Logout</Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Configurações </Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Ajuda</Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Termos</Link></p>
                     </div>
                     <div className="col">
                         <h3>Informações</h3>
-                        <p>Resgate um animal</p>
-                        <p>Leia mais</p>
-                        <p>Home</p>
-                        <p>Contatar</p>
+                        <p><Link  className='textoFooter' to='/home2'>Resgate um animal</Link></p>
+                        <p><Link  className='textoFooter' to='/home'>Leia mais</Link></p>
+                        <p><Link  className='textoFooter' to='/home'>Home</Link></p>
+                        <p><Link  className='textoFooter' to='/home3'>Contatar</Link></p>
                     </div>
                     <div className="col">
                         <h3>Créditos</h3>
-                        <p> Equipe TheBoys:</p>
-                        <p>Gustavo</p>
-                        <p>Abilio</p>
-                        <p>Basitt</p>
+                        <p><Link  className='textoFooter' to='/perfil'>Equipe TheBoys:</Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Gustavo</Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Abílio</Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Basitt</Link></p>
                     </div>
                     <form>
                         <h3>Redes sociais</h3>
