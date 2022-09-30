@@ -17,9 +17,9 @@ const Navbar = () => {
                 </div>
 
                 <ul className={nav ? 'nav-menu active' : 'nav-menu'}>
-                    <li ><Link className='l1' to='/home'>Home</Link></li>
-                    <li ><Link className='l2' to='/feed'>Feed</Link> </li>
-                    <li ><Link className='l3' to='/apimapa'>bglh do maps</Link></li>
+                    <li><Link className='l1' to='/home'>Home</Link></li>
+                    <li><Link className='l2' to='/feed'>Feed</Link> </li>
+                    <li><Link className='l3' to='/apimapa'>Locais de Ajuda</Link></li>
                     <li><Link to='/perfil'><div className='navbox3'>
                         <div className='fotopost3'></div>
                         <div className='nominho2'>Gustavin</div></div></Link></li> 

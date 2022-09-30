@@ -94,6 +94,10 @@
     color: #f8f8f8;
     font-size: 3rem;
 }
+.textoFooter{
+    color: #000000;
+    font-size: 19.2px;
+}
 
 
 @media screen and (max-width: 940px) {
