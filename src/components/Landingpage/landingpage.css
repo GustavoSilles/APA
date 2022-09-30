@@ -139,7 +139,7 @@
   color: #ECD6C4;
 }
 @media screen and (max-width:940px) {
-  
+ 
   body{
     width: 100%!important;
     height: auto!important;
@@ -162,7 +162,7 @@
     box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 13px;
     color: #2F2325;
   }
   .conteudo-principal-imagem {
@@ -195,11 +195,31 @@
   
   
 }
-@media screen and (max-width:1400px) {
-  .conteudo-principal-imagem {
-    height: 200px;
-    width: 190px;
-  }
+
+@media screen and (max-width: 365px) {
+  .cabecalho-imagem {
+    content: '';
+    margin-left: 2%;
+    font-weight: 400;
+    font-size: 50px;
+    color: #FFF2E7;
+}
+.conteudo-principal-escrito-botao {
+  background-color: #ECD6C4;
+  width: 100px;
+  display: flex;
+  padding: 15px;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-weight: 400;
+  font-size: 13px;
+  color: #2F2325;
+}
 }
 
 

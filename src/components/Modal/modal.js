@@ -1,29 +1,26 @@
 import React from "react";
 import "./modal.css";
+ import {CgClose} from 'react-icons/cg'
+ import {HiPhotograph} from "react-icons/hi"
 
 function Modal({ setOpenModal }) {
   return (
     <div className="modalBackground">
       <div className="modalContainer">
-        <div className="titleCloseBtn">
-        </div>
-        <div className="title">
-          <h1>Are You Sure You Want to Continue?</h1>
-        </div>
-        <div className="body">
-          <p>The next page looks amazing. Hope you want to go there!</p>
-        </div>
-        <div className="footer">
-          <button
-            onClick={() => {
-              setOpenModal(false);
-            }}
-            id="cancelBtn"
-          >
-            Cancel
-          </button>
-          <button>Continue</button>
-        </div>
+      <div className="navmodal">
+      <p className="titlemodal">Criar publicação</p>
+        <CgClose onClick={() => {setOpenModal(false) }} id="cancelBtn" className="iconmodal"/>
+      </div>
+      <div className="descricaomodal">
+      <input placeholder="No que voce esta pensando?"></input>
+      </div>
+      <div className="imgcontainer">
+      <div className="imgmodal"></div>
+      </div>
+      <div className="footermodal">
+       <HiPhotograph className = 'iconmodalimg' /> 
+      <button>Postar</button>
+       </div>
       </div>
     </div>
   );
