@@ -1,10 +1,9 @@
 import "./login.css";
-import {Link} from 'react-router-dom'
+import {useNavigate, Link} from 'react-router-dom'
 import React, {useState} from "react";
 
-  
   const Login = () => {
-            
+          const navigate = useNavigate();
           const [email, setEmail] = useState("");
           const [password, setPassword] = useState("");
           const [users, setUsers] = useState([])
@@ -15,7 +14,7 @@ import React, {useState} from "react";
               if (email && password != "") {
               try{
                   const requestOptions = {
-                      method: 'GET',
+                      method: 'POST',
                       headers: { 'Content-type': 'application/json' },
                       body: JSON.stringify({
                           email: email,
@@ -24,13 +23,14 @@ import React, {useState} from "react";
                   }
                   const response = await fetch('http://localhost:3000/api/login/user', requestOptions)
                   if(response.status === 400){
-                  alert("Erro!","Usuário não encontrado")
+                  alert("Erro!, Usuário não encontrado")
                   }else{
-                      //const data = await response.json()
-                      //setUsers(data)
+                      navigate("../home", { replace: true })
+                      const data = await response.json()
+                      setUsers(data)
                       }
               }catch(error){
-                  console.log("error")
+                  console.log(error)
                       }
          }}   
       return (
@@ -64,8 +64,7 @@ import React, {useState} from "react";
                 </div>
     
                 <div className="container-login-form-btn">
-                  <Link className="login-form-btn" to='/home'>
-                    <button onClick={getUsers} className="login-form-btn">Login</button></Link>
+                    <button onClick={getUsers} className="login-form-btn">Login</button>
                 </div>
     
                 <div className="text-center">
