@@ -12,6 +12,8 @@
     justify-content: space-between;
     align-items: center;
 }
+
+
 .fotopost3{
     background: url('../../assets/WIN_20220927_16_51_31_Pro.jpg') no-repeat center center/cover;
     content: '';
@@ -106,6 +108,8 @@
     .navbar{
         position: fixed;
     }
+  
+
 
     .navbar .nav-menu {
         position: absolute;
@@ -130,6 +134,7 @@
     .navbar li {
         font-size: 1.5rem;
     }
+     
     
 
 

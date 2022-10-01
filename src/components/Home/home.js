@@ -13,9 +13,9 @@ const Home = () => {
             <div className="container">
                 <div className="content">
                 <h1 className='marrom'>Quer saber como</h1>
-                    <h1>você pode</h1>
+                    <h2 className='preto'>você pode</h2>
                     <h1 className='marrom'>Proteger</h1>
-                    <h1 className=''>os animais?</h1>
+                    <h2 className='preto'>os animais?</h2>
                     <div><button>Leia mais</button></div>
                 </div>
             </div>

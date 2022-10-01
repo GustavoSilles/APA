@@ -1,7 +1,6 @@
 import React from 'react'
 import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import './apiMapaStyles.css'
-import Footer from '../Footer/footer'
 import Navbar from '../Navbar/navbar'
 
 
@@ -32,7 +31,6 @@ const ApiMapa = () => {
         <></>
       </GoogleMap>
        </LoadScript> 
-        <Footer/>
         </>
     )
 }

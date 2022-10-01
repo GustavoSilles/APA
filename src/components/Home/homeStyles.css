@@ -3,7 +3,10 @@
     height: 100vh;
     background: url('../../assets/ongs-que-ajudam-animais-de-rua.jpg') no-repeat center center/cover;
 }
-
+.preto{
+    font-size: 3.5rem;
+    color: black;
+}
 .home .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

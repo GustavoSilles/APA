@@ -109,8 +109,9 @@
 }
 
 .conteudo-principal-imagem {
-  height: 300px;
-  width: 19%;
+  height: 360px;
+  position: relative;
+  width: 355px;
   margin-top: 30px;
 }
 
@@ -118,7 +119,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 80px;
+  margin-top: 40px;
   gap: 24px;
  
 }
