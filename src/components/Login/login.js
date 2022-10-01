@@ -1,9 +1,9 @@
 import "./login.css";
-import {useNavigate, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import React, {useState} from "react";
 
   const Login = () => {
-          const navigate = useNavigate();
+     
           const [email, setEmail] = useState("");
           const [password, setPassword] = useState("");
           const [users, setUsers] = useState([])
@@ -25,7 +25,7 @@ import React, {useState} from "react";
                   if(response.status === 400){
                   alert("Erro!, Usuário não encontrado")
                   }else{
-                      navigate("../home", { replace: true })
+                     
                       const data = await response.json()
                       setUsers(data)
                       }
@@ -64,12 +64,13 @@ import React, {useState} from "react";
                 </div>
     
                 <div className="container-login-form-btn">
+                <Link to='/home'><p className="txt2">aa</p></Link>
                     <button onClick={getUsers} className="login-form-btn">Login</button>
                 </div>
     
                 <div className="text-center">
                   <span className="txt1">Não possui conta? </span>
-                 
+                
                   <Link to='/cadastro'><p className="txt2">Criar conta</p></Link>
                 </div>
               </form>
