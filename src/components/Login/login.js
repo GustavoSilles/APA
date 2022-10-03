@@ -8,8 +8,6 @@ import React, {useState} from "react";
           const [password, setPassword] = useState("");
           const [users, setUsers] = useState([])
      
-      //     const handleEmailChange = email => setEmail(email)
-      //     const handleSenhaChange = senha => setSenha(senha)
           const getUsers = async () => {
               if (email && password != "") {
               try{
