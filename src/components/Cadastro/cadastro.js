@@ -29,8 +29,7 @@ const Cadastro = () => {
                   })
               }
               await fetch('http://localhost:3000/api/user', requestOptions)
-         
-              
+              window.location.href = "./login "
           }catch( error){
               console.log(error)
               setUsername('')
@@ -42,9 +41,6 @@ const Cadastro = () => {
         alert("preencha todos os campos")
           }
       }
-
-
-
     return (
       <div className="cadastro">
         <div className="container-cadastro">
@@ -58,7 +54,6 @@ const Cadastro = () => {
                   type="user name"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
-                  //onChangeText={handleUsernameChange}
                 />
                 <span className="focus-input" data-placeholder="User name"></span>
               </div>
@@ -69,7 +64,6 @@ const Cadastro = () => {
                   type="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  //onChangeText={handleNameChange}
                 />
                 <span className="focus-input" data-placeholder="Name"></span>
               </div>
@@ -80,7 +74,6 @@ const Cadastro = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  //onChangeText={handleEmailChange}
                 />
                 <span className="focus-input" data-placeholder="Email"></span>
               </div>
@@ -91,7 +84,6 @@ const Cadastro = () => {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  //onChangeText={handlePasswordChange}
                 />
                 <span className="focus-input" data-placeholder="Password"></span>
               </div>
