@@ -1,7 +1,7 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
 import Cadastro from "./components/Cadastro/cadastro"
-import Feed from "./components/Feed/feed"
+import Feed  from "./components/Feed/feed"
 import Footer from "./components/Footer/footer"
 import Home from "./components/Home/home"
 import Home2 from "./components/Home2/home2"
@@ -12,10 +12,15 @@ import Navbar from "./components/Navbar/navbar"
 import Perfil from "./components/Perfil/perfil"
 import './index.css';
 import ApiMapa from './components/ApiMapa/apiMapa'
+import SavePost from "./components/RenderizarPost/"
 
-function App(){
-  return (
-    <Router>
+
+ function App () {
+  return(
+    <>
+    <SavePost/>
+   
+  <Router>
       <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/apimapa" element={<ApiMapa />} />
@@ -28,19 +33,12 @@ function App(){
           <Route path="/login" element={<Login />} />
           <Route path="/navbar" element={<Navbar />} />
           <Route path="/perfil" element={<Perfil />} />
-
-        
-  
       </Routes>
     </Router>
+    </>
   )
 }
 
-
-
- 
-
-
-  export default App
+export default App
 
 

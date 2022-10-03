@@ -6,7 +6,8 @@ import {HiPhotograph} from "react-icons/hi"
 import Posts from "../Posts/posts"
 import Modal from '../Modal/modal'
 
-const Feed = () => {
+import Post from "../Posts/posts"
+const Feed = (list) => {
     const [modalOpen, setModalOpen] = useState(false);
 
     return (
@@ -36,13 +37,10 @@ const Feed = () => {
                 </div>
                 
              <Posts/>
-             <Posts/>
-             <Posts/>
-             <Posts/>
-             <Posts/>
-             
-           
-           
+             {list.map((post, index) => (
+                        <Post key={index} fotoPerfil={post.fotoPerfil} nomeUsuario={post.nomeUsuario} 
+                        descricao={post.descricao} fotoPost={post.fotoPost} />
+                    ))}
             </div>
           
 
