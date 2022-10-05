@@ -7,10 +7,25 @@ const Perfil = () => {
         <>
         <Navbar/>
         <div className='perfil'>
-            <div className="container">
-              
-                </div>
-            </div>
+          <div className='perfil-container'>
+          <div className='box-perfil'>
+          <div className='fundo-perfil'>
+            <div className='foto-perfil'></div>
+          </div>
+          </div>
+         
+          <div className='box-perfil2'>
+            
+           
+            <p className='gustavin'>Gustavin</p>
+            <input  type="text" className='inp_perfil' placeholder='Mudar name'></input>
+            <input  type="text" className='inp_perfil' placeholder='Mudar username'></input>
+            <input  type="text" className='inp_perfil' placeholder='Mudar E-mail'></input>
+            <input  type="text" className='inp_perfil' placeholder='Mudar senha'></input>
+           
+          </div>
+          </div>
+        </div>
             <Footer/>
         </>
     )

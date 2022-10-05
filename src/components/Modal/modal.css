@@ -77,20 +77,24 @@
   
   .iconmodalimg{
     margin-left: 5%;
+    transition-duration: 0.3s;
   }
+  .iconmodalimg:hover{
+    color: #5f3d2b;
+    transform: scale(1.1)
+  }
+
   .btnpostar{
     margin-right: 5%;
   }
  
- 
- 
 .btnpostar{
-  transition-duration: 1s;
+  transition-duration: 0.3s;
 }
 .btnpostar:hover {
-  background-color: black;
+  background-color: #5f3d2b;
   color: white;
-  transform: scale(1.1)
+  transform: scale(1.05)
 }
 .fadeIn {
   animation: fadeIn 1s linear;
@@ -99,7 +103,7 @@
 @keyframes fadeIn {
   from{ opacity: 0;
   }
-  to{ opacity: 1; 
+  to{ opacity: 10; 
   }
 }
   
