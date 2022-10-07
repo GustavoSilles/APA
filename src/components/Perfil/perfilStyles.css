@@ -49,9 +49,9 @@
     font-weight:500;
 }
 .inp_perfil{
-    width: 60%;
+    width: 100%;
     padding: 1rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     outline: none;
     font-size: 1rem;
     border: 1px solid #aaa;
@@ -62,8 +62,18 @@
 .inpt{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  align-items: center;
+  width: 60%;
+}
+.label{
+    margin-left: 3.3%;
+}
+.btn_perfil{
+    margin-right: 4%;
+}
+.cantodolula{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 .inp_perfil:focus {
     color: #333;

@@ -49,9 +49,10 @@
       margin-right: 5%;
     }
     .inpmodal{
-      width: 100%;
+      width: 95%;
       color: black;
       border: 0;
+      font-family: roboto;
       height: auto;
       border-radius: 0%;
       padding-top: 20px;
@@ -62,8 +63,16 @@
       background-color: #E6E6E6;
       resize: none;
 }
+.descricaomodal{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2px;
+}
+
 .inpmodal:focus{
   box-shadow:none;
+  border: 0;
   }
   .footermodal{
     align-items: center;

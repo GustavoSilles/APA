@@ -36,11 +36,12 @@ const Perfil = () => {
             <label className='label'>Alterar password:</label>
             <input  type="password" className='inp_perfil' placeholder='********'/>
             </div>
-            
             </div>
-         
-           
+            <div className='cantodolula'>
+          <button className='btn_perfil'>Salvar alterações</button>
           </div>
+          </div>
+        
           </div>
         </div>
             <Footer/>

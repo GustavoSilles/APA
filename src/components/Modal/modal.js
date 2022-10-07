@@ -3,7 +3,8 @@ import "./modal.css";
 import {CgClose} from 'react-icons/cg'
 import {HiPhotograph} from "react-icons/hi"
 
-function Modal({ setOpenModal }) {
+const Modal =({ setOpenModal }) => {
+  
   return (
    
     <div className="modalBackground">
@@ -15,9 +16,9 @@ function Modal({ setOpenModal }) {
      
         <CgClose size={22} color='#532E1C' onClick={() => {setOpenModal(false) }} id="cancelBtn" className="iconmodal"/>
       </div>
-      <div className="descricaomodal">
-      <textarea  cols="250" rows="50"  placeholder="No que voce esta pensando?" className="inpmodal"></textarea>
-      </div>
+      <form className="descricaomodal">
+      <textarea  cols="100" rows="10"  placeholder="No que voce esta pensando?" className="inpmodal"/>
+      </form>
       <div className="imgcontainer">
       <div className="imgmodal"></div>
       </div>
