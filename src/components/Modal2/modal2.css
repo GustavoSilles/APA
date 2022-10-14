@@ -1,0 +1,56 @@
+.modalBackground2 {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    display: flex;
+   
+    justify-content: center;
+    color: #532E1C;
+    align-items: center;
+  }
+  
+ 
+  .modalContainer2 {
+    width: 40%;
+    height: auto;
+    margin-top: -191px;
+    border-radius: 12px;
+    background-color: #E6E6E6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.fadeIn {
+  animation: fadeIn 1s linear;
+  
+}
+@keyframes fadeIn {
+  from{ opacity: 0;
+  }
+  to{ opacity: 10; 
+  }
+}
+  
+
+  @media screen and (max-width:940px) {
+    .modalContainer2 {
+      width: 95%;
+      height: auto;
+      margin-top: 16px;
+      border-radius: 12px;
+      background-color: #E6E6E6;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      flex-direction: column;
+    }
+ }
+ 
+ 
+    
+  
+  
+  
+  
+
+  
