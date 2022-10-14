@@ -1,6 +1,13 @@
 export const getComments = async () => {
   return [
-   
+    {
+      id: "1",
+      body: "Primeiro comentario, e o abilio é viado",
+      username: "Gustavo",
+      userId: "1",
+      parentId: null,
+      createdAt: "2005-03-11T23:00:33.010+02:00",
+    },
   ];
 };
 
