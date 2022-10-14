@@ -1,12 +1,17 @@
-import React from 'react'
+import React, { useState }  from 'react'
 import './posts.css'
 import {BsFillChatLeftTextFill} from "react-icons/bs"
 import {BsFillShareFill} from "react-icons/bs"
+import Modal2 from '../Modal2/modal2'
+
 
 const Posts = () => {
+    
+    const [modalOpen, setModalOpen] = useState(false);
     return (
        
        <>
+      
        <div className='postzao'>
                 <div className='posixion'>
                 <div className='box'>
@@ -21,10 +26,14 @@ const Posts = () => {
                         <div className='propriafoto'></div>
                     </div>
                     <div className='footerbox'>
-                    <div className='ascoisas'>
+                    <div className='ascoisas'onClick={() => {setModalOpen(true)}}>
                     <BsFillChatLeftTextFill className='iconbox' />
+                
                     <div className='textbox'>Comente</div>
+                
+                    
                     </div>
+                        
                     <div className='ascoisas2'>
                     <BsFillShareFill className='iconbox'/>
                     <div className='textbox'>Compartilhe</div>
@@ -32,10 +41,21 @@ const Posts = () => {
                     </div>
                     <div className='comentario'></div>
                 </div>
+                {modalOpen && <Modal2 setOpenModal={setModalOpen} />}
                 </div>
+              
+                </div>
+               
+                <div>
+               
 
-                </div>
+       
+               
+      </div>
+     
+     
                 </> 
+                
                 
       
     )
