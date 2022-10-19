@@ -9,6 +9,7 @@ const Home = () => {
     return (
         <>
         <Navbar/>
+        <div className='scroll'>
         <div className='home'>
             <div className="container">
                 <div className="content">
@@ -23,6 +24,9 @@ const Home = () => {
         <Home2/>
         <Home3/>
         <Footer/>
+        </div>
+       
+        
         </>
         
         
