@@ -7,8 +7,10 @@ const Home2 = () => {
         <div className='home2'>
             <div className="container" >
                 <div className="content">
-                    <h2><span>Eles</span> são especiais</h2>
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi officiis unde perferendis voluptas laborum aliquam culpa officia a maiores porro. Consequuntur officia corporis aliquam numquam, fuga quisquam illo. Obcaecati, voluptatum.</p>
+                    <h2><span>Eles</span> são necessários</h2>
+                    <p>Quando se está tendo terapia a presença (e ajuda) de um animalzinho de estimação, reduzirá os pensementos negativos
+                        de seus tutores, pois sua presença conseguemenizar todos os sintomas de estresse, angústia, tristeza e solidão. 
+                    </p>
                     <div>
                      <Link to='/apimapa'><button>Resgate um animal</button></Link>
                     </div>

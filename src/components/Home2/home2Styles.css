@@ -31,8 +31,8 @@
     left: 50%;
     top: 30%;
     width: 50%;
+    text-shadow: 1px 1px 1px  black;
 }
-
 
 .home2 .content p {
     margin: 1rem 0;

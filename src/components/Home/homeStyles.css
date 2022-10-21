@@ -12,6 +12,10 @@
     height: 100vh;
   
 }
+.blackButton{
+    background-color: black;
+    border: 0;
+}
 
 
 
@@ -31,7 +35,8 @@
     justify-content: center;
     padding: 1rem;
     margin-top: 2rem;
-    margin-left: 6rem;
+    margin-right: 6rem;
+    text-shadow: 1px 1px 1px  black;
 }
 
 .home h1 {
@@ -39,7 +44,7 @@
 }
 
 .home .marrom {
-    color: var(--primary-color);
+    color: black;
 }
 
 @media screen and (max-width:940px) {

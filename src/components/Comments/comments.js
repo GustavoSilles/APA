@@ -60,7 +60,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
 
   return (
     <div className="comments">
-      <h3 className="comments-title">Comentario</h3>
+      <h3 className="comments-title">Comentário</h3>
       <div className="comment-form-title">Escrever comentário:</div>
       <CommentForm submitLabel="comentar"  handleSubmit={addComment}/>
       <div className="comments-container">

@@ -6,9 +6,13 @@ const Home3 = () => {
         <div className='home3'>
             <div className="container" >
                 <div className="content">
-                    <h2><span>Ame</span> os animais</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus at veritatis quisquam voluptatem nostrum reprehenderit, tempore sint placeat, aperiam alias, facilis voluptate quod itaque deleniti molestiae non odit esse necessitatibus.</p>
-                <div><button>Contatar</button></div>
+                    <h2><span className='grayText'>Ame</span> os animais</h2>
+                    <p>Mesmo quando estamos nos sentindo sozinhos e sem nenhum amigo, nossos animais sempre estarão
+                       conosco. Nós precisamos mais deles do que ele de nós, e para que um possa cuidar do outro, 
+                       é preciso que você adote e cuide bem de seu animalzinho. Caso possua dúvidas, 
+                       basta entrar em contato com nossa equipe. 
+                    </p>
+                <div><button className='grayButton'>Contatar</button></div>
                 </div>
             </div>
         </div>

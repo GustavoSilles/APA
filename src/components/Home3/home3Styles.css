@@ -25,11 +25,22 @@
 
 .home3 h2 {
     color: #E6E6E6;
+    text-shadow: 1px 1px 1px  black;
 }
+.grayButton{
+    background-color:#333;
+    border: 0;
+}
+.grayText{
+    color:#333;
+    
+}
+
 
 .home3 p {
     color: #E6E6E6;
     margin: 1rem 0;
+    text-shadow: 1px 1px 1px  black;
 }
 
 

@@ -21,30 +21,30 @@ const Perfil = () => {
          
             <div className='inputes'>
               <div className='inpt'>
-              <label className='label'>Alterar name:</label>
+              <label className='label'>Alterar nome:</label>
             <input  type="text" className='inp_perfil' placeholder='Gustavo Silles'/>
             </div>
             <div className='inpt'>
-            <label className='label'>Alterar username:</label>
+            <label className='label'>Alterar nome de usuário:</label>
             <input  type="text" className='inp_perfil' placeholder='Gustavin'/>
             </div>
             <div className='inpt'>
-            <label className='label'>Alterar email:</label>
+            <label className='label'>Alterar e-mail:</label>
             <input  type="text" className='inp_perfil' placeholder='sillesgustavo05@gmail.com'/>
             </div>
             <div className='inpt'>
-            <label className='label'>Alterar password:</label>
+            <label className='label'>Alterar senha:</label>
             <input  type="password" className='inp_perfil' placeholder='********'/>
             </div>
             </div>
-            <div className='cantodolula'>
+            <div className='cantoEsquerdo'>
           <button className='btn_perfil'>Salvar alterações</button>
           </div>
           </div>
         
           </div>
         </div>
-            <Footer/>
+           
         </>
     )
 }

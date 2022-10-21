@@ -16,7 +16,7 @@
     content: '';
     width: 10rem;
     height: 10rem;
-    border: 5px solid #E6E6E6;
+    border: 5px solid #fff;
     margin-top: 140px;
     margin-left: 3%;
     cursor: pointer;
@@ -28,7 +28,7 @@
     border-radius:12px 12px 0 0;
     height: 12rem;
     z-index: 2;
-    background: #532E1C;
+    background: #333;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -44,7 +44,7 @@
 }
 .gustavin{
     margin-top: 50px;
-    margin-left: 3%;
+    margin-left: 6.2%;
     font-size: 25px;
     font-weight:500;
 }
@@ -69,8 +69,9 @@
 }
 .btn_perfil{
     margin-right: 4%;
+    background-color: #333;
 }
-.cantodolula{
+.cantoEsquerdo{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -92,7 +93,7 @@
     display: flex;
     z-index: 1;
     border-radius: 0 0 12px 12px;
-    color: #532E1C;
+    color: #000000;
     margin-bottom: 1.5%;
     height: auto;
     background: #E6E6E6;
