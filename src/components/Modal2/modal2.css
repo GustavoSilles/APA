@@ -1,20 +1,22 @@
 .modalBackground2 {
     width: 100%;
-    height: auto;
+    height: 500px;
     position: fixed;
     display: flex;
-   
+    top: 150px;
     justify-content: center;
     color: #532E1C;
     align-items: center;
   }
   
- 
+  .fadeIn{
+    overflow-y: scroll;
+  }
+  
   .modalContainer2 {
     width: 40%;
-    height: auto;
+    height: 100%;
     padding: 10px;
-    margin-top: -191px;
     border-radius: 12px;
     background-color: #E6E6E6;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -37,15 +39,14 @@
   @media screen and (max-width:940px) {
     .modalContainer2 {
       width: 95%;
-      height: auto;
-      margin-top: 16px;
+      height: 100%;
       border-radius: 12px;
       background-color: #E6E6E6;
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       display: flex;
       flex-direction: column;
     }
- }
+  }
  
  
     

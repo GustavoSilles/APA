@@ -3,7 +3,6 @@
     height: 100vh;
     scroll-snap-align: center;
     position: relative;
-    background: rgba(0, 0, 0, .1);
 }
 .home2 h2 {
     color: #E6E6E6;
