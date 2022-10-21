@@ -7,6 +7,7 @@ import Home from "./components/Home/home"
 import Home2 from "./components/Home2/home2"
 import Home3 from "./components/Home3/home3"
 import LandingPage from "./components/Landingpage/landingpage"
+import LeiaMais from "./components/LeiaMais/leiamais"
 import Login from "./components/Login/login"
 import Navbar from "./components/Navbar/navbar"
 import Perfil from "./components/Perfil/perfil"
@@ -26,6 +27,7 @@ function App(){
           <Route path="/home2" element={<Home2 />} />
           <Route path="/home3" element={<Home3 />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/leiamais" element={<LeiaMais />} />
           <Route path="/navbar" element={<Navbar />} />
           <Route path="/perfil" element={<Perfil />} />
       </Routes>

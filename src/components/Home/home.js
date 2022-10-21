@@ -4,6 +4,7 @@ import Home2 from '../Home2/home2'
 import Home3 from '../Home3/home3'
 import Navbar from '../Navbar/navbar'
 import Footer from '../Footer/footer'
+import {Link} from 'react-router-dom'
 
 const Home = () => {
     return (
@@ -17,7 +18,7 @@ const Home = () => {
                     <h2 className='preto'>você pode</h2>
                     <h1 className='marrom'>Proteger</h1>
                     <h2 className='preto'>os animais?</h2>
-                    <div><button className='blackButton'>Leia mais</button></div>
+                   <Link to="/leiamais"><button className='blackButton'>Leia mais</button></Link>
                 </div>
             </div>
         </div>
