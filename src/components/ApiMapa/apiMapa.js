@@ -20,7 +20,8 @@ const ApiMapa = () => {
         <>
     <Navbar/>
      <LoadScript
-      googleMapsApiKey="AIzaSyBR9lQa8zmcvvzbh1mbbetR7t59-pjCSxk"
+      googleMapsApiKey="AIzaSyDrTIZQcdJFV8sv5VwV-S4v2YOgtO3AcfU"
+      // googleMapsApiKey="AIzaSyBR9lQa8zmcvvzbh1mbbetR7t59-pjCSxk"
     >
       <GoogleMap
         mapContainerStyle={containerStyle}
