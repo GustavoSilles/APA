@@ -17,13 +17,12 @@ const CommentForm = ({
   return (
     <form onSubmit={onSubmit}>
       <textarea
+      placeholder="Escrever comentario"
         className="comment-form-textarea"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button className="comment-form-button" disabled={isTextareaDisabled}>
-        {submitLabel}
-      </button>
+      <div className="atualizar">
       {hasCancelButton && (
         <button
           type="button"
@@ -32,7 +31,13 @@ const CommentForm = ({
         >
           Cancelar
         </button>
+       
       )}
+      
+      <button className="comment-form-button" disabled={isTextareaDisabled}>
+        {submitLabel}
+      </button>
+      </div>
     </form>
   );
 };
