@@ -90,7 +90,7 @@ const ApiMapa = () => {
         center={center}
         zoom={12}
       >
-        <Marker position={center} 
+        <Marker className="map-marker" position={center} 
         options={{
           label: {
             text: "Centro Veterinário AnimalVet",
