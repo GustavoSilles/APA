@@ -14,9 +14,11 @@ const containerStyle = {
   };
 
   const localizacao = [{
+    id: 1,
     lat: -27.431461222742616,
     lng: -48.39659835064593
   }, {
+    id: 2,
     lat: -27.4393955680015051,
     lng: -48.49331615525595
   }, {
@@ -90,21 +92,21 @@ const ApiMapa = () => {
         center={center}
         zoom={12}
       >
-        <Marker className="map-marker" position={center} 
+        <Marker position={center} 
         options={{
           label: {
             text: "Centro Veterinário AnimalVet",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao[1]} 
         options={{
           label: {
             text: "Animal Care Medicina",
             className: "map-marker"
           }
         }} /> 
-        <Marker position={localizacao} 
+        <Marker position={localizacao[2]} 
         options={{
           label: {
             text: "Animal Land pet center",
