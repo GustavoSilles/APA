@@ -12,6 +12,7 @@ const Feed = () => {
     return (
         <>
           <Navbar/>
+         
         <div className='feed'>
             <div className="container-feed">
                 <div className='divpost'>
@@ -44,7 +45,7 @@ const Feed = () => {
            
            
             </div>
-          
+            
 
                 
         </>

@@ -4,7 +4,7 @@
 }
 
 
-.feed:before {
+.feed::before {
     content: '';
     position: fixed;
     background: url('../../assets/ongs-que-ajudam-animais-de-rua.jpg') no-repeat center center/cover;

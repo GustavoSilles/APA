@@ -12,12 +12,12 @@ const Modal2 =({ setOpenModal }) => {
       <div className="modalContainer2">
       <div className="fadeIn">
        
-      <CgClose size={22} color='#532E1C' onClick={() => {setOpenModal(false) }} id="cancelBtn" className="iconmodal"/>
-      <div>
-      <Comments
-        commentsUrl="http://localhost:3004/Comments"
-        currentUserId="1"
-      />
+        <CgClose size={22} color='#532E1C' onClick={() => {setOpenModal(false) }} id="cancelBtn" className="iconmodal"/>
+        <div>
+          <Comments
+            commentsUrl="http://localhost:3004/Comments"
+            currentUserId="1"
+        />
       </div>
        
     
