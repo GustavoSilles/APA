@@ -99,7 +99,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao[1]} 
+        <Marker position={localizacao.id(1)} 
         options={{
           label: {
             text: "Animal Care Medicina",
