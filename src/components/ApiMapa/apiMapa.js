@@ -34,7 +34,11 @@ const ApiMapa = () => {
         zoom={12}
       >
        <Marker position={petshop} />
-        <Marker position={center} options={{
+        <Marker position={center} 
+        icon={{
+          path: "M 8546 12274 c -311 -61 -636 -299 -905 -661 c -346 -465 -580 -1080 -668 -1758 c -28 -216 -25 -698 5 -894 c 70 -447 219 -789 442 -1011 c 191 -192 431 -281 675 -252 c 581 72 1154 706 1460 1616 c 254 755 281 1550 73 2156 c -203 591 -615 897 -1082 804 Z"
+        }}
+        options={{
           label: {
             text: "Posição teste",
             className: "map-marker"
