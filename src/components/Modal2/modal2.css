@@ -9,20 +9,19 @@
     align-items: center;
   }
   
-  .fadeIn{
-    overflow-y: scroll;
-  }
+  
   
   .modalContainer2 {
     width: 40%;
-    height: 100%;
+    overflow-y: scroll;
+    height: 415px;
     padding: 10px;
     border-radius: 12px;
     background-color: #E6E6E6;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
     display: flex;
     flex-direction: column;
-  }
+}
   
 .fadeIn {
   animation: fadeIn 1s linear;

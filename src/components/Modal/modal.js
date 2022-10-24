@@ -16,9 +16,9 @@ const Modal =({ setOpenModal }) => {
      
         <CgClose size={22} color='#532E1C' onClick={() => {setOpenModal(false) }} id="cancelBtn" className="iconmodal"/>
       </div>
-      <form className="descricaomodal">
-      <textarea  cols="100" rows="10"  placeholder="No que voce esta pensando?" className="inpmodal"/>
-      </form>
+      <div className="textWrapper">
+        <textarea placeholder="No que voce esta pensando?" className="inpmodal"/>
+      </div>
       <div className="imgcontainer">
       <div className="imgmodal"></div>
       </div>
