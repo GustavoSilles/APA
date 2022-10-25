@@ -21,74 +21,74 @@ const containerStyle = {
     lat: -27.439395,
     lng: -48.493316
   }
-  const localizacao3 = {
-    lat: -27.451968,
-    lng: -48.457532
-  }
-  const localizacao4 = {
-    lat: -27.445054 ,
-    lng: -48.387650
-  }
-  const localizacao5 = {
-    lat: -27.551430,
-    lng: -48.496244
-  }
-  const localizacao6 = {
-    lat: -27.575065,
-    lng: -48.513914
-  }
-  const localizacao7 = {
-    lat: -27.600989,
-    lng: -48.500515
-  }
-  const localizacao8 = {
-    lat: -27.653259,
-    lng: -48.479578
-  }
-  const localizacao9 = {
-    lat: -27.680390,
-    lng: -48.499570
-  }
-  const localizacao10 = {
-    lat: -27.676360,
-    lng: -48.500654
-  }
-  const localizacao11 = {
-    lat: -27.663588,
-    lng: -48.535223
-  }
-  const localizacao12 = {
-    lat: -27.592823,
-    lng: -48.550558
-  }
-  const localizacao13 = {
-    lat: -27.591696,
-    lng: -48.557127
-  }
-  const localizacao14 = {
-    lat: -27.575011,
-    lng: -48.513856
-  }
-  const localizacao15 = {
-    lat: -27.596529,
-    lng: -48.550013 
-  }
-  const localizacao16 = {
-    lat: -27.493557,
-    lng: -48.411190
-  }
-  const localizacao17 = {
-    lat: -27.476972,
-    lng: -48.418561
-  }
-  const localizacao18 = {
-    lat: -27.425285,
-    lng: -48.425116
-  }
-  const localizacao19 = {
-    lat: -27.587337,
-    lng: -48.542888
-  }
+  // const localizacao3 = {
+  //   lat: -27.451968,
+  //   lng: -48.457532
+  // }
+  // const localizacao4 = {
+  //   lat: -27.445054 ,
+  //   lng: -48.387650
+  // }
+  // const localizacao5 = {
+  //   lat: -27.551430,
+  //   lng: -48.496244
+  // }
+  // const localizacao6 = {
+  //   lat: -27.575065,
+  //   lng: -48.513914
+  // }
+  // const localizacao7 = {
+  //   lat: -27.600989,
+  //   lng: -48.500515
+  // }
+  // const localizacao8 = {
+  //   lat: -27.653259,
+  //   lng: -48.479578
+  // }
+  // const localizacao9 = {
+  //   lat: -27.680390,
+  //   lng: -48.499570
+  // }
+  // const localizacao10 = {
+  //   lat: -27.676360,
+  //   lng: -48.500654
+  // }
+  // const localizacao11 = {
+  //   lat: -27.663588,
+  //   lng: -48.535223
+  // }
+  // const localizacao12 = {
+  //   lat: -27.592823,
+  //   lng: -48.550558
+  // }
+  // const localizacao13 = {
+  //   lat: -27.591696,
+  //   lng: -48.557127
+  // }
+  // const localizacao14 = {
+  //   lat: -27.575011,
+  //   lng: -48.513856
+  // }
+  // const localizacao15 = {
+  //   lat: -27.596529,
+  //   lng: -48.550013 
+  // }
+  // const localizacao16 = {
+  //   lat: -27.493557,
+  //   lng: -48.411190
+  // }
+  // const localizacao17 = {
+  //   lat: -27.476972,
+  //   lng: -48.418561
+  // }
+  // const localizacao18 = {
+  //   lat: -27.425285,
+  //   lng: -48.425116
+  // }
+  // const localizacao19 = {
+  //   lat: -27.587337,
+  //   lng: -48.542888
+  // }
   
 const ApiMapa = () => {
     
