@@ -1,6 +1,6 @@
 import React from 'react'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import './apiMapaStyles.css'
+import "./apiMapasStyles.css"
 import Navbar from '../Navbar/navbar'
 
 const containerStyle = {
@@ -239,8 +239,13 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
-        
-        
+         <Marker position={localizacao} 
+        options={{
+          label: {
+            text: "Centro Veterinário AnimalVet",
+            className: "map-marker"
+          }
+        }} />
       </GoogleMap>
        </LoadScript> 
         </>
