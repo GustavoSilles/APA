@@ -1,6 +1,6 @@
 import React from 'react'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
-import './apiMapaStyles.css'
+import "./apiMapasStyles.css"
 import Navbar from '../Navbar/navbar'
 
 const containerStyle = {
@@ -107,6 +107,139 @@ const ApiMapa = () => {
         zoom={12}
       >
         <Marker position={localizacao} 
+        options={{
+          label: {
+            text: "Centro Veterinário AnimalVet",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={position} 
+        options={{
+          label: {
+            text: "Animal Land pet center",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao3} 
+        options={{
+          label: {
+            text: "Animal Land pet center",
+            className: "map-marker"
+          }
+        }} /> 
+        <Marker position={localizacao4} 
+        options={{
+          label: {
+            text: "Animal Vital",
+            className: "map-marker"
+          }
+        }} /> 
+        <Marker position={localizacao5} 
+        options={{
+          label: {
+            text: "Petshop anjos de patas",
+            className: "map-marker"
+          }
+        }} /> 
+        <Marker position={localizacao6} 
+        options={{
+          label: {
+            text: "Diretoria de Bem-Estar Animal",
+            className: "map-marker"
+          }
+        }} /> 
+        <Marker position={localizacao7} 
+        options={{
+          label: {
+            text: "Vila Animal Centro Veterinário",
+            className: "map-marker"
+          }
+        }} /> 
+        <Marker position={localizacao8} 
+        options={{
+          label: {
+            text: "Animais e Cia Floripa",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao9} 
+        options={{
+          label: {
+            text: "Animal Village",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao10} 
+        options={{
+          label: {
+            text: "Reino dos Animais",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao11} 
+        options={{
+          label: {
+            text: "Veterinária animal Floripa",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao12} 
+        options={{
+          label: {
+            text: "Hospital Veterinário Vet Ilha",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao13} 
+        options={{
+          label: {
+            text: "Pet Care Center",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao14} 
+        options={{
+          label: {
+            text: "Centro de Zoonoses",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao15} 
+        options={{
+          label: {
+            text: "Centro de Controle de Zoonoses",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao16} 
+        options={{
+          label: {
+            text: "PET GREE SHOP",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao17} 
+        options={{
+          label: {
+            text: "AgroPet agroshop",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao18} 
+        options={{
+          label: {
+            text: "Pet Gold",
+            className: "map-marker"
+          }
+        }} />
+        <Marker position={localizacao19} 
+        options={{
+          label: {
+            text: "Petz",
+            className: "map-marker"
+          }
+        }} />
+         <Marker position={localizacao} 
         options={{
           label: {
             text: "Centro Veterinário AnimalVet",
