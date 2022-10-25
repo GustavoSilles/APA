@@ -18,7 +18,6 @@ const containerStyle = {
     lat: -27.431461222742616,
     lng: -48.39659835064593
   }, {
-    id: 2,
     lat: -27.4393955680015051,
     lng: -48.49331615525595
   }, {
@@ -74,7 +73,7 @@ const containerStyle = {
     lng: -48.542888597569394
   }]
 
-
+const ids = localizacao.map(l => l.id)
   
 const ApiMapa = () => {
     
@@ -99,14 +98,14 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao.id(1)} 
+        <Marker position={localizacao.ids('1')} 
         options={{
           label: {
             text: "Animal Care Medicina",
             className: "map-marker"
           }
         }} /> 
-        <Marker position={localizacao[2]} 
+        <Marker position={localizacao.ids(1)} 
         options={{
           label: {
             text: "Animal Land pet center",
