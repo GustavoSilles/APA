@@ -1,10 +1,38 @@
-import React from "react";
+
 import "./modal.css";
 import {CgClose} from 'react-icons/cg'
 import {HiPhotograph} from "react-icons/hi"
+import React, { useState } from "react";
+import {storage} from "../firebase";
 
 const Modal =({ setOpenModal }) => {
-  
+  const [progress, setProgress] = useState(0)
+  const formHandler = (e) => {
+    e.preventDefault()
+    const file = e.target[0].file[0]
+    uploadFiles(file)
+  }
+  const uploadFiles = (file) => {
+    const uploadTask = storage.ref(`files/${file.name}`).put(file)
+    uploadTask.on(
+      "state_changed",
+      (snapshot) =>{
+        const prog = Math.round(
+          (snapshot.bytesTransferred / snapshot.totalBytes) * 100)
+          setProgress(prog)
+      },
+      (error) => console.log(error),
+      () => {
+        storage
+        .ref("files")
+        .child(file.name)
+        .getDownloadURL()
+        .then((url) => {
+          console.log(url)
+        });
+      }
+    )
+  }
   return (
    
     <div className="modalBackground">
@@ -24,7 +52,11 @@ const Modal =({ setOpenModal }) => {
       </div>
       
       <div className="footermodal">
-       <HiPhotograph className = 'iconmodalimg'size={22} color='#532E1C' /> 
+        <form onSubmit={formHandler}>
+       <HiPhotograph type="file" className = 'iconmodalimg'size={22} color='#532E1C' /> 
+       <HiPhotograph type="submit" className = 'iconmodalimg'size={22} color='#532E1C' /> 
+       </form>
+       
       <button className="btnpostar">Postar</button>
        </div>
      
