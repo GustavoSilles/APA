@@ -120,7 +120,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao3} 
+        {/* <Marker position={localizacao3} 
         options={{
           label: {
             text: "Animal Land pet center",
@@ -238,7 +238,7 @@ const ApiMapa = () => {
             text: "Petz",
             className: "map-marker"
           }
-        }} />
+        }} /> */}
         
       </GoogleMap>
        </LoadScript> 
