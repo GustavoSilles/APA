@@ -14,66 +14,81 @@ const containerStyle = {
   };
 
   const localizacao = {
-    
-    lat: -27.431461222742616,
-    lng: -48.39659835064593
+    lat: -27.431461,
+    lng: -48.396598
      }
-  // , {
-   
-  //   lat: -27.4393955680015051,
-  //   lng: -48.49331615525595
-  // }, {
-  //   lat: -27.451968788255307,
-  //   lng: -48.45753237237153
-  // }, {
-  //   lat: -27.445054400545235,
-  //   lng: -48.38765042731308
-  // }, {
-  //   lat: -27.55143088965647,
-  //   lng: -48.496244861115244
-  // }, {
-  //   lat: -27.57506552888069,
-  //   lng: -48.513914178481585
-  // }, {
-  //   lat: -27.600989381562105,
-  //   lng: -48.50051573092948
-  // }, {
-  //   lat: -27.653259586912817,
-  //   lng: -48.47957860534384
-  // }, {
-  //   lat: -27.680390640506715,
-  //   lng: -48.49957087404924
-  // }, {
-  //   lat: -27.67636018887423,
-  //   lng: -48.50065438395896
-  // }, {
-  //   lat: -27.66358825995029,
-  //   lng: -48.535223851216465
-  // }, {
-  //   lat: -27.5928238455143745,
-  //   lng: -48.550558920510134
-  // }, {
-  //   lat: -27.5916960265658675,
-  //   lng: -48.55712767552501
-  // }, {
-  //   lat: -27.575011782278448,
-  //   lng: -48.513856075486416
-  // }, {
-  //   lat: -27.59652929414465,
-  //   lng: -48.55001367638963
-  // }, {
-  //   lat: -27.49355788094308,
-  //   lng: -48.41119039617368
-  // }, {
-  //   lat: -27.476972059823566,
-  //   lng: -48.4185614539143
-  // }, {
-  //   lat: -27.425285109997326,
-  //   lng: -48.42511644679131
-  // }, {
-  //   lat: -27.5873375981432,
-  //   lng: -48.542888597569394
-  // }]
+  const localizacaooo = {
+    lat: -27.439395,
+    lng: -48.493316
+  }
+  const localizacao3 = {
+    lat: -27.451968,
+    lng: -48.457532
+  }
+  const localizacao4 = {
+    lat: -27.445054 ,
+    lng: -48.387650
+  }
+  const localizacao5 = {
+    lat: -27.551430,
+    lng: -48.496244
+  }
+  const localizacao6 = {
+    lat: -27.575065,
+    lng: -48.513914
+  }
+  const localizacao7 = {
+    lat: -27.600989,
+    lng: -48.500515
+  }
+  const localizacao8 = {
+    lat: -27.653259,
+    lng: -48.479578
+  }
+  const localizacao9 = {
+    lat: -27.680390,
+    lng: -48.499570
+  }
+  const localizacao10 = {
+    lat: -27.676360,
+    lng: -48.500654
+  }
+  const localizacao11 = {
+    lat: -27.663588,
+    lng: -48.535223
+  }
+  const localizacao12 = {
+    lat: -27.592823,
+    lng: -48.550558
+  }
+  const localizacao13 = {
+    lat: -27.591696,
+    lng: -48.557127
+  }
+  const localizacao14 = {
+    lat: -27.575011,
+    lng: -48.513856
+  }
+  const localizacao15 = {
+    lat: -27.596529,
+    lng: -48.550013 
+  }
+  const localizacao16 = {
+    lat: -27.493557,
+    lng: -48.411190
+  }
+  const localizacao17 = {
+    lat: -27.476972,
+    lng: -48.418561
+  }
+  const localizacao18 = {
+    lat: -27.425285,
+    lng: -48.425116
+  }
+  const localizacao19 = {
+    lat: -27.587337,
+    lng: -48.542888
+  }
   
 const ApiMapa = () => {
     
@@ -91,138 +106,133 @@ const ApiMapa = () => {
         center={center}
         zoom={12}
       >
-        <Marker position={center} 
+        <Marker position={localizacao} 
         options={{
           label: {
             text: "Centro Veterinário AnimalVet",
             className: "map-marker"
           }
         }} />
-        
-        {/* {localizacao.map(local =>
-        <Marker position={localizacao} 
-        key={local[1]}
+        <Marker position={localizacaooo} 
         options={{
           label: {
             text: "Animal Land pet center",
             className: "map-marker"
           }
-        }} /> )} */}
-        {/* {localizacao.map(local =>
-        <Marker position={localizacao} 
-        key={local.id}
+        }} />
+        <Marker position={localizacao3} 
         options={{
           label: {
             text: "Animal Land pet center",
             className: "map-marker"
           }
-        }} /> )} */}
-        <Marker position={localizacao} 
+        }} /> 
+        <Marker position={localizacao4} 
         options={{
           label: {
             text: "Animal Vital",
             className: "map-marker"
           }
         }} /> 
-        <Marker position={localizacao} 
+        <Marker position={localizacao5} 
         options={{
           label: {
             text: "Petshop anjos de patas",
             className: "map-marker"
           }
         }} /> 
-        <Marker position={localizacao} 
+        <Marker position={localizacao6} 
         options={{
           label: {
             text: "Diretoria de Bem-Estar Animal",
             className: "map-marker"
           }
         }} /> 
-        <Marker position={localizacao} 
+        <Marker position={localizacao7} 
         options={{
           label: {
             text: "Vila Animal Centro Veterinário",
             className: "map-marker"
           }
         }} /> 
-        <Marker position={localizacao} 
+        <Marker position={localizacao8} 
         options={{
           label: {
             text: "Animais e Cia Floripa",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao9} 
         options={{
           label: {
             text: "Animal Village",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao10} 
         options={{
           label: {
             text: "Reino dos Animais",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao11} 
         options={{
           label: {
             text: "Veterinária animal Floripa",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao12} 
         options={{
           label: {
             text: "Hospital Veterinário Vet Ilha",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao13} 
         options={{
           label: {
             text: "Pet Care Center",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao14} 
         options={{
           label: {
             text: "Centro de Zoonoses",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao15} 
         options={{
           label: {
             text: "Centro de Controle de Zoonoses",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao16} 
         options={{
           label: {
             text: "PET GREE SHOP",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao17} 
         options={{
           label: {
             text: "AgroPet agroshop",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao18} 
         options={{
           label: {
             text: "Pet Gold",
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
+        <Marker position={localizacao19} 
         options={{
           label: {
             text: "Petz",
