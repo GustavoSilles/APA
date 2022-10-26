@@ -4,34 +4,36 @@ import {CgClose} from 'react-icons/cg'
 import {HiPhotograph} from "react-icons/hi"
 import React, { useState } from "react";
 import {storage} from "../firebase";
+import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 const Modal =({ setOpenModal }) => {
-  const [progress, setProgress] = useState(0)
+  const [imgUrl, setImgUrl] = useState(null);
+  const [progresspercent, setProgresspercent] = useState(0);
   const formHandler = (e) => {
     e.preventDefault()
-    const file = e.target[0].file[0]
-    uploadFiles(file)
-  }
-  const uploadFiles = (file) => {
-    const uploadTask = storage.ref(`files/${file.name}`).put(file)
-    uploadTask.on(
-      "state_changed",
-      (snapshot) =>{
-        const prog = Math.round(
-          (snapshot.bytesTransferred / snapshot.totalBytes) * 100)
-          setProgress(prog)
+    const file = e.target[0]?.files[0]
+
+    if(!file) return; 
+    
+
+    const storageRef = ref(storage, `files/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    uploadTask.on("state_changed",
+      (snapshot) => {
+        const progress =
+          Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+        setProgresspercent(progress);
       },
-      (error) => console.log(error),
+      (error) => {
+        alert(error);
+      },
       () => {
-        storage
-        .ref("files")
-        .child(file.name)
-        .getDownloadURL()
-        .then((url) => {
-          console.log(url)
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          setImgUrl(downloadURL)
         });
       }
-    )
+    );
   }
   return (
    
@@ -51,14 +53,16 @@ const Modal =({ setOpenModal }) => {
       <div className="imgmodal"></div>
       </div>
       
-      <div className="footermodal">
-        <form onSubmit={formHandler}>
-       <HiPhotograph type="file" className = 'iconmodalimg'size={22} color='#532E1C' /> 
-       <HiPhotograph type="submit" className = 'iconmodalimg'size={22} color='#532E1C' /> 
+      
+        <form onSubmit={formHandler} className="footermodal">
+        <label className="label-file" for="input-file">
+          <HiPhotograph className="iconmodalimg"size={22} color='#532E1C' />
+        </label>
+       <input type="file" id='input-file'/> 
+       <button type="submit" className="btnpostar">Postar</button> 
        </form>
        
-      <button className="btnpostar">Postar</button>
-       </div>
+      
      
       </div>
       </div>

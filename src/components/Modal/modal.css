@@ -58,17 +58,17 @@
   color: black;
   border: 0;
   font-family: roboto;
-  height: auto;
+  height: 5rem;
+  font-size: 18px;
   border-radius: 0%;
   padding-top: 20px;
-  max-height: 4.7rem;
   padding-left: 15px;
   box-shadow: none;
   background-color: #E6E6E6;
   resize: none;
 }
 
-.inpmodal:focus{
+.inpmodal:focus {
   outline: none;
 }
 
@@ -94,13 +94,21 @@
   display: flex;
 }
 
-.iconmodalimg {
-  margin-left: 5%;
-  transition-duration: 0.3s;
+#input-file {
+  display: none;
+
 }
+
+.label-file {
+  margin-left: 5%;
+
+}
+
 
 .iconmodalimg:hover {
   color: #5f3d2b;
+  cursor: pointer;
+  transition-duration: 0.3s;
   transform: scale(1.1)
 }
 
