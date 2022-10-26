@@ -26,8 +26,8 @@ const Cadastro = () => {
               }
               await fetch('http://localhost:3000/api/user', requestOptions)
               //await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
-              window.location.href = "./login "
-          }catch( error){
+              window.location.href= "./login"
+            }catch( error){
               console.log(error)
               setUsername('')
               setName('')

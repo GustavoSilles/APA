@@ -23,9 +23,9 @@ import React, {useState} from "react";
                   if(response.status === 400){
                   alert("Erro!, Usuário não encontrado")
                   }else{
-                       window.location.href = "./home "
-                      const data = await response.json()
+                    const data = await response.json()
                       setUsers(data)
+                      window.location.href= "./home"
                       }
               }catch(error){
                   console.log(error)
