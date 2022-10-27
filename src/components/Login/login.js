@@ -19,10 +19,11 @@ import React, {useState} from "react";
                           password: password
                       })
                   }
-                  const response = await fetch('http://localhost:3000/api/login/user', requestOptions)
+                  const response = await fetch('http://localhost:3001/api/login/user', requestOptions)
                   if(response.status === 400){
                   alert("Erro!, Usuário não encontrado")
                   }else{
+                   
                     const data = await response.json()
                       setUsers(data)
                       window.location.href= "./home"
@@ -30,7 +31,7 @@ import React, {useState} from "react";
               }catch(error){
                   console.log(error)
                       }
-         }}   
+         }}
       return (
         <div className="login">
           <div className="container-login">
