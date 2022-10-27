@@ -8,13 +8,13 @@
   align-items: center;
 }
 
-.imgmodal {
-  background: url('../../assets/8.jpg') no-repeat center center/cover;
+ .imgmodal {
+  
   content: '';
   width: 95%;
   border-radius: 5px;
   height: 20rem;
-}
+} 
 
 .imgcontainer {
   justify-content: center;

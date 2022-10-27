@@ -7,8 +7,8 @@ import {storage} from "../firebase";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 const Modal =({ setOpenModal }) => {
-  const [imgUrl, setImgUrl] = useState(null);
-  const [progresspercent, setProgresspercent] = useState(0);
+  const [imgURL, setImgURL] = useState("");
+  const [progressPorcent, setProgresspercent] = useState(0);
   const formHandler = (e) => {
     e.preventDefault()
     const file = e.target[0]?.files[0]
@@ -28,10 +28,11 @@ const Modal =({ setOpenModal }) => {
       (error) => {
         alert(error);
       },
-      () => {
+     () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          setImgUrl(downloadURL)
+          setImgURL(downloadURL)
         });
+        
       }
     );
   }
@@ -50,16 +51,17 @@ const Modal =({ setOpenModal }) => {
         <textarea placeholder="No que voce esta pensando?" className="inpmodal"/>
       </div>
       <div className="imgcontainer">
-      <div className="imgmodal"></div>
+      {!imgURL && <p>{progressPorcent}%</p>}
+      {imgURL && <img className="imgmodal" src={imgURL} alt="Imagem" />}
       </div>
       
       
-        <form onSubmit={formHandler} className="footermodal">
+        <form onSubmit={formHandler}className="footermodal">
         <label className="label-file" for="input-file">
           <HiPhotograph className="iconmodalimg"size={22} color='#532E1C' />
         </label>
-       <input type="file" id='input-file'/> 
-       <button type="submit" className="btnpostar">Postar</button> 
+      <input type="file" id='input-file' onChange={setImgURL}/> 
+      <button  className="btnpostar">Postar</button> 
        </form>
        
       
