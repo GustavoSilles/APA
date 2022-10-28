@@ -52,7 +52,7 @@ const Modal =({ setOpenModal }) => {
       </div>
       <div className="imgcontainer">
       {!imgURL && <p>{progressPorcent}%</p>}
-      {imgURL && <img className="imgmodal"  src={imgURL} alt="Imagem" />}
+      {imgURL && <img className="imgmodal" src={URL.createObjectURL(imgURL)}  alt="Imagem"/>}
       </div>
       
       
@@ -60,8 +60,8 @@ const Modal =({ setOpenModal }) => {
         <label className="label-file" for="input-file">
           <HiPhotograph className="iconmodalimg"size={22} color='#532E1C' />
         </label>
-      <input type="file" id='input-file' onChange={setImgURL}/> 
-      <button  className="btnpostar">Postar</button> 
+      <input type="file" id='input-file' onChange={e => setImgURL(e.target.files[0])}/> 
+      <button type="submit" className="btnpostar">Postar</button> 
        </form>
        
       
