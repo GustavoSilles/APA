@@ -52,7 +52,7 @@ const Modal =({ setOpenModal }) => {
       </div>
       <div className="imgcontainer">
       {!imgURL && <p>{progressPorcent}%</p>}
-      {imgURL && <img className="imgmodal" src={imgURL} alt="Imagem" />}
+      {imgURL && <img className="imgmodal"  src={imgURL} alt="Imagem" />}
       </div>
       
       

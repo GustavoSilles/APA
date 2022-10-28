@@ -1,19 +1,31 @@
 .modalBackground {
   width: 100%;
   height: auto;
+  top: 190px;
   position: fixed;
   display: flex;
   justify-content: center;
   color: #532E1C;
   align-items: center;
 }
+.modalContainer::-webkit-scrollbar-track {
+  background-color: #E6E6E6;
+}
+.modalContainer::-webkit-scrollbar {
+  width: 8px;
+  
+  background: #000000;
+}
+.modalContainer::-webkit-scrollbar-thumb{
+  background: #000000;
+  border-radius: 7px;
+ 
+}
 
  .imgmodal {
-  
-  content: '';
   width: 95%;
   border-radius: 5px;
-  height: 20rem;
+  height: 100%;
 } 
 
 .imgcontainer {
@@ -24,8 +36,9 @@
 
 .modalContainer {
   width: 40%;
-  height: auto;
+  max-height: 500px;
   margin-top: 16px;
+  overflow-y: scroll;
   border-radius: 12px;
   background-color: #E6E6E6;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
