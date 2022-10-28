@@ -32,11 +32,13 @@ body {
 }
 ::-webkit-scrollbar {
   width: 8px;
+  
   background: #000000;
 }
 ::-webkit-scrollbar-thumb {
   background: #000000;
   border-radius: 7px;
+ 
 }
 
 ul {
