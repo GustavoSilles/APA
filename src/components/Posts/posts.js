@@ -6,7 +6,6 @@ import Modal2 from '../Modal2/modal2'
 
 
 const Posts = () => {
-    
     const [modalOpen, setModalOpen] = useState(false);
     return (
        
