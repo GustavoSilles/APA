@@ -12,6 +12,8 @@ const containerStyle = {
     lat:  -27.590824,
     lng: -48.551262 
   };
+  
+  var minhaImagem = '../assets/auauau.png'
 
   const localizacao = {
     lat: -27.431461,
@@ -109,13 +111,14 @@ const ApiMapa = () => {
         options={{
           label: {
             text: "Centro Veterinário AnimalVet",
-            className: "map-marker"
+            className: "map-marker",
+            icone: minhaImagem
           }
         }} />
         <Marker position={position} 
         options={{
           label: {
-            text: "Animal Land pet center",
+            text: "Animal Care pet center",
             className: "map-marker"
           }
         }} />

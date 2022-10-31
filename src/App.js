@@ -13,6 +13,7 @@ import Navbar from "./components/Navbar/navbar"
 import Perfil from "./components/Perfil/perfil"
 import './index.css';
 import ApiMapa from './components/ApiMapa/apiMapa'
+import ApiMapaTest from "./components/ApiMapaTest/apifront.html"
 
 function App(){
   return (
