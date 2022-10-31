@@ -51,7 +51,6 @@ const Modal =({ setOpenModal }) => {
         <textarea placeholder="No que voce esta pensando?" className="inpmodal"/>
       </div>
       <div className="imgcontainer">
-      {!imgURL && <p>{progressPorcent}%</p>}
       {imgURL && <img className="imgmodal" src={URL.createObjectURL(imgURL)}  alt="Imagem"/>}
       </div>
       

@@ -13,11 +13,17 @@ import Navbar from "./components/Navbar/navbar"
 import Perfil from "./components/Perfil/perfil"
 import './index.css';
 import ApiMapa from './components/ApiMapa/apiMapa'
+import Adm from "./components/Adm/adm"
+import Perfil2 from './components/Perfil2/perfil2'
+import Navbar2 from './components/Navbar2/navbar2'
 
 function App(){
   return (
     <Router>
       <Routes>
+          <Route path="/perfil2" element={<Perfil2 />} />
+          <Route path="/adm" element={<Adm />} />
+          <Route path="/navbar2" element={<Navbar2 />} />
           <Route path="/" element={<LandingPage />} />
           <Route path="/apimapa" element={<ApiMapa />} />
           <Route path="/cadastro" element={<Cadastro />} />
