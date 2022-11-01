@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import "./cadastro.css";
 import {Link} from 'react-router-dom'
+import GoogleLogin from '@leecheuk/react-google-login'
 
 const Cadastro = () => {
 
@@ -8,7 +9,9 @@ const Cadastro = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
+    const responseGoogle = (response) => {
+      console.log(response);
+    }
 
     const postUser = async () => {  
 
@@ -93,7 +96,16 @@ const Cadastro = () => {
                 <span className="txt1">já possui conta? </span>
                 <Link to='/login'> <p className="txt2">Fazer login</p></Link>
               </div>
+              <div>
+            <GoogleLogin
+              clientId="1097643803374-c7g4t2g4i8kitlmo3uamagsub95cilo5.apps.googleusercontent.com"
+              buttonText="Continuar com o google"
+              onSuccess={responseGoogle}
+              onFailure={responseGoogle}
+              />,
+              </div>
             </form>
+           
           </div>
         </div>
       </div>

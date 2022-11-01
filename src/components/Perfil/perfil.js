@@ -10,6 +10,7 @@ const Perfil = () => {
           <div className='box-perfil'>
           <div className='fundo-perfil'>
             <div className='foto-perfil'></div>
+            <p className='logout'>Logout</p>
           </div>
           </div>
          
