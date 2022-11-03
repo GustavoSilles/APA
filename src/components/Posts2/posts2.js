@@ -1,11 +1,13 @@
 import React, { useState }  from 'react'
-import './posts.css'
+import './posts2.css'
 import {BsFillChatLeftTextFill} from "react-icons/bs"
+import {IoMdTrash} from "react-icons/io"
 import {BsFillShareFill} from "react-icons/bs"
 import Modal2 from '../Modal2/modal2'
 
 
-const Posts = () => {
+const Posts2 = () => {
+    
     const [modalOpen, setModalOpen] = useState(false);
     return (
        
@@ -15,8 +17,12 @@ const Posts = () => {
                 <div className='posixion'>
                 <div className='box'>
                     <div className='navbox'>
+                        <div className='abilio'>
                         <div className='fotopost2'></div>
-                        <div className='nominho'>Gustavin</div>
+                        <div className='nominho'>Admin</div>
+                        </div><div className='lixoxo'>
+                        <IoMdTrash className='lixo'/>
+                        </div>
                     </div>
                     <div className='descricao'>
                         <p className='descrison'>oia que gatinho bunitu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -60,7 +66,7 @@ const Posts = () => {
     )
 }
 
-export default Posts
+export default Posts2
 
 
 

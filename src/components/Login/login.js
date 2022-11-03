@@ -9,7 +9,7 @@ import React, {useState} from "react";
      
           const getUsers = async () => {
             if(email == "adm" && password == "123"){
-              window.location.href= "./feed"
+              window.location.href= "./adm"
             }else{
               if (email && password != "") {
               try{

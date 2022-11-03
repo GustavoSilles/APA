@@ -1,0 +1,112 @@
+.box{
+    width: 50%;
+    height: auto;
+    border-radius:12px;
+    margin-top: 20px;
+    background: #E6E6E6;
+    margin-bottom: 1rem;
+
+}
+.postzao{
+    height: auto;
+}
+.posixion{
+    display: flex;
+    justify-content: center;
+}
+
+.fotopost2{
+    background: url('../../assets/WIN_20220927_16_51_31_Pro.jpg') no-repeat center center/cover;
+    content: '';
+    width: 3rem;
+    height: 3rem;
+    margin-left: 2%;
+    cursor: pointer;
+    border-radius:50%;
+}
+
+.nominho{
+    color: #532E1C;
+    margin-left: 2%;
+}
+.descricao{
+    width: 100%;
+    height: auto;
+    min-height: 5vh;
+    display: flex;
+    background-color: #E6E6E6;
+    color: #532E1C;
+}
+.descrison{
+    margin-left: 2%;
+    font-size: clamp(1em, 1em + 1vw, 1.2em);
+}
+.propriafoto{
+    background: url('../../assets//funny-cat-videos-wide.jpg') no-repeat center center/cover;
+    content: '';
+    width: 100%;
+    height: 20rem;
+}
+
+.footerbox{
+    width: 100%;
+    background-color: #E6E6E6;
+    display: flex;
+    color: #532E1C;
+    align-items: center;
+    justify-content: space-around;
+    height: 4rem;
+    flex-direction: row;
+    border-radius: 0 0 12px 12px;
+}
+.ascoisas{
+    display: flex;
+   align-items: center;
+   cursor: pointer;
+   gap: 12px;
+    flex-direction: row;
+}
+.ascoisas2{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: row;
+}
+.navbox{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#E6E6E6;
+    width: 100%;
+    border-radius:12px 12px 0 0;
+    height: 4.5rem;
+}
+.abilio{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 110px;
+    margin-left: 2%;
+}
+.lixo{
+    color: red;
+    height: 25px;
+    width: 25px;
+    margin-left: -45%;
+}
+@media screen and (max-width: 940px) {
+    .box{
+        width: 95%;
+        height: auto;
+        border-radius:12px;
+        margin-top: 20px;
+        background: #E6E6E6;
+        margin-bottom: 1rem;
+    
+    }
+}
+
+
+
