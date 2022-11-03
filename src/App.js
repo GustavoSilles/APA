@@ -17,6 +17,7 @@ import Adm from "./components/Adm/adm"
 import Perfil2 from './components/Perfil2/perfil2'
 import Navbar2 from './components/Navbar2/navbar2'
 
+
 function App(){
   return (
     <Router>
