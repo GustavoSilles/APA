@@ -86,6 +86,13 @@
     justify-content: center;
     align-items: center;
 }
+.logout{
+    margin-left: 85%;
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight:500;
+}
 
 .box-perfil2{
     width: 50%;

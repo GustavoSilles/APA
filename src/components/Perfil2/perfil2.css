@@ -101,3 +101,31 @@
     justify-content: space-around;
    
 }
+@media screen and (max-width: 940px) {
+    .box-perfil{
+        width: 95%;
+        display: flex;
+        border-radius:12px 12px 0 0;
+        height: 8rem;
+        z-index: 2;
+        background: #532E1C;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around; 
+        margin-top: 1rem;
+    }
+    .box-perfil2{
+        width: 95%;
+        display: flex;
+        z-index: 1;
+        border-radius: 0 0 12px 12px;
+        color: #000000;
+        margin-bottom: 1.5%;
+        height: auto;
+        background: #E6E6E6;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+       
+    }
+}

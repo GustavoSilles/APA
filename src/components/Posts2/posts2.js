@@ -16,7 +16,7 @@ const Posts2 = () => {
        <div className='postzao'>
                 <div className='posixion'>
                 <div className='box'>
-                    <div className='navbox'>
+                    <div className='navbox2'>
                         <div className='abilio'>
                         <div className='fotopost2'></div>
                         <div className='nominho'>Admin</div>
