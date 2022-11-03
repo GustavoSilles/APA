@@ -22,16 +22,7 @@ const Feed = () => {
                    
                     </div>
                     
-                    <div className='bagulhinhos'>
-                     <div className='localização'>
-                    <FiMapPin className='map-icon' />
-                    <div className='teixto'>Localização</div>
-                    </div>
-                    <div className='foto-icon'>
-                    <HiPhotograph className = 'img-icon' />   
-                    <div className='teixto2'>Foto</div>
-                    </div> 
-                    </div>
+                   
                 </div>
                 {modalOpen && <Modal setOpenModal={setModalOpen} />}
                 </div>
