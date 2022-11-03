@@ -15,8 +15,11 @@ const Posts = (descricao, imgURL) => {
                 <div className='posixion'>
                 <div className='box'>
                     <div className='navbox'>
+                        <div className='pika'>
                         <div className='fotopost2'></div>
                         <div className='nominho'>Gustavin</div>
+                        </div>
+                        <p className='denunciar'>Denunciar</p>
                     </div>
                     <div className='descricao'>
                         <p className='descrison'>{descricao}</p>

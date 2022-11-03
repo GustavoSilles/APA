@@ -27,7 +27,7 @@
 
 .nominho{
     color: #532E1C;
-    margin-left: 2%;
+    margin-left: 10px;
 }
 .descricao{
     width: 100%;
@@ -73,10 +73,25 @@
     cursor: pointer;
     flex-direction: row;
 }
+.pika{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+.denunciar{
+    font-size: 16px;
+    font-family: roboto;
+    cursor: pointer;
+    color: red;
+    font-weight:500;
+    margin-right: 2%;
+}
+
 .navbox{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
     background-color:#E6E6E6;
     width: 100%;
     border-radius:12px 12px 0 0;

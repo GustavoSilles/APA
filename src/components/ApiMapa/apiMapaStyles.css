@@ -2,7 +2,11 @@
     height: 100vh;
 }
 .map-marker{
-    margin-top:-30;
+    margin-bottom: 40px;
     color: white;
-    text-decoration: white;
+    font-size: 400px;
+}
+text{
+    color: white;
+    font-size: 400px; 
 }
