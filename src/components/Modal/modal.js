@@ -23,9 +23,10 @@ const Modal =({ setOpenModal }) => {
                       descricao: descricao
                   })
               }
-              await fetch('http://localhost:3001/api/post', requestOptions)
+              const resp = await fetch('http://localhost:3001/api/post', requestOptions)
               //await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
               window.location.reload();
+              onAddPost(resp)
             }catch( error){
               setImgURL('')
               setDescricao('')

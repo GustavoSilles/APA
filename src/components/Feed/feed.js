@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './feedStyles.css'
 import Navbar from '../Navbar/navbar'
 import {FiMapPin} from "react-icons/fi"
@@ -7,34 +7,35 @@ import Posts from "../Posts/posts"
 import Modal from '../Modal/modal'
 
 const Feed = (list) => {
+    console.log(list);
     const [modalOpen, setModalOpen] = useState(false);
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
 
 
-    const getPostagem = async ({onAddPost}) => {  
+    const getPostagem = async () => {  
 
-        if (imgURL && descricao != "") {
+        
             try {
                 const requestOptions = {
-                    method: 'GET',
-                    headers: { 'Content-type': 'application/json' },
-                    body: JSON.stringify({
-                        imgURL: imgURL,
-                        descricao: descricao
-                    })
+                    method: 'GET'
                 }
-                await fetch('http://localhost:3001/api/post', requestOptions)
-                window.location.reload();
+                const resp = await fetch('http://localhost:3001/api/post', requestOptions)
+                //window.location.reload();
+                console.log("getdobasit", resp);
               }catch( error){
+                console.log(error);
                 setImgURL('')
                 setDescricao('')
                 
             }
-        }else{
-          alert("bla")
-            }
         }
+
+
+        useEffect(()=>{
+            getPostagem()
+            console.log("caiu no usefecte");
+        }, []);
 
     return (
         <>
@@ -53,10 +54,6 @@ const Feed = (list) => {
                 </div>
                 {modalOpen && <Modal setOpenModal={setModalOpen} />}
                 </div>
-                {list.map((post, Feed) => (
-                        <div key={Feed} fotoPerfil={post.fotoPerfil} nomeUsuario={post.nomeUsuario} 
-                        descricao={post.descricao} fotoPost={post.fotoPost} />
-                    ))}
                 
              <Posts/>
              <Posts/>
