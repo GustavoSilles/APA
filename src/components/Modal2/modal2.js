@@ -9,7 +9,7 @@ const Modal2 =({ setOpenModal }) => {
    <>
     <div className="modalBackground2">
      
-      <div className="modalContainer2">
+      <div className="modalContainer">
       <div className="fadeIn">
        
         <CgClose size={22} color='#532E1C' onClick={() => {setOpenModal(false) }} id="cancelBtn" className="iconmodal"/>

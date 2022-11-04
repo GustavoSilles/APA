@@ -3,10 +3,12 @@ import './posts.css'
 import {BsFillChatLeftTextFill} from "react-icons/bs"
 import {BsFillShareFill} from "react-icons/bs"
 import Modal2 from '../Modal2/modal2'
-
+import Modal3 from '../Modal-confirmacao/modal-confirmacao'
 
 const Posts = () => {
     const [modalOpen, setModalOpen] = useState(false);
+    const [modalOpen2, setModalOpen2] = useState(false);
+    
     return (
        
        <>
@@ -19,7 +21,7 @@ const Posts = () => {
                         <div className='fotopost2'></div>
                         <div className='nominho'>Gustavin</div>
                         </div>
-                        <p className='denunciar'>Denunciar</p>
+                        <p className='denunciar' onClick={() => {setModalOpen2(true)}}>Denunciar</p>
                     </div>
                     <div className='descricao'>
                         <p className='descrison'>oia que gatinho bunitu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
@@ -44,6 +46,7 @@ const Posts = () => {
                     <div className='comentario'></div>
                 </div>
                 {modalOpen && <Modal2 setOpenModal={setModalOpen} />}
+                {modalOpen2 && <Modal3  setOpenModal={setModalOpen2} />}
                 </div>
               
                 </div>
