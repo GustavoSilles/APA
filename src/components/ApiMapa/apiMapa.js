@@ -7,7 +7,9 @@ const containerStyle = {
     width: '100%',
     height: '100vh'
   };
-  
+
+  var image = "../../assets/PataFofa.png"
+
   const center = {
     lat:  -27.590824,
     lng: -48.551262 
@@ -104,21 +106,24 @@ const ApiMapa = () => {
         center={center}
         zoom={12}
       >
-        <Marker position={localizacao} 
+        
+        <Marker className="markerStyle" position={localizacao} 
         options={{
           label: {
-            text: "Centro Veterinário AnimalVet",
-            className: "map-marker",
+          text: "Centro Veterinário AnimalVet",
+          className: "map-marker"
           }
         }} />
-        <Marker position={position} 
+
+        <Marker className="markerStyle" position={position} 
         options={{
           label: {
             text: "Animal Care pet center",
             className: "map-marker"
           }
         }} />
-        <Marker className="map-marker" position={localizacao3} 
+
+        <Marker className="markerStyle"position={localizacao3} 
         options={{
           label: {
             text: "Animal Land pet center",
@@ -132,6 +137,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} /> 
+
         <Marker position={localizacao5} 
         options={{
           label: {
@@ -139,6 +145,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} /> 
+
         <Marker position={localizacao6} 
         options={{
           label: {
@@ -146,6 +153,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} /> 
+
         <Marker position={localizacao7} 
         options={{
           label: {
@@ -153,6 +161,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} /> 
+
         <Marker position={localizacao8} 
         options={{
           label: {
@@ -160,6 +169,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao9} 
         options={{
           label: {
@@ -167,6 +177,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao10} 
         options={{
           label: {
@@ -174,6 +185,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao11} 
         options={{
           label: {
@@ -181,6 +193,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao12} 
         options={{
           label: {
@@ -188,6 +201,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao13} 
         options={{
           label: {
@@ -195,6 +209,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao14} 
         options={{
           label: {
@@ -202,6 +217,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao15} 
         options={{
           label: {
@@ -209,6 +225,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao16} 
         options={{
           label: {
@@ -216,6 +233,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao17} 
         options={{
           label: {
@@ -223,6 +241,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao18} 
         options={{
           label: {
@@ -230,6 +249,7 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
+
         <Marker position={localizacao19} 
         options={{
           label: {
@@ -237,139 +257,9 @@ const ApiMapa = () => {
             className: "map-marker"
           }
         }} />
-        <Marker position={localizacao} 
-        options={{
-          label: {
-            text: "Centro Veterinário AnimalVet",
-            className: "map-marker",
-          }
-        }} />
-        <Marker position={position} 
-        options={{
-          label: {
-            text: "Animal Care pet center",
-            className: "map-marker"
-          }
-        }} />
-        <Marker className="map-marker" position={localizacao3} 
-        options={{
-          label: {
-            text: "Animal Land pet center",
-            className: "map-marker"
-          }
-        }} /> 
-        <Marker position={localizacao4} 
-        options={{
-          label: {
-            text: "Animal Vital",
-            className: "map-marker"
-          }
-        }} /> 
-        <Marker position={localizacao5} 
-        options={{
-          label: {
-            text: "Petshop anjos de patas",
-            className: "map-marker"
-          }
-        }} /> 
-        <Marker position={localizacao6} 
-        options={{
-          label: {
-            text: "Diretoria de Bem-Estar Animal",
-            className: "map-marker"
-          }
-        }} /> 
-        <Marker position={localizacao7} 
-        options={{
-          label: {
-            text: "Vila Animal Centro Veterinário",
-            className: "map-marker"
-          }
-        }} /> 
-        <Marker position={localizacao8} 
-        options={{
-          label: {
-            text: "Animais e Cia Floripa",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao9} 
-        options={{
-          label: {
-            text: "Animal Village",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao10} 
-        options={{
-          label: {
-            text: "Reino dos Animais",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao11} 
-        options={{
-          label: {
-            text: "Veterinária animal Floripa",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao12} 
-        options={{
-          label: {
-            text: "Hospital Veterinário Vet Ilha",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao13} 
-        options={{
-          label: {
-            text: "Pet Care Center",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao14} 
-        options={{
-          label: {
-            text: "Centro de Zoonoses",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao15} 
-        options={{
-          label: {
-            text: "Centro de Controle de Zoonoses",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao16} 
-        options={{
-          label: {
-            text: "PET GREE SHOP",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao17} 
-        options={{
-          label: {
-            text: "AgroPet agroshop",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao18} 
-        options={{
-          label: {
-            text: "Pet Gold",
-            className: "map-marker"
-          }
-        }} />
-        <Marker position={localizacao19} 
-        options={{
-          label: {
-            text: "Petz",
-            className: "map-marker"
-          }
-        }} />
+        
+        
+        
          
       </GoogleMap>
       <></>
