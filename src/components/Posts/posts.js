@@ -22,10 +22,10 @@ const Posts = (descricao, imgURL) => {
                         <p className='denunciar'>Denunciar</p>
                     </div>
                     <div className='descricao'>
-                        <p className='descrison'></p>
+                        <p className='descrison'>{descricao}</p>
                     </div>
                     <div className='imgbox'>
-                        <div className='propriafoto'></div>
+                        <div className='propriafoto'>{imgURL}</div>
                     </div>
                     <div className='footerbox'>
                     <div className='ascoisas'onClick={() => {setModalOpen(true)}}>

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import './feedStyles.css'
 import Navbar from '../Navbar/navbar'
-import {FiMapPin} from "react-icons/fi"
-import {HiPhotograph} from "react-icons/hi"
 import Posts from "../Posts/posts"
 import Modal from '../Modal/modal'
 
