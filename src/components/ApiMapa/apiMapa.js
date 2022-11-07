@@ -7,9 +7,7 @@ const containerStyle = {
     width: '100%',
     height: '100vh'
   };
-
-  var image = "../../assets/PataFofa.png"
-
+  
   const center = {
     lat:  -27.590824,
     lng: -48.551262 
