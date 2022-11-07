@@ -50,7 +50,7 @@ const Feed = (list) => {
                     
                    
                 </div>
-                {modalOpen && <Modal setOpenModal={setModalOpen} />}
+                {modalOpen && (<Modal setOpenModal={setModalOpen} />)}
                 </div>
                 
              <Posts/>

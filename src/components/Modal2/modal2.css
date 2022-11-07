@@ -11,10 +11,10 @@
   
   
   
-  .modalContainer2 {
+  .modalContainer {
     width: 40%;
     overflow-y: scroll;
-    height: 415px;
+    max-height:500px;
     padding: 10px;
     border-radius: 12px;
     background-color: #E6E6E6;

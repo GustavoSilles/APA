@@ -165,11 +165,16 @@
     cursor: pointer;
   }
   
-  .text-center {
+  .text-center2 {
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+
+  }
+  .possui{
+    display: flex;
+    flex-direction: row;
   }
   
   .txt1 {
