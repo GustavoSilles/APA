@@ -10,8 +10,6 @@
     content: '';
     position: absolute;
     background: url('../../assets/auauau.jpg') no-repeat center center/cover;
-    height: 100%;
-    width: 100%;
     z-index: -1;
 }
 

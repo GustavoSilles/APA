@@ -12,7 +12,7 @@ const Footer = () => {
             <div className="container">
                 <div className="top">
                     <div className="logo-footer">
-                        <SiPug className='icon' />
+                    <SiPug className='icon' />""
                         <h2>APA.</h2>
                     </div>
                      {/* <Link to="top" spy={true} smooth={true} duration={500} >

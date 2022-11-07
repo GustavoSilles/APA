@@ -24,7 +24,7 @@ const Posts = (descricao, imgURL) => {
                         <p className='denunciar' onClick={() => {setModalOpen2(true)}}>Denunciar</p>
                     </div>
                     <div className='descricao'>
-                        <p className='descrison'></p>
+                        <p className='descrison'>oia que gatinho bunitu</p>
                     </div>
                     <div className='imgbox'>
                         <div className='propriafoto'></div>

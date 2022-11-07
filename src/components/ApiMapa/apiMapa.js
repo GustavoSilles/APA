@@ -3,10 +3,13 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import "./apiMapaStyles.css"
 import Navbar from '../Navbar/navbar'
 
+
 const containerStyle = {
+  
     width: '100%',
     height: '100vh'
   };
+  
   
   const center = {
     lat:  -27.590824,
@@ -104,6 +107,7 @@ const ApiMapa = () => {
         center={center}
         zoom={12}
       >
+        
         <Marker position={localizacao} 
         options={{
           label: {
