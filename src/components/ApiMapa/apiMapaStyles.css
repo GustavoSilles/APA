@@ -2,11 +2,12 @@
     height: 100vh;
 }
 .map-marker{
-    background: url('../../assets/PataFofa.png') no-repeat center center/cover;
+    background: url('../../assets/PataMarrom.png') no-repeat center center/cover;
+    margin-bottom: -7px;
     content: '';
-    width: 2.8rem;
+    width: 3.5rem;
     position: relative;
-    height: 2.8rem;
+    height: 3.3rem;
     cursor: pointer;
     border-radius:50%;
 }

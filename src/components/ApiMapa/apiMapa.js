@@ -111,8 +111,9 @@ const ApiMapa = () => {
         <Marker position={localizacao} 
         options={{
           label: {
-          text: "Centro Veterinário AnimalVet",
-          className: "map-marker"
+            className: "map-marker",
+          text: "Centro Veterinário AnimalVet"
+         
           }
         }} />
 
