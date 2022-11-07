@@ -2,14 +2,19 @@
     height: 100vh;
 }
 .map-marker{
-    margin-bottom: 40px;
-    color: white;
-    font-size: 400px;
+    background: url('../../assets/PataMarrom.png') no-repeat center center/cover;
+    margin-bottom: -7px;
+    content: '';
+    width: 3.5rem;
+    position: relative;
+    height: 3.3rem;
+    cursor: pointer;
+    border-radius:50%;
 }
 text{
     color: white;
     font-size: 400px; 
 }
 .markerStyle{
-    background-image: url("../../assets/PataFofa.png");
+    display: none;
 }
