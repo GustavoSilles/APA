@@ -2,7 +2,7 @@
     height: 100vh;
 }
 .map-marker{
-    background: url('../../assets/WIN_20220927_16_51_31_Pro.jpg') no-repeat center center/cover;
+    background: url('../../assets/PataFofa.png') no-repeat center center/cover;
     content: '';
     width: 2.8rem;
     position: relative;
@@ -13,4 +13,7 @@
 text{
     color: white;
     font-size: 400px; 
+}
+.markerStyle{
+    display: none;
 }
