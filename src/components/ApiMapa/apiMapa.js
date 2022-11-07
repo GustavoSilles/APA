@@ -2,7 +2,7 @@ import React from 'react'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import "./apiMapaStyles.css"
 import Navbar from '../Navbar/navbar'
-import icon from "../../assets/PataMarrom.png"
+import icon from "../../assets/Pata2000.png"
 import {BsFillChatLeftTextFill} from "react-icons/bs"
 
 const containerStyle = {
