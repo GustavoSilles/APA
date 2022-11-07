@@ -2,7 +2,8 @@ import React from 'react'
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import "./apiMapaStyles.css"
 import Navbar from '../Navbar/navbar'
-
+import icon from "../../assets/PataMarrom.png"
+import {BsFillChatLeftTextFill} from "react-icons/bs"
 
 const containerStyle = {
   
@@ -107,17 +108,17 @@ const ApiMapa = () => {
         center={center}
         zoom={12}
       >
-        
-        <Marker position={localizacao} 
+        <Marker  position={localizacao} 
         options={{
           label: {
-            className: "map-marker",
-          text: "Centro Veterinário AnimalVet"
-         
+          text: "Centro Veterinário AnimalVet",
+          className: "map-marker",
+        
           }
+         
         }} />
 
-        <Marker className="markerStyle" position={position} 
+        <Marker position={position} 
         options={{
           label: {
             text: "Animal Care pet center",
@@ -125,7 +126,7 @@ const ApiMapa = () => {
           }
         }} />
 
-        <Marker className="markerStyle"position={localizacao3} 
+        <Marker position={localizacao3} 
         options={{
           label: {
             text: "Animal Land pet center",
@@ -252,13 +253,15 @@ const ApiMapa = () => {
           }
         }} />
 
-        <Marker position={localizacao19} 
+        <Marker className="vai" icon={icon} position={localizacao19}
         options={{
           label: {
             text: "Petz",
             className: "map-marker"
           }
         }} />
+        
+        
         
         
         

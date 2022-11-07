@@ -1,20 +1,5 @@
-.Map{
-    height: 100vh;
-}
+
 .map-marker{
-    background: url('../../assets/PataMarrom.png') no-repeat center center/cover;
-    margin-bottom: -7px;
-    content: '';
-    width: 3.5rem;
-    position: relative;
-    height: 3.3rem;
-    cursor: pointer;
-    border-radius:50%;
-}
-text{
-    color: white;
-    font-size: 400px; 
-}
-.markerStyle{
-    display: none;
-}
+   width: 20px;
+   height: 20px;
+} 
