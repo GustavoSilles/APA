@@ -24,7 +24,7 @@ const Footer = () => {
                 </div>
                 <div className="col-container">
                     <div className="col">
-                        <h3>Navigation</h3>
+                        <h3>Navegação</h3>
                         
                         <p><Link className='textoFooter' to='/home'>Home</Link></p>
                         <p><Link className='textoFooter' to='/feed'>Feed</Link></p>
@@ -49,9 +49,9 @@ const Footer = () => {
                     <div className="col">
                         <h3>Créditos</h3>
                         <p><Link  className='textoFooter' to='/perfil'>Equipe TheBoys:</Link></p>
-                        <p><Link  className='textoFooter' to='/perfil'>Gustavo</Link></p>
-                        <p><Link  className='textoFooter' to='/perfil'>Abílio</Link></p>
-                        <p><Link  className='textoFooter' to='/perfil'>Basitt</Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Gustavo Silles</Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Abílio Gama</Link></p>
+                        <p><Link  className='textoFooter' to='/perfil'>Gabriel Basitt </Link></p>
                     </div>
                     <form>
                         <h3>Redes sociais</h3>

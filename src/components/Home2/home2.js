@@ -9,7 +9,7 @@ const Home2 = () => {
                 <div className="content">
                     <h2><span>Eles</span> são necessários</h2>
                     <p>Quando se está tendo terapia a presença (e ajuda) de um animalzinho de estimação, reduzirá os pensementos negativos
-                        de seus tutores, pois sua presença conseguemenizar todos os sintomas de estresse, angústia, tristeza e solidão. 
+                        de seus tutores, pois sua presença consegue amenizar todos os sintomas de estresse, angústia, tristeza e solidão. 
                     </p>
                     <div>
                      <Link to='/apimapa'><button>Resgate um animal</button></Link>

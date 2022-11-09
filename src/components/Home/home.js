@@ -16,7 +16,7 @@ const Home = () => {
                 <div className="content">
                 <h1 className='marrom'>Quer saber como</h1>
                     <h2 className='preto'>você pode</h2>
-                    <h1 className='marrom'>Proteger</h1>
+                    <h1 className='marrom'>Ajudar</h1>
                     <h2 className='preto'>os animais?</h2>
                    <Link to="/leiamais"><button className='blackButton'>Leia mais</button></Link>
                 </div>
