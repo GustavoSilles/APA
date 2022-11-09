@@ -9,11 +9,15 @@ const Cadastro = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [img, setImg] = useState(false)
    
+    const handleModal = (state) => {
+      setImg(state)
+    }
 
     const postUser = async () => {  
 
-      if (username && name && email && password != "") {
+      if (username != "" && name !="" && email != "" && password != "") {
           try {
               const requestOptions = {
                   method: 'POST',
@@ -36,7 +40,8 @@ const Cadastro = () => {
               setPassword('')
           }
       }else{
-        return( <><Modal3/></>)
+        setImg(true)
+
           }
       }
     return (
@@ -97,8 +102,9 @@ const Cadastro = () => {
                 <Link to='/login'> <p className="txt2">Fazer login</p></Link>
                 </div>
               </div>
-              
+             
             </form>
+            {img &&(<Modal3 handleModal={handleModal}/>)}
            
           </div>
         </div>

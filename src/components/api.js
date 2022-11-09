@@ -2,7 +2,7 @@ export const getComments = async () => {
   return [
     {
       id: "1",
-      body: "Primeiro comentario, e o Gustavo é viado!",
+      body: "Primeiro comentario.",
       username: "Gustavo",
       userId: "1",
       parentId: null,

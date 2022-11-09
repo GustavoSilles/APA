@@ -30,7 +30,7 @@ const Posts = (descricao, imgURL) => {
                     </div>
                     <div className='imgbox'>
                         <div className='propriafoto'>
-                                {basit}
+                                {}
                         </div>
                     </div>
                     <div className='footerbox'>
