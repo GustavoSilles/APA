@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import './feedStyles.css'
 import Navbar from '../Navbar/navbar'
-import Posts from "../Posts/posts"
+import Posts  from "../Posts/posts"
 import Modal from '../Modal/modal'
-import { Posts } from '../Posts/posts'
+
 
 const Feed = (list) => {
     console.log(list);
@@ -48,11 +48,11 @@ const Feed = (list) => {
                     <button  className="btnpost"  onClick={() => {setModalOpen(true)}}>Começar a publicação</button>
                    
                     </div>
-                    {list.map((post, feed) => (
+                    {/* {list.map((post, feed) => (
                         <Posts key={feed}  
                         descricao={post.descricao} imgURL={post.imgURL} />
                     ))}
-                   
+                    */}
                 </div>
                 {modalOpen && (<Modal setOpenModal={setModalOpen} />)}
                 </div>
