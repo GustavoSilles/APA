@@ -1,4 +1,3 @@
-
 import "./modal.css";
 import {CgClose} from 'react-icons/cg'
 import {HiPhotograph} from "react-icons/hi"
@@ -11,22 +10,21 @@ const Modal =({ setOpenModal }) => {
     const [imgURL, setImgURL] = useState("");
     const [progressPorcent, setProgresspercent] = useState(0);
 
-    const postPostagem = async ({onAddPost}) => {  
+    const postPostagem = async () => {  
 
-      if (imgURL && descricao != "") {
+      if (imgURL != "" && descricao != "") {
           try {
               const requestOptions = {
                   method: 'POST',
                   headers: { 'Content-type': 'application/json' },
                   body: JSON.stringify({
-                      imgURL: imgURL,
+                      setImgURL: setImgURL,
                       descricao: descricao
                   })
               }
-              const resp = await fetch('http://localhost:3001/api/post', requestOptions)
-              //await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
-              window.location.reload();
-              onAddPost(resp)
+             await fetch('http://localhost:3001/api/post', requestOptions)
+              //window.location.reload();
+              alert("deu certo")
             }catch( error){
               setImgURL('')
               setDescricao('')

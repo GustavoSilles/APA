@@ -6,34 +6,30 @@ import Modal from '../Modal/modal'
 
 const Feed = (list) => {
     console.log(list);
+    const [posts, setPosts] = useState([])
     const [modalOpen, setModalOpen] = useState(false);
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
 
 
     const getPostagem = async () => {  
-
-        
             try {
-                const requestOptions = {
-                    method: 'GET'
-                }
-                const resp = await fetch('http://localhost:3001/api/post', requestOptions)
+                const  response = await fetch('http://localhost:3001/api/post')
+                const data = response.json()
+                data.then(
+                    (val) => setPosts(val)
+                )   
                 //window.location.reload();
-                console.log("getdobasit", resp);
               }catch( error){
                 console.log(error);
-                setImgURL('')
-                setDescricao('')
+                setPosts([])
                 
             }
         }
-
-
-        useEffect(()=>{
-            getPostagem()
-            console.log("caiu no usefecte");
-        }, []);
+        // useEffect(()=>{
+        //     getPostagem()
+        //     console.log("caiu no usefecte");
+        // }, []);
 
     return (
         <>

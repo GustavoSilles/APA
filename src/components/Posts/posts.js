@@ -7,7 +7,6 @@ import Modal3 from '../Modal-confirmacao/modal-confirmacao'
 
 const Posts = (descricao, imgURL) => {
     console.log(imgURL);
-    const basit = "basit"
     const [modalOpen, setModalOpen] = useState(false);
     const [modalOpen2, setModalOpen2] = useState(false);
     
@@ -30,7 +29,6 @@ const Posts = (descricao, imgURL) => {
                     </div>
                     <div className='imgbox'>
                         <div className='propriafoto'>
-                                {}
                         </div>
                     </div>
                     <div className='footerbox'>
