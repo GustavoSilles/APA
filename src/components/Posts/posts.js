@@ -5,11 +5,14 @@ import {BsFillShareFill} from "react-icons/bs"
 import Modal2 from '../Modal2/modal2'
 import Modal3 from '../Modal-confirmacao/modal-confirmacao'
 
-const Posts = (descricao, imgURL) => {
+const Posts = (descricao, imgURL,) => {
     console.log(imgURL);
     const basit = "basit"
     const [modalOpen, setModalOpen] = useState(false);
-    const [modalOpen2, setModalOpen2] = useState(false);
+    const [modal, setModal] = useState(false);
+    const handleModal = (state) => {
+        setModal(state)
+      }
     
     return (
        
@@ -23,7 +26,7 @@ const Posts = (descricao, imgURL) => {
                         <div className='fotopost2'></div>
                         <div className='nominho'>Gustavin</div>
                         </div>
-                        <p className='denunciar' onClick={() => {setModalOpen2(true)}}>Denunciar</p>
+                        <p className='denunciar' onClick={() => {setModal(true)}}>Denunciar</p>
                     </div>
                     <div className='descricao'>
                         <p className='descrison'>oia que gatinho bunitu</p>
@@ -46,7 +49,8 @@ const Posts = (descricao, imgURL) => {
                     <div className='comentario'></div>
                 </div>
                 {modalOpen && <Modal2 setOpenModal={setModalOpen} />}
-                {modalOpen2 && <Modal3  setOpenModal={setModalOpen2} />}
+                {modal &&(<Modal3 handleModal={handleModal}/>)} 
+               
                 </div>
               
                 </div>

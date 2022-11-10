@@ -4,10 +4,13 @@ import {BsFillChatLeftTextFill} from "react-icons/bs"
 import {IoMdTrash} from "react-icons/io"
 import {BsFillShareFill} from "react-icons/bs"
 import Modal2 from '../Modal2/modal2'
-
+import Modal3 from '../Modal-confirmacao/modal-confirmacao'
 
 const Posts2 = () => {
-    
+    const [modal, setModal] = useState(false);
+    const handleModal = (state) => {
+        setModal(state)
+      }
     const [modalOpen, setModalOpen] = useState(false);
     return (
        
@@ -21,11 +24,11 @@ const Posts2 = () => {
                         <div className='fotopost2'></div>
                         <div className='nominho'>Admin</div>
                         </div><div className='lixoxo'>
-                        <IoMdTrash className='lixo'/>
+                        <IoMdTrash className='lixo' onClick={() => {setModal(true)}}/>
                         </div>
                     </div>
                     <div className='descricao'>
-                        <p className='descrison'>oia que gatinho bunitu Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <p className='descrison'>oia que gatinho bunitu</p>
                     </div>
                     <div className='imgbox'>
                         <div className='propriafoto'></div>
@@ -39,14 +42,14 @@ const Posts2 = () => {
                     
                     </div>
                         
-                    <div className='ascoisas2'>
-                    <BsFillShareFill className='iconbox'/>
+                    <div className='ascoisas2'>                    <BsFillShareFill className='iconbox'/>
                     <div className='textbox'>Compartilhe</div>
                     </div>
                     </div>
                     <div className='comentario'></div>
                 </div>
                 {modalOpen && <Modal2 setOpenModal={setModalOpen} />}
+                {modal &&(<Modal3 handleModal={handleModal}/>)} 
                 </div>
               
                 </div>
