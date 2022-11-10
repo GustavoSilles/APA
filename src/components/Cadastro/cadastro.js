@@ -9,40 +9,40 @@ const Cadastro = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [img, setImg] = useState(false)
+    const [modal, setModal] = useState(false)
    
     const handleModal = (state) => {
-      setImg(state)
+      setModal(state)
     }
 
-    const postUser = async () => {  
-
+    const postUser = async () => {
       if (username != "" && name !="" && email != "" && password != "") {
-          try {
-              const requestOptions = {
-                  method: 'POST',
-                  headers: { 'Content-type': 'application/json' },
-                  body: JSON.stringify({
+        console.log("n ta vazio");
+        try {
+          const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-type': 'application/json' },
+            body: JSON.stringify({
                       username: username,
                       name: name,
                       email: email,
                       password: password
-                  })
+                    })
+                  }
+                  await fetch('http://localhost:3001/api/user', requestOptions)
+                  //await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
+                  window.location.href= "./login"
+                }catch( error){
+                  console.log(error)
+                  setUsername('')
+                  setName('')
+                  setEmail('')
+                  setPassword('')
+                }
+              }else{
+                setModal(true) 
+                
               }
-              await fetch('http://localhost:3001/api/user', requestOptions)
-              //await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
-              window.location.href= "./login"
-            }catch( error){
-              console.log(error)
-              setUsername('')
-              setName('')
-              setEmail('')
-              setPassword('')
-          }
-      }else{
-        setImg(true)
-
-          }
       }
     return (
       <div className="cadastro">
@@ -53,18 +53,16 @@ const Cadastro = () => {
 
               <div className="wrap-input">
                 <input
-                  className={username !== "" ? "has-val input" : "input"}
-                  type="user name"
+                  className={username !== "" ? "has-val input" : "input"}  
                   value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                />
+                    onChange={(e) => setUsername(e.target.value)}
+                /> 
                 <span className="focus-input" data-placeholder="User name"></span>
               </div>
 
               <div className="wrap-input">
                 <input
                   className={name !== "" ? "has-val input" : "input"}
-                  type="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
@@ -74,8 +72,8 @@ const Cadastro = () => {
               <div className="wrap-input">
                 <input
                   className={email !== "" ? "has-val input" : "input"}
-                  type="email"
                   value={email}
+                  type="email"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <span className="focus-input" data-placeholder="Email"></span>
@@ -96,7 +94,7 @@ const Cadastro = () => {
               </div>
   
               <div className="text-center2">
-               
+              {modal &&(<Modal3 handleModal={handleModal}/>)} 
               <div className="possui">
                 <span className="txt1">já possui conta? </span>
                 <Link to='/login'> <p className="txt2">Fazer login</p></Link>
@@ -104,7 +102,8 @@ const Cadastro = () => {
               </div>
              
             </form>
-            {img &&(<Modal3 handleModal={handleModal}/>)}
+          
+
            
           </div>
         </div>
