@@ -63,6 +63,9 @@ h1 {
 h2 {
   font-size: 3rem;
 }
+h3 {
+  font-size: 2rem;
+}
 
 .container {
   max-width: 1240px;
