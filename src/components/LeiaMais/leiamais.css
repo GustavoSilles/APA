@@ -10,3 +10,34 @@
     width: 100%;
     z-index: -1;
 }
+.leiamais .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 20%;
+    left: 18%;
+    width: 70%;
+    height: 100vh;
+    text-shadow: 1px 1px 1px  black;
+}
+
+.leiamais .content h3 {
+    margin: 1rem 0;
+}
+.leiamais h2 {  
+    color: #532E1C
+}
+
+.leiamais h3 {
+    color: #E6E6E6;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 940px) {
+    .leiamais .content {
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
+}
