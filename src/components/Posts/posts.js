@@ -4,7 +4,7 @@ import {BsFillChatLeftTextFill} from "react-icons/bs"
 import {BsFillShareFill} from "react-icons/bs"
 import Modal2 from '../Modal2/modal2'
 import Modal3 from '../Modal-confirmacao/modal-confirmacao'
-
+import { GoMegaphone } from "react-icons/go";
 const Posts = (descricao, imgURL,) => {
     console.log(imgURL);
     const [modalOpen, setModalOpen] = useState(false);
@@ -25,7 +25,7 @@ const Posts = (descricao, imgURL,) => {
                         <div className='fotopost2'></div>
                         <div className='nominho'>Gustavin</div>
                         </div>
-                        <p className='denunciar' onClick={() => {setModal(true)}}>Denunciar</p>
+                        <GoMegaphone className='megaphone' onClick={() => {setModal(true)}}/>
                     </div>
                     <div className='descricao'>
                         <p className='descrison'>oia que gatinho bunitu</p>

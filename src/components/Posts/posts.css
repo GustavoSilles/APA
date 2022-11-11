@@ -78,13 +78,12 @@
     align-items: center;
     margin-left: 2%;
 }
-.denunciar{
-    font-size: 16px;
-    font-family: roboto;
-    cursor: pointer;
+.megaphone {
     color: red;
-    font-weight:500;
+    width: 25px;
+    height: 25px;
     margin-right: 2%;
+    cursor: pointer;
 }
 
 .navbox{
