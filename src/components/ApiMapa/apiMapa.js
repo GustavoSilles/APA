@@ -3,7 +3,7 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import "./apiMapaStyles.css"
 import Navbar from '../Navbar/navbar'
 import icon from "../../assets/PataMarrom.png"
-import { BsFillChatLeftTextFill } from "react-icons/bs"
+
 
 const containerStyle = {
 
@@ -20,7 +20,7 @@ const localizacao = {
   lat: -27.431461,
   lng: -48.396598
 }
-const position = {
+const localizacao2 = {
   lat: -27.439395,
   lng: -48.493316
 }
@@ -36,10 +36,10 @@ const localizacao5 = {
   lat: -27.551430,
   lng: -48.496244
 }
-const localizacao6 = {
-  lat: -27.575065,
-  lng: -48.513914
-}
+// const localizacao6 = {
+//   lat: -27.575065,
+//   lng: -48.513914
+// }
 const localizacao7 = {
   lat: -27.600989,
   lng: -48.500515
@@ -92,6 +92,10 @@ const localizacao19 = {
   lat: -27.587337,
   lng: -48.542888
 }
+const localizacao20 = {
+  lat:-27.534593, 
+  lng:-48.509859
+}
 
 const ApiMapa = () => {
 
@@ -116,7 +120,305 @@ const ApiMapa = () => {
               }
             }} />
 
-          <Marker icon={icon} position={position}
+          <Marker icon={icon} position={localizacao2}
+            options={{
+              label: {
+                text: "Animal Care pet center",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao3}
+            options={{
+              label: {
+                text: "Animal Land pet center",
+                className: "map-marker"
+              }
+            }} />
+          <Marker icon={icon} position={localizacao4}
+            options={{
+              label: {
+                text: "Animal Vital",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao5}
+            options={{
+              label: {
+                text: "Petshop anjos de patas",
+                className: "map-marker"
+              }
+            }} />
+          <Marker icon={icon} position={localizacao7}
+            options={{
+              label: {
+                text: "Vila Animal Centro Veterinário",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao8}
+            options={{
+              label: {
+                text: "Animais e Cia Floripa",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao9}
+            options={{
+              label: {
+                text: "Animal Village",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao10}
+            options={{
+              label: {
+                text: "Reino dos Animais",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao11}
+            options={{
+              label: {
+                text: "Veterinária animal Floripa",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao12}
+            options={{
+              label: {
+                text: "Hospital Veterinário Vet Ilha",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao13}
+            options={{
+              label: {
+                text: "Pet Care Center",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao14}
+            options={{
+              label: {
+                text: "Centro de Zoonoses",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao15}
+            options={{
+              label: {
+                text: "Centro de Controle de Zoonoses",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao16}
+            options={{
+              label: {
+                text: "PET GREE SHOP",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao17}
+            options={{
+              label: {
+                text: "AgroPet agroshop",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao18}
+            options={{
+              label: {
+                text: "Pet Gold",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker className="vai" icon={icon} position={localizacao19}
+            options={{
+              label: {
+                text: "Petz",
+                className: "map-marker"
+              }
+            }} />
+            <Marker className="vai" icon={icon} position={localizacao20}
+            options={{
+              label: {
+                text: "Shopping Petz",
+                className: "map-marker"
+              }
+            }} />
+            
+            <Marker icon={icon} position={localizacao}
+            options={{
+              label: {
+                text: "Centro Veterinário AnimalVet",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao2}
+            options={{
+              label: {
+                text: "Animal Care pet center",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao3}
+            options={{
+              label: {
+                text: "Animal Land pet center",
+                className: "map-marker"
+              }
+            }} />
+          <Marker icon={icon} position={localizacao4}
+            options={{
+              label: {
+                text: "Animal Vital",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao5}
+            options={{
+              label: {
+                text: "Petshop anjos de patas",
+                className: "map-marker"
+              }
+            }} />
+          <Marker icon={icon} position={localizacao7}
+            options={{
+              label: {
+                text: "Vila Animal Centro Veterinário",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao8}
+            options={{
+              label: {
+                text: "Animais e Cia Floripa",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao9}
+            options={{
+              label: {
+                text: "Animal Village",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao10}
+            options={{
+              label: {
+                text: "Reino dos Animais",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao11}
+            options={{
+              label: {
+                text: "Veterinária animal Floripa",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao12}
+            options={{
+              label: {
+                text: "Hospital Veterinário Vet Ilha",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao13}
+            options={{
+              label: {
+                text: "Pet Care Center",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao14}
+            options={{
+              label: {
+                text: "Centro de Zoonoses",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao15}
+            options={{
+              label: {
+                text: "Centro de Controle de Zoonoses",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao16}
+            options={{
+              label: {
+                text: "PET GREE SHOP",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao17}
+            options={{
+              label: {
+                text: "AgroPet agroshop",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao18}
+            options={{
+              label: {
+                text: "Pet Gold",
+                className: "map-marker"
+              }
+            }} />
+
+            <Marker className="vai" icon={icon} position={localizacao20}
+            options={{
+              label: {
+                text: "Shopping Petz",
+                className: "map-marker"
+              }
+            }} />
+            
+          <Marker className="vai" icon={icon} position={localizacao19}
+            options={{
+              label: {
+                text: "Petz",
+                className: "map-marker"
+              }
+            }} />
+            <Marker icon={icon} position={localizacao}
+            options={{
+              label: {
+                text: "Centro Veterinário AnimalVet",
+                className: "map-marker"
+              }
+            }} />
+
+          <Marker icon={icon} position={localizacao2}
             options={{
               label: {
                 text: "Animal Care pet center",
@@ -250,285 +552,10 @@ const ApiMapa = () => {
               }
             }} />
             
-            <Marker icon={icon} position={localizacao}
+            <Marker className="vai" icon={icon} position={localizacao20}
             options={{
               label: {
-                text: "Centro Veterinário AnimalVet",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={position}
-            options={{
-              label: {
-                text: "Animal Care pet center",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao3}
-            options={{
-              label: {
-                text: "Animal Land pet center",
-                className: "map-marker"
-              }
-            }} />
-          <Marker icon={icon} position={localizacao4}
-            options={{
-              label: {
-                text: "Animal Vital",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao5}
-            options={{
-              label: {
-                text: "Petshop anjos de patas",
-                className: "map-marker"
-              }
-            }} />
-          <Marker icon={icon} position={localizacao7}
-            options={{
-              label: {
-                text: "Vila Animal Centro Veterinário",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao8}
-            options={{
-              label: {
-                text: "Animais e Cia Floripa",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao9}
-            options={{
-              label: {
-                text: "Animal Village",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao10}
-            options={{
-              label: {
-                text: "Reino dos Animais",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao11}
-            options={{
-              label: {
-                text: "Veterinária animal Floripa",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao12}
-            options={{
-              label: {
-                text: "Hospital Veterinário Vet Ilha",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao13}
-            options={{
-              label: {
-                text: "Pet Care Center",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao14}
-            options={{
-              label: {
-                text: "Centro de Zoonoses",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao15}
-            options={{
-              label: {
-                text: "Centro de Controle de Zoonoses",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao16}
-            options={{
-              label: {
-                text: "PET GREE SHOP",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao17}
-            options={{
-              label: {
-                text: "AgroPet agroshop",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao18}
-            options={{
-              label: {
-                text: "Pet Gold",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker className="vai" icon={icon} position={localizacao19}
-            options={{
-              label: {
-                text: "Petz",
-                className: "map-marker"
-              }
-            }} />
-            <Marker icon={icon} position={localizacao}
-            options={{
-              label: {
-                text: "Centro Veterinário AnimalVet",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={position}
-            options={{
-              label: {
-                text: "Animal Care pet center",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao3}
-            options={{
-              label: {
-                text: "Animal Land pet center",
-                className: "map-marker"
-              }
-            }} />
-          <Marker icon={icon} position={localizacao4}
-            options={{
-              label: {
-                text: "Animal Vital",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao5}
-            options={{
-              label: {
-                text: "Petshop anjos de patas",
-                className: "map-marker"
-              }
-            }} />
-          <Marker icon={icon} position={localizacao7}
-            options={{
-              label: {
-                text: "Vila Animal Centro Veterinário",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao8}
-            options={{
-              label: {
-                text: "Animais e Cia Floripa",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao9}
-            options={{
-              label: {
-                text: "Animal Village",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao10}
-            options={{
-              label: {
-                text: "Reino dos Animais",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao11}
-            options={{
-              label: {
-                text: "Veterinária animal Floripa",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao12}
-            options={{
-              label: {
-                text: "Hospital Veterinário Vet Ilha",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao13}
-            options={{
-              label: {
-                text: "Pet Care Center",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao14}
-            options={{
-              label: {
-                text: "Centro de Zoonoses",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao15}
-            options={{
-              label: {
-                text: "Centro de Controle de Zoonoses",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao16}
-            options={{
-              label: {
-                text: "PET GREE SHOP",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao17}
-            options={{
-              label: {
-                text: "AgroPet agroshop",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker icon={icon} position={localizacao18}
-            options={{
-              label: {
-                text: "Pet Gold",
-                className: "map-marker"
-              }
-            }} />
-
-          <Marker className="vai" icon={icon} position={localizacao19}
-            options={{
-              label: {
-                text: "Petz",
+                text: "Shopping Petz",
                 className: "map-marker"
               }
             }} />

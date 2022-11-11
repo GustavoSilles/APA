@@ -28,7 +28,7 @@ const Landingpage = () => {
       <h3 className="conteudo-secundario-titulo">O que ela faz por você?</h3>
       <p className="conteudo-secundario-paragrafo">1. Voce pode <strong>criar varios posts</strong> mostrando animais que precisam de ajuda.</p>
       <p className="conteudo-secundario-paragrafo">2. Possui uma <strong>interface fácil e simples</strong> de se usar.</p>
-      <p className="conteudo-secundario-paragrafo">3. <strong>sistema de localização com o google maps</strong>, para pessoas postarem a localização do animal.</p>
+      <p className="conteudo-secundario-paragrafo">3. <strong>Sistema de localização com o google maps</strong>, para pessoas postarem a localização do animal.</p>
       
     </section>
   </main>

@@ -1,6 +1,7 @@
 .leiamais {
     width: 100%;
     height: 100vh;
+    background: rgba(21, 19, 19, 0.433);
 }
 .leiamais:before {
     content: '';
@@ -9,4 +10,39 @@
     height: 100%;
     width: 100%;
     z-index: -1;
+}
+.leiamais .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 20%;
+    left: 18%;
+    width: 70%;
+    height: 100vh;
+    text-shadow: 1px 1px 1px  black;
+}
+
+.leiamais .content h3 {
+    margin: 1rem 0;
+}
+.leiamais h2 {  
+    color: white
+}
+.outraCor {
+    color: #a57454;
+}
+
+
+.leiamais h3 {
+    color: #E6E6E6;
+    margin: 1rem 0;
+}
+
+@media screen and (max-width: 940px) {
+    .leiamais .content {
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+    }
 }
