@@ -1,7 +1,39 @@
-import React from 'react'
+import React, { useState } from "react";
+import {storage} from "../firebase";
+import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import './perfilStyles.css'
 import Navbar from '../Navbar/navbar'
 const Perfil = () => {
+  const [imgURL, setImgURL] = useState("");
+  const [progressPorcent, setProgresspercent] = useState(0);
+
+   const formHandler = (e) => {
+    e.preventDefault()
+    const file = e.target[0]?.files[0]
+
+    if(!file) return; 
+    
+
+    const storageRef = ref(storage, `files/${file.name}`);
+    const uploadTask = uploadBytesResumable(storageRef, file);
+
+    uploadTask.on("state_changed",
+      (snapshot) => {
+        const progress =
+          Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+        setProgresspercent(progress);
+      },
+      (error) => {
+        alert(error);
+      },
+     () => {
+        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+          setImgURL(downloadURL)
+        });
+        
+      }
+    );
+   }
     return (
         <>
         <Navbar/>
@@ -9,8 +41,14 @@ const Perfil = () => {
           <div className='perfil-container'>
           <div className='box-perfil'>
           <div className='fundo-perfil'>
-            <div className='foto-perfil'></div>
-            <p className='logout'>Logout</p>
+           
+             <form onSubmit={formHandler}className='seila-container'>   
+           
+             {!imgURL && <p>{}</p>}
+             {imgURL && <img className="foto-perfil2" src={URL.createObjectURL(imgURL)}  alt="Imagem"  value={imgURL} onChange={(e) => setImgURL(e.target.value)}/>}
+             <input type="file" className='foto-perfil' onChange={e => setImgURL(e.target.files[0])}></input>
+       </form>
+           
           </div>
           </div>
          
@@ -28,7 +66,7 @@ const Perfil = () => {
             <label className='label'>Alterar nome de usuário:</label>
             <input  type="text" className='inp_perfil' placeholder='Gustavin'/>
             </div>
-            <div className='inpt'>
+            <div className='inpt'>  
             <label className='label'>Alterar e-mail:</label>
             <input  type="text" className='inp_perfil' placeholder='sillesgustavo05@gmail.com'/>
             </div>
@@ -40,11 +78,11 @@ const Perfil = () => {
             <div className='cantoEsquerdo'>
           <button className='btn_perfil'>Salvar alterações</button>
           </div>
+         
           </div>
-        
           </div>
         </div>
-           
+        
         </>
     )
 }

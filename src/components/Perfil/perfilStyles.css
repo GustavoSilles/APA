@@ -11,12 +11,27 @@
     width: 100%;
     z-index: -1;
 }
+
 .foto-perfil{
-    background: url('../../assets/WIN_20220927_16_51_31_Pro.jpg') no-repeat center center/cover;
     content: '';
     width: 7rem;
+    
+    object-fit: cover;
+    background-color: #E6E6E6;
     height: 7rem;
-    border: 4px solid #fff;
+    border: 4px solid #fff;     
+    margin-top: 115px;
+    margin-left: 3%;
+    cursor: pointer;
+    border-radius:50%;
+}
+.foto-perfil2{
+    content: '';
+    width: 7rem;
+    object-fit: cover;
+    background-color: #000000;
+    height: 7rem;
+    border: 4px solid #fff;     
     margin-top: 115px;
     margin-left: 3%;
     cursor: pointer;
@@ -86,13 +101,8 @@
     justify-content: center;
     align-items: center;
 }
-.logout{
-    margin-left: 85%;
-    color: red;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight:500;
-}
+
+
 
 .box-perfil2{
     width: 50%;
