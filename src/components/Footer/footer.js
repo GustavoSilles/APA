@@ -9,7 +9,7 @@ import './footerStyles.css'
 const Footer = () => {
     return (
         <div className='footer'>
-            <div className="container">
+            <div className="container-footer">
                 <div className="top">
                     <div className="logo-footer">
                     <SiPug className='icon' />
@@ -40,7 +40,7 @@ const Footer = () => {
                         <p><Link  className='textoFooter' to='/perfil'>Termos</Link></p>
                     </div>
                     <div className="col">
-                        <h3>Informações</h3>
+                        <h3>Informação</h3>
                         <p><Link  className='textoFooter' to='/home2'>Resgate um animal</Link></p>
                         <p><Link  className='textoFooter' to='/home'>Leia mais</Link></p>
                         <p><Link  className='textoFooter' to='/home'>Home</Link></p>

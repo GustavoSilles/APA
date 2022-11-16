@@ -8,8 +8,8 @@ const LeiaMais = () => {
         <>
             <Navbar />
             <div className='leiamais'>
-                <div className="container" >
-                    <div className="content">
+                <div className="container-mais" >
+                    <div className="content-mais">
                         <h2><span className='outraCor'>Como posso</span> ajudar os animais?</h2>
                             <h3>Para que você possa ajudar um animal, sendo este um gato, um cachorro, vaca e etc, 
                                 não é preciso necessariamente adota-lo, você pode alimenta-lo caso ele esteja visivelmente com fome, 
