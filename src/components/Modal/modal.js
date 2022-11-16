@@ -11,19 +11,17 @@ const Modal =({ setOpenModal }) => {
     const [progressPorcent, setProgresspercent] = useState(0);
 
     const postPostagem = async () => {  
-
       if (imgURL != "" && descricao != "") {
           try {
               const requestOptions = {
                   method: 'POST',
                   headers: { 'Content-type': 'application/json' },
                   body: JSON.stringify({
-                      setImgURL: setImgURL,
+                      imgURL: imgURL,
                       descricao: descricao
                   })
               }
              await fetch('http://localhost:3001/api/post', requestOptions)
-              //window.location.reload();
               alert("deu certo")
             }catch( error){
               setImgURL('')

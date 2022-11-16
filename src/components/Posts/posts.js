@@ -5,33 +5,33 @@ import {BsFillShareFill} from "react-icons/bs"
 import Modal2 from '../Modal2/modal2'
 import Modal3 from '../Modal-confirmacao/modal-confirmacao'
 import { GoMegaphone } from "react-icons/go";
-const Posts = (descricao, imgURL,) => {
-    console.log(imgURL);
+const Posts = (props) => {
     const [modalOpen, setModalOpen] = useState(false);
     const [modal, setModal] = useState(false);
     const handleModal = (state) => {
         setModal(state)
       }
-    
+console.log(props);
+
     return (
        
        <>
-      
+    
        <div className='postzao'>
                 <div className='posixion'>
                 <div className='box'>
                     <div className='navbox'>
                         <div className='pika'>
-                        <div className='fotopost2'></div>
+                        <div className='fotopost2'>{props.imgURL}</div>
                         <div className='nominho'>Gustavin</div>
                         </div>
                         <GoMegaphone className='megaphone' onClick={() => {setModal(true)}}/>
                     </div>
                     <div className='descricao'>
-                        <p className='descrison'>oia que gatinho bunitu</p>
+                    <p className='descrison'>{props.descricao}</p>
                     </div>
                     <div className='imgbox'>
-                        <div className='propriafoto'>
+                        <div className='propriafoto' style={{backgroundImage: props.imgURL}}>
                         </div>
                     </div>
                     <div className='footerbox'>
