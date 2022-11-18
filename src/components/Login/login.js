@@ -26,12 +26,13 @@ import GoogleLogin from '@leecheuk/react-google-login'
                       })
                   }
                   const response = await fetch('http://localhost:3001/api/login/user', requestOptions)
+
                   if(response.status === 400){
                   alert("Erro!, Usuário não encontrado")
                   }else{
-                   
                     const data = await response.json()
                       setUsers(data)
+                      // localStorage.setItem('bla', JSON.stringify(users[0].id))
                       window.location.href= "./home"
                       }
               }catch(error){

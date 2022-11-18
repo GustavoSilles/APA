@@ -15,6 +15,7 @@
 .foto-perfil{
     content: '';
     width: 7rem;
+     background: url('../../assets/funny-cat-videos-wide.jpg') no-repeat center center/cover;
     object-fit: cover;
     background-color: #E6E6E6;
     height: 7rem;
@@ -27,15 +28,35 @@
 .foto-perfil2{
     content: '';
     width: 7rem;
+     background: url('../../assets/funny-cat-videos-wide.jpg') no-repeat center center/cover;
     object-fit: cover;
-    background-color: #000000;
+    background-color: #E6E6E6;
     height: 7rem;
+    bottom: 119px;
+    right: 7%;
+    position: relative;
     border: 4px solid #fff;     
     margin-top: 115px;
     margin-left: 3%;
     cursor: pointer;
     border-radius:50%;
 }
+#input-file2 {
+    display: none;
+  
+  }
+  .label-file2 {
+    left: 13%;
+    position: relative;
+    bottom: 30px;
+    color: #E6E6E6;
+  
+  }
+  .iconmodalimg2 {
+    color: #E6E6E6;
+
+  }
+
 .box-perfil{
     width: 50%;
     display: flex;

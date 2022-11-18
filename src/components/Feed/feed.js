@@ -12,6 +12,7 @@ const Feed = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
+    const [localizacao, setLocalizacao] = useState("")
 
 
     const getPostagem = async () => {  
@@ -50,7 +51,7 @@ const Feed = () => {
                 </div>
                 
                     { posts.map((posts) => {
-                        return <Posts descricao = {posts.descricao}/>
+                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL}/>
                     })}
                 <Posts />
             </div>

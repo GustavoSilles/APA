@@ -22,7 +22,7 @@ console.log(props);
                 <div className='box'>
                     <div className='navbox'>
                         <div className='pika'>
-                        <div className='fotopost2'>{props.imgURL}</div>
+                        <div className='fotopost2'></div>
                         <div className='nominho'>Gustavin</div>
                         </div>
                         <GoMegaphone className='megaphone' onClick={() => {setModal(true)}}/>
@@ -31,7 +31,7 @@ console.log(props);
                     <p className='descrison'>{props.descricao}</p>
                     </div>
                     <div className='imgbox'>
-                        <div className='propriafoto' style={{backgroundImage: props.imgURL}}>
+                        <div className='propriafoto' style={{background: `url(${props.imgURL}) no-repeat center center/cover`}}>
                         </div>
                     </div>
                     <div className='footerbox'>
