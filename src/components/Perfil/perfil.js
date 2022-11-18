@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {storage} from "../firebase";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
+import {BsCameraFill} from "react-icons/bs"
 import './perfilStyles.css'
 import Navbar from '../Navbar/navbar'
 const Perfil = () => {
@@ -41,12 +42,15 @@ const Perfil = () => {
           <div className='perfil-container'>
           <div className='box-perfil'>
           <div className='fundo-perfil'>
-           
-             <form onSubmit={formHandler}className='seila-container'>   
-           
-             {!imgURL && <p>{}</p>}
-             {imgURL && <img className="foto-perfil2" src={URL.createObjectURL(imgURL)}  alt="Imagem"  value={imgURL} onChange={(e) => setImgURL(e.target.value)}/>}
-             <input type="file" className='foto-perfil' onChange={e => setImgURL(e.target.files[0])}></input>
+          <div className="foto-perfil">
+          {imgURL && <img className="foto-perfil2" src={URL.createObjectURL(imgURL)}  alt="Imagem"  value={imgURL} onChange={(e) => setImgURL(e.target.value)}/>}
+          </div>
+          <form onSubmit={formHandler}className="">
+        <label className="label-file2" for="input-file2">
+          <BsCameraFill className="iconmodalimg2"size={28} color='#532E1C' />
+        </label>
+      <input type="file" id='input-file2' onChange={e => setImgURL(e.target.files[0])}/> 
+     
        </form>
            
           </div>

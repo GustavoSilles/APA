@@ -22,21 +22,21 @@ function App(){
   return (
     <Router>
       <Routes>
-          <Route path="/perfil2" element={<Perfil2 />} />
-          <Route path="/adm" element={<Adm />} />
-          <Route path="/navbar2" element={<Navbar2 />} />
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/apimapa" element={<ApiMapa />} />
-          <Route path="/cadastro" element={<Cadastro />} />
-          <Route path="/feed" element={<Feed />} />
-          <Route path="/footer" element={<Footer />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/home2" element={<Home2 />} />
-          <Route path="/home3" element={<Home3 />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/leiamais" element={<LeiaMais />} />
-          <Route path="/navbar" element={<Navbar />} />
-          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/perfil2" element={<Perfil2/>} />
+          <Route path="/adm" element={<Adm/>} />
+          <Route path="/navbar2" element={<Navbar2/>} />
+          <Route path="/" element={<LandingPage/>} />
+          <Route path="/apimapa" element={<ApiMapa/>} />
+          <Route path="/cadastro" element={<Cadastro/>} />
+          <Route path="/feed" element={<Feed/>} />
+          <Route path="/footer" element={<Footer/>} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/home2" element={<Home2/>} />
+          <Route path="/home3" element={<Home3/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/leiamais" element={<LeiaMais/>} />
+          <Route path="/navbar" element={<Navbar/>} />
+          <Route path="/perfil" element={<Perfil/>} />
       </Routes>
     </Router>
   )
