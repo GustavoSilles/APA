@@ -22,10 +22,10 @@ function App(){
   return (
     <Router>
       <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/perfil2" element={<Perfil2 />} />
           <Route path="/adm" element={<Adm />} />
           <Route path="/navbar2" element={<Navbar2 />} />
-          <Route path="/" element={<LandingPage />} />
           <Route path="/apimapa" element={<ApiMapa />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/feed" element={<Feed />} />
