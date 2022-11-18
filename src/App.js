@@ -1,5 +1,5 @@
 import React from 'react'
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Cadastro from "./components/Cadastro/cadastro"
 import Feed from "./components/Feed/feed"
 import Footer from "./components/Footer/footer"
@@ -20,7 +20,8 @@ import Navbar2 from './components/Navbar2/navbar2'
 
 function App(){
   return (
-    <Router>
+    <BrowserRouter>
+
       <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/perfil2" element={<Perfil2 />} />
@@ -38,7 +39,7 @@ function App(){
           <Route path="/navbar" element={<Navbar />} />
           <Route path="/perfil" element={<Perfil />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   )
 }
 
