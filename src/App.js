@@ -11,17 +11,15 @@ import LeiaMais from "./components/LeiaMais/leiamais"
 import Login from "./components/Login/login"
 import Navbar from "./components/Navbar/navbar"
 import Perfil from "./components/Perfil/perfil"
-import './index.css';
 import ApiMapa from './components/ApiMapa/apiMapa'
 import Adm from "./components/Adm/adm"
 import Perfil2 from './components/Perfil2/perfil2'
 import Navbar2 from './components/Navbar2/navbar2'
-
+import './index.css';
 
 function App(){
   return (
     <BrowserRouter>
-    <div>
       <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/perfil2" element={<Perfil2 />} />
@@ -39,7 +37,7 @@ function App(){
           <Route path="/navbar" element={<Navbar />} />
           <Route path="/perfil" element={<Perfil />} />
       </Routes>
-      </div>
+ 
     </BrowserRouter>
   )
 }
