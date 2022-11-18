@@ -51,7 +51,7 @@ const Feed = () => {
                 </div>
                 
                     { posts.map((posts) => {
-                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {props.localizacao}/>
+                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL}/>
                     })}
              
             </div>
