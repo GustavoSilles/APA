@@ -15,7 +15,7 @@
 .foto-perfil{
     content: '';
     width: 7rem;
-     background: url('../../assets/funny-cat-videos-wide.jpg') no-repeat center center/cover;
+     background: url('../../assets/fotoPadrão.png') no-repeat center center/cover;
     object-fit: cover;
     background-color: #E6E6E6;
     height: 7rem;
