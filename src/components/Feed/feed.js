@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from "react";
 import './feedStyles.css'
 import Navbar from '../Navbar/navbar'
-import Posts  from "../Posts/posts"
+import Posts   from "../Posts/posts"
 import Modal from '../Modal/modal'
 
+let loadfeed = 0
 
-const Feed = (list) => {
-    console.log(list);
+const Feed = () => {
+
     const [posts, setPosts] = useState([])
     const [modalOpen, setModalOpen] = useState(false);
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
+    const [localizacao, setLocalizacao] = useState("")
 
 
     const getPostagem = async () => {  
@@ -18,20 +20,19 @@ const Feed = (list) => {
                 const  response = await fetch('http://localhost:3001/api/post')
                 const data = response.json()
                 data.then(
-                    (val) => setPosts(val)
+                    (val) => setPosts(val.data)
                 )   
-                //window.location.reload();
               }catch( error){
                 console.log(error);
                 setPosts([])
                 
             }
         }
-        // useEffect(()=>{
-        //     getPostagem()
-        //     console.log("caiu no usefecte");
-        // }, []);
-
+    if(loadfeed < 7){
+        loadfeed++
+        getPostagem()
+    }
+    console.log(posts)
     return (
         <>
           <Navbar/>
@@ -44,20 +45,14 @@ const Feed = (list) => {
                     <button  className="btnpost"  onClick={() => {setModalOpen(true)}}>Começar a publicação</button>
                    
                     </div>
-                    {/* {list.map((post, feed) => (
-                        <Posts key={feed}  
-                        descricao={post.descricao} imgURL={post.imgURL} />
-                    ))}
-                    */}
+                   
                 </div>
                 {modalOpen && (<Modal setOpenModal={setModalOpen} />)}
                 </div>
                 
-             <Posts/>
-             <Posts/>
-             <Posts/>
-             <Posts/>
-             <Posts/>
+                    { posts.map((posts) => {
+                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {props.localizacao}/>
+                    })}
              
             </div>
                 

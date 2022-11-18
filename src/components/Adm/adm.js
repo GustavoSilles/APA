@@ -16,11 +16,7 @@ const Adm = () => {
                
                 </div>
                 
-             <Posts2/>
-             <Posts2/>
-             <Posts2/>
-             <Posts2/>
-             <Posts2/>
+            
              
            
            
