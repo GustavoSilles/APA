@@ -12,7 +12,7 @@ const Home2 = () => {
                         de seus tutores, pois sua presença consegue amenizar todos os sintomas de estresse, angústia, tristeza e solidão. 
                     </p>
                     <div>
-                     <Link to='/apimapa'><button>Resgate um animal</button></Link>
+                     <Link to='/feed'><button>Resgate um animal</button></Link>
                     </div>
                 </div>
             </div>

@@ -46,14 +46,15 @@
   
   }
   .label-file2 {
-    left: 13%;
+    left: 14%;
     position: relative;
-    bottom: 30px;
+    bottom: 35px;
     color: #E6E6E6;
   
   }
   .iconmodalimg2 {
-    color: #E6E6E6;
+    color: #c5a880!important;
+    cursor: pointer;
 
   }
 

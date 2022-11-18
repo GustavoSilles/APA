@@ -8,11 +8,35 @@ import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 const Modal =({ setOpenModal }) => {
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
-    const [localizacao, setLocalizacao] = useState("");
     const [progressPorcent, setProgresspercent] = useState(0);
 
+    const postPostagem = async () => {  
+
+      if (imgURL != "" && descricao != "") {
+          try {
+              const requestOptions = {
+                  method: 'POST',
+                  headers: { 'Content-type': 'application/json' },
+                  body: JSON.stringify({
+                      setImgURL: setImgURL,
+                      descricao: descricao
+                  })
+              }
+             await fetch('http://localhost:3001/api/post', requestOptions)
+              //window.location.reload();
+              alert("deu certo")
+            }catch( error){
+              setImgURL('')
+              setDescricao('')
+              
+          }
+      }else{
+        alert("preencha todos os campos")
+          }
+      }
   const formHandler = (e) => {
-    const file = e.target.files[0]
+    e.preventDefault()
+    const file = e.target[0]?.files[0]
 
     if(!file) return; 
     
@@ -32,37 +56,11 @@ const Modal =({ setOpenModal }) => {
      () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           setImgURL(downloadURL)
-          
         });
         
       }
     );
   }
-
-    const postPostagem = async (e) => {
-      if (descricao != "" && imgURL != "" && localizacao != "") {
-          try {
-              const requestOptions = {
-                  method: 'POST',
-                  headers: { 'Content-type': 'application/json' },
-                  body: JSON.stringify({
-                      imgURL: imgURL,
-                      descricao: descricao,
-                      localizacao: localizacao
-                  })
-              }
-             await fetch('http://localhost:3001/api/post', requestOptions)
-            }catch(error){
-              setImgURL('')
-              setDescricao('')
-              setLocalizacao('')
-              
-          }
-      }else{
-        alert("preencha todos os campos")
-          }
-      }
-
   return (
    
     <div className="modalBackground">
@@ -74,12 +72,11 @@ const Modal =({ setOpenModal }) => {
      
         <CgClose size={22} color='#532E1C' onClick={() => {setOpenModal(false) }} id="cancelBtn" className="iconmodal"/>
       </div>
-      <div className="textWrapper">
+        <textarea placeholder="qual a localização do animal?" className="inpmodal"  value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
         <textarea placeholder="No que voce esta pensando?" className="inpmodal"  value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
-      </div>
       <div className="imgcontainer">
       {!imgURL && <p>{}</p>}
-      {imgURL && <img className="imgmodal" src={imgURL}  alt="Imagem"  value={imgURL} onChange={(e) => setImgURL(e.target.value)}/>}
+      {imgURL && <img className="imgmodal" src={URL.createObjectURL(imgURL)}  alt="Imagem"  value={imgURL} onChange={(e) => setImgURL(e.target.value)}/>}
       </div>
       
       
@@ -87,7 +84,7 @@ const Modal =({ setOpenModal }) => {
         <label className="label-file" for="input-file">
           <HiPhotograph className="iconmodalimg"size={22} color='#532E1C' />
         </label>
-      <input type="file" id='input-file' onChange={(e) => formHandler(e)}/> 
+      <input type="file" id='input-file' onChange={e => setImgURL(e.target.files[0])}/> 
       <button type="submit" onClick={postPostagem} className="btnpostar">Postar</button> 
        </form>
        
