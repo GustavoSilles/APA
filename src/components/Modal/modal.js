@@ -8,8 +8,8 @@ import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 const Modal =({ setOpenModal }) => {
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
+    const [localizacao, setLocalizacao] = useState("");
     const [progressPorcent, setProgresspercent] = useState(0);
-  console.log(imgURL)
 
   const formHandler = (e) => {
     const file = e.target.files[0]
@@ -40,21 +40,22 @@ const Modal =({ setOpenModal }) => {
   }
 
     const postPostagem = async (e) => {
-      if (descricao != "" && imgURL != "") {
+      if (descricao != "" && imgURL != "" && localizacao != "") {
           try {
               const requestOptions = {
                   method: 'POST',
                   headers: { 'Content-type': 'application/json' },
                   body: JSON.stringify({
                       imgURL: imgURL,
-                      descricao: descricao
+                      descricao: descricao,
+                      localizacao: localizacao
                   })
               }
              await fetch('http://localhost:3001/api/post', requestOptions)
-              alert("deu certo")
-            }catch( error){
+            }catch(error){
               setImgURL('')
               setDescricao('')
+              setLocalizacao('')
               
           }
       }else{
