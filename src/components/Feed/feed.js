@@ -50,7 +50,7 @@ const Feed = () => {
                 </div>
                 
                     { posts.map((posts) => {
-                        return <Posts descricao = {posts.descricao}/>
+                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL}/>
                     })}
              
             </div>

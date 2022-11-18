@@ -3,9 +3,31 @@ import {storage} from "../firebase";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import './perfilStyles.css'
 import Navbar from '../Navbar/navbar'
+
+let loadfeed = 0
+
 const Perfil = () => {
   const [imgURL, setImgURL] = useState("");
   const [progressPorcent, setProgresspercent] = useState(0);
+  const [users, setUsers] = useState([])
+
+  const getPerfil = async () => {  
+    try {
+        const  response = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('id')))
+        const data = response.json()
+        data.then(
+            (val) => setUsers(val.data)
+        )   
+      }catch( error){
+        console.log(error);
+        setUsers([])
+        
+    }
+}
+if(loadfeed < 7){
+loadfeed++
+getPerfil()
+}
 
    const formHandler = (e) => {
     e.preventDefault()

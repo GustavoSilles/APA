@@ -36,7 +36,7 @@ function App(){
           <Route path="/login" element={<Login />} />
           <Route path="/leiamais" element={<LeiaMais />} />
           <Route path="/navbar" element={<Navbar />} />
-          <Route path="/perfil" element={<Perfil />} />
+          <Route path="/perfil/*" element={<Perfil />} />
       </Routes>
     </Router>
   )
