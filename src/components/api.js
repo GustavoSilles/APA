@@ -8,6 +8,7 @@ export const getComments = async () => {
       parentId: null,
       createdAt: "2005-03-11T23:00:33.010+02:00",
     },
+    
   ];
 };
 
