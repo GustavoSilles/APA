@@ -53,8 +53,13 @@ const Feed = () => {
                     { posts.map((posts) => {
                         return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL}/>
                     })}
+<<<<<<< HEAD
                 <Posts />
+=======
+               <Posts/>
+>>>>>>> 47e5844f73e4a7e34680f62ed2890a0b8a398f59
             </div>
+          
                 
         </>
     )

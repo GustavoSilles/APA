@@ -41,7 +41,19 @@ console.log(props);
                     </div>
                     <div className='ascoisas2'>
                     <BsFillShareFill className='iconbox'/>
-                    <div className='textbox'>Compartilhe</div>
+                    <button 
+                        className='textbox'
+                            onClick={
+                                () => { 
+                                    navigator.share({
+                                    title: 'Share', 
+                                    text:  'whatevs'   ,                  
+                                    url: this.state.link
+                                }
+                            )}
+                        }>
+                        Compartilhar
+                    </button>
                     </div>
                     </div>
                     <div className='comentario'></div>

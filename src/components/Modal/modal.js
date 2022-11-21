@@ -75,6 +75,7 @@ const Modal =({ setOpenModal }) => {
         <CgClose size={22} color='#532E1C' onClick={() => {setOpenModal(false) }} id="cancelBtn" className="iconmodal"/>
       </div>
       <div className="textWrapper">
+        <textarea placeholder="Qual a localização do animal?" className="inpmodal"  value={localizacao} onChange={(e) => setLocalizacao(e.target.value)}/>
         <textarea placeholder="No que voce esta pensando?" className="inpmodal"  value={descricao} onChange={(e) => setDescricao(e.target.value)}/>
       </div>
       <div className="imgcontainer">
