@@ -99,4 +99,4 @@ const Modal =({ setOpenModal }) => {
   );
 }
 
-export default Modal;
+export default Modal;

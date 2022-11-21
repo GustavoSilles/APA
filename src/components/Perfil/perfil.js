@@ -69,7 +69,7 @@ getPerfil()
           </div>
           <form onSubmit={formHandler}className="">
         <label className="label-file2" for="input-file2">
-          <BsCameraFill className="iconmodalimg2"size={28} color='#532E1C' />
+          <BsCameraFill className="iconmodalimg2"size={30} color='#532E1C' />
         </label>
       <input type="file" id='input-file2' onChange={e => setImgURL(e.target.files[0])}/> 
      
