@@ -53,8 +53,9 @@ const Feed = () => {
                     { posts.map((posts) => {
                         return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL}/>
                     })}
-             
+               <Posts/>
             </div>
+          
                 
         </>
     )

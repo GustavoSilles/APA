@@ -1,15 +1,15 @@
 import "./login.css";
 import {Link} from 'react-router-dom'
 import React, {useState} from "react";
-import GoogleLogin from '@leecheuk/react-google-login'
+// import GoogleLogin from '@leecheuk/react-google-login'
   const Login = () => {
      
           const [email, setEmail] = useState("");
           const [password, setPassword] = useState("");
           const [users, setUsers] = useState([])
-          const responseGoogle = (response) => {
-            console.log(response);
-          }
+          // const responseGoogle = (response) => {
+          //   console.log(response);
+          // }
 
           const getUsers = async () => {
             if(email == "adm" && password == "123"){
@@ -75,12 +75,12 @@ import GoogleLogin from '@leecheuk/react-google-login'
                 </div>
     
                 <div className="text-center2">
-                <div className="google"><GoogleLogin
+                {/* <div className="google"><GoogleLogin
               clientId="1097643803374-c7g4t2g4i8kitlmo3uamagsub95cilo5.apps.googleusercontent.com"
               buttonText="Continuar com o google"
               onSuccess={responseGoogle}
               onFailure={responseGoogle}
-              /></div>
+              /></div> */}
               <div className="possui">
                   <span className="txt1">Não possui conta? </span>
                 
