@@ -54,9 +54,10 @@ const Feed = () => {
                         return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL}/>
                     })}
                <Posts/>
+               
             </div>
           
-                
+            
         </>
     )
 }

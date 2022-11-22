@@ -14,7 +14,11 @@
     display: flex;
     justify-content: center;
 }
-
+.pika{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
 .fotopost2{
     background: url('../../assets/WIN_20220927_16_51_31_Pro.jpg') no-repeat center center/cover;
     content: '';
@@ -24,9 +28,14 @@
     cursor: pointer;
     border-radius:50%;
 }
-
 .nominho{
+    margin-top: 5px;
     color: #532E1C;
+    margin-left: 10px;
+}
+.localizacao{
+    font-size: 12px;
+    width: auto;
     margin-left: 10px;
 }
 .descricao{
@@ -73,11 +82,7 @@
     cursor: pointer;
     flex-direction: row;
 }
-.pika{
-    display: flex;
-    align-items: center;
-    margin-left: 2%;
-}
+
 .megaphone {
     color: red;
     width: 25px;
