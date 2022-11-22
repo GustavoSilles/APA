@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./cadastro.css";
 import {Link} from 'react-router-dom'
-import Modal3 from '../Modal-confirmacao/modal-confirmacao'
+// import Modal3 from '../Modal-confirmacao/modal-confirmacao'
 
 const Cadastro = () => {
 
@@ -40,7 +40,7 @@ const Cadastro = () => {
                   setPassword('')
                 }
               }else{
-                setModal(true) 
+                // setModal(true) 
                 
               }
       }
@@ -53,15 +53,19 @@ const Cadastro = () => {
 
               <div className="wrap-input">
                 <input
+                required 
+                type="text"
                   className={username !== "" ? "has-val input" : "input"}  
                   value={username}
                     onChange={(e) => setUsername(e.target.value)}
                 /> 
-                <span className="focus-input" data-placeholder="User name"></span>
+                <span className="focus-input" data-placeholder="Username"></span>
               </div>
 
               <div className="wrap-input">
                 <input
+                required 
+                   type="text"
                   className={name !== "" ? "has-val input" : "input"}
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -71,6 +75,7 @@ const Cadastro = () => {
   
               <div className="wrap-input">
                 <input
+                required 
                   className={email !== "" ? "has-val input" : "input"}
                   value={email}
                   type="email"
@@ -81,7 +86,9 @@ const Cadastro = () => {
   
               <div className="wrap-input">
                 <input
+                required 
                   className={password !== "" ? "has-val input" : "input"}
+                  minlength="8"
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -90,11 +97,11 @@ const Cadastro = () => {
               </div>
   
               <div className="container-login-form-btn">
-                <button  onClick={postUser} className="login-form-btn">Cadastre-se</button>
+                <button type="submit"  onClick={postUser} className="login-form-btn">Cadastre-se</button>
               </div>
   
               <div className="text-center2">
-              {modal &&(<Modal3 handleModal={handleModal}/>)} 
+              {/* {modal &&(<Modal3 handleModal={handleModal}/>)}  */}
               <div className="possui">
                 <span className="txt1">já possui conta? </span>
                 <Link to='/login'> <p className="txt2">Fazer login</p></Link>
