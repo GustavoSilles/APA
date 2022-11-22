@@ -51,12 +51,12 @@ const Feed = () => {
                 </div>
                 
                     { posts.map((posts) => {
-                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL}/>
+                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao} />
                     })}
-               <Posts/>
+               
             </div>
           
-                
+            
         </>
     )
 }
