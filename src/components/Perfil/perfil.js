@@ -8,27 +8,46 @@ import Navbar from '../Navbar/navbar'
 let loadfeed = 0
 
 const Perfil = () => {
-  const [imgURL, setImgURL] = useState("");
+  const [imgURL2, setImgURL2] = useState("");
+
+  const postPhoto = async (e) => {
+    if (imgURL2 != "") {
+        try {
+            const requestOptions = {
+                method: 'POST',
+                headers: { 'Content-type': 'application/json' },
+                body: JSON.stringify({
+                    imgURL2: imgURL2   
+                })
+            }
+           await fetch('http://localhost:3001/api/user', requestOptions)
+          }catch(error){
+            setImgURL2('')     
+        }
+    }else{
+      alert("preencha todos os campos")
+        }
+    }
   const [progressPorcent, setProgresspercent] = useState(0);
   const [users, setUsers] = useState([])
 
-  const getPerfil = async () => {  
-    try {
-        const  response = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('id')))
-        const data = response.json()
-        data.then(
-            (val) => setUsers(val.data)
-        )   
-      }catch( error){
-        console.log(error);
-        setUsers([])
+//   const getPerfil = async () => {  
+//     try {
+//         const  response = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('id')))
+//         const data = response.json()
+//         data.then(
+//             (val) => setUsers(val.data)
+//         )   
+//       }catch( error){
+//         console.log(error);
+//         setUsers([])
         
-    }
-}
-if(loadfeed < 7){
-loadfeed++
-getPerfil()
-}
+//     }
+// }
+// if(loadfeed < 7){
+// loadfeed++
+// getPerfil()
+// }
 
    const formHandler = (e) => {
     e.preventDefault()
@@ -51,7 +70,7 @@ getPerfil()
       },
      () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          setImgURL(downloadURL)
+          setImgURL2(downloadURL)
         });
         
       }
@@ -65,13 +84,13 @@ getPerfil()
           <div className='box-perfil'>
           <div className='fundo-perfil'>
           <div className="foto-perfil">
-          {imgURL && <img className="foto-perfil2" src={URL.createObjectURL(imgURL)}  alt="Imagem"  value={imgURL} onChange={(e) => setImgURL(e.target.value)}/>}
+          {imgURL2 && <img className="foto-perfil2" src={URL.createObjectURL(imgURL2)} alt="Imagem"  value={imgURL2} onChange={(e) => setImgURL2(e.target.value)}/>}
           </div>
           <form onSubmit={formHandler}className="">
         <label className="label-file2" for="input-file2">
           <BsCameraFill className="iconmodalimg2"size={30} color='#532E1C' />
         </label>
-      <input type="file" id='input-file2' onChange={e => setImgURL(e.target.files[0])}/> 
+      <input type="file" id='input-file2' onChange={e => setImgURL2(e.target.files[0])}/> 
      
        </form>
            
@@ -102,7 +121,7 @@ getPerfil()
             </div>
             </div>
             <div className='cantoEsquerdo'>
-          <button className='btn_perfil'>Salvar alterações</button>
+          <button className='btn_perfil' onClick={postPhoto}>Salvar alterações</button>
           </div>
          
           </div>

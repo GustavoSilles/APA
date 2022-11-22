@@ -25,8 +25,8 @@ console.log(props);
                         <div className='pika'>
                         <div className='fotopost2'></div>
                         <div className='divTextos'>
-                        <div className='nominho'>Gustavin</div>
-                        <div className='localizacao'>Dale primoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+                        <div className='nominho'></div>
+                        <div className='localizacao'>{props.localizacao}</div>
                         </div>
                         </div>
                         <GoMegaphone className='megaphone' onClick={() => {setModal(true)}}/>
