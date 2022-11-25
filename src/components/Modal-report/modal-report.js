@@ -1,5 +1,5 @@
 
-import "./modal-confirmacao.css";
+import "./modal-report.css";
 import React from "react";
 import {CgClose} from 'react-icons/cg'
 
@@ -14,7 +14,7 @@ const Modal3 =(props) => {
       <div className="modalContainer3">
       <div className="fadeIn">
       <div className="navmodal">
-        <p className="titlemodal">Realmente deseja realizar essa ação?</p>
+        <p className="titlemodal">Realmente deseja reportar essa publicação?</p>
      
         <CgClose size={22} color='#532E1C' onClick={() => {handleModal(false) }} id="cancelBtn" className="iconmodal"/>
       </div>
