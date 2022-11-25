@@ -11,7 +11,7 @@ const Posts = (props) => {
     const handleModal = (state) => {
         setModal(state)
       }
-console.log(props);
+
 
     return (
        
@@ -25,7 +25,7 @@ console.log(props);
                         <div className='pika'>
                         <div className='fotopost2'></div>
                         <div className='divTextos'>
-                        <div className='nominho'></div>
+                        <div className='nominho'>{props.username}</div>
                         <div className='localizacao'>{props.localizacao}</div>
                         </div>
                         </div>

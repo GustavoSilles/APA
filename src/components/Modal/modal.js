@@ -5,11 +5,31 @@ import React, { useState } from "react";
 import {storage} from "../firebase";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
+let loadModal = 0
+
 const Modal =({ setOpenModal }) => {
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
     const [localizacao, setLocalizacao] = useState("");
     const [progressPorcent, setProgresspercent] = useState(0);
+
+    const [loggedUser, setLoggedUser] = useState({})
+    console.log(loggedUser);
+    const getUsers = async () => {
+
+        try{
+                const responseUser = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('vapo')))
+                const dataUser = responseUser.json()
+                dataUser.then(
+                    (val) => {
+                        setLoggedUser(val.data) 
+                    }
+                )
+            
+        }catch(e){
+            console.log("erro");
+        }
+    }
 
   const formHandler = (e) => {
     const file = e.target.files[0]
@@ -48,7 +68,8 @@ const Modal =({ setOpenModal }) => {
                   body: JSON.stringify({
                       imgURL: imgURL,
                       descricao: descricao,
-                      localizacao: localizacao
+                      localizacao: localizacao,
+                      usuario: loggedUser.username
                   })
               }
              await fetch('http://localhost:3001/api/post', requestOptions)
@@ -61,8 +82,8 @@ const Modal =({ setOpenModal }) => {
       }else{
         alert("preencha todos os campos")
           }
-      }
-
+      }    
+        getUsers()
   return (
    
     <div className="modalBackground">
