@@ -71,7 +71,7 @@ const Feed = () => {
                 </div>
                 
                     { posts.map((posts) => {
-                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao}  username = {posts.usuario}/>
+                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao}  username = {posts.usuario} imgURL2 = {posts.imgURL2}/>
                     })}
                
             </div>
