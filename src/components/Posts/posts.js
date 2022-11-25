@@ -25,11 +25,7 @@ const Posts = (props) => {
                         <div className='pika'>
                         <div className='fotopost2'></div>
                         <div className='divTextos'>
-<<<<<<< HEAD
-                        <div className='nominho'>Gustavo</div>
-=======
                         <div className='nominho'>{props.username}</div>
->>>>>>> ff5a166dfb8b2632e2cac011a43a7d11cfec4b30
                         <div className='localizacao'>{props.localizacao}</div>
                         </div>
                         </div>
