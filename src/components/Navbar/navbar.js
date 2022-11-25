@@ -26,7 +26,7 @@ const Navbar = () => {
                     <li><Link className='l1' to='/home'>Home</Link></li>
                     <li><Link className='l2' to='/feed'>Feed</Link> </li>
                     <li><Link className='l3' to='/apimapa'>Locais de Ajuda</Link></li>
-                    <li><div className='fotopost3' onClick={() => {setModal(!modal)}}></div></li> 
+                    <li><div className='fotopost8' onClick={() => {setModal(!modal)}}></div></li> 
                        
                        
                 </ul>

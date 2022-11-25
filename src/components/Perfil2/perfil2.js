@@ -1,6 +1,7 @@
 import React from 'react'
 import './perfil2.css'
 import Navbar2 from '../Navbar2/navbar2'
+
 const Perfil2 = () => {
     return (
         <>
@@ -9,7 +10,7 @@ const Perfil2 = () => {
           <div className='perfil-container'>
           <div className='box-perfil'>
           <div className='fundo-perfil'>
-            <div className='foto-perfil'></div>
+            <div className='foto-perfil3'></div>
           </div>
           </div>
          

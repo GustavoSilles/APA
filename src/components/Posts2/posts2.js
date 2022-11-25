@@ -4,7 +4,9 @@ import {BsFillChatLeftTextFill} from "react-icons/bs"
 import {IoMdTrash} from "react-icons/io"
 import {BsFillShareFill} from "react-icons/bs"
 import Modal2 from '../Modal2/modal2'
-import Modal3 from '../Modal-confirmacao/modal-confirmacao'
+import Modal4 from '../Modal-excluir/modal-excluir'
+
+
 
 const Posts2 = () => {
     const [modal, setModal] = useState(false);
@@ -49,7 +51,7 @@ const Posts2 = () => {
                     <div className='comentario'></div>
                 </div>
                 {modalOpen && <Modal2 setOpenModal={setModalOpen} />}
-                {modal &&(<Modal3 handleModal={handleModal}/>)} 
+                {modal &&(<Modal4 handleModal={handleModal}/>)} 
                 </div>
               
                 </div>
@@ -60,7 +62,6 @@ const Posts2 = () => {
        
                
       </div>
-     
      
                 </> 
                 
