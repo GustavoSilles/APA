@@ -65,6 +65,7 @@
 
 .conteudo-principal-escrito {
   display: flex;
+  width: 60%;
   flex-direction: column;
   gap: 32px;
 }
@@ -108,12 +109,14 @@
   background-color: rgba(236, 214, 196, 0.53);
 }
 
-.conteudo-principal-imagem {
-  height: 360px;
-  position: relative;
-  width: 355px;
+.conteudo-principal-imagem{
+  content: '';
   margin-top: 30px;
+  background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
+  height: 26rem;
+  width: 25rem;
 }
+
 
 .conteudo-secundario {
   display: flex;
@@ -149,6 +152,7 @@
   .landingpage{
     height: auto;
   }
+  
  
   .conteudo-principal-escrito-botao {
     background-color: #ECD6C4;
@@ -166,10 +170,13 @@
     font-size: 13px;
     color: #2F2325;
   }
-  .conteudo-principal-imagem {
-    height: 200px;
-    width: 190px;
+  .conteudo-principal-imagem{
+    content: '';
+    background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
+    height: 25rem;
+    width: 25rem;
   }
+  
   .conteudo-principal{
     flex-direction: column;
     text-align: center;

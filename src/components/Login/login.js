@@ -1,25 +1,22 @@
 import "./login.css";
-import { Link, useNavigate } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import React, { useState } from "react";
 // import GoogleLogin from '@leecheuk/react-google-login'
-import { FaIndent } from "react-icons/fa";
 
 const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const loggedUser = []
-  const navigate = useNavigate()
 
   // const responseGoogle = (response) => {
   //   console.log(response);
   // }
 
   const getUsers = async () => {
-    if (email == "adm" && password == "123") {
+    if (email === "adm" && password === "123") {
       window.location.href = "./adm"
     } else {
-      if (email != "" && password != "") {
+      if (email !== "" && password !== "") {
         try {
           const requestOptions = {
             method: 'POST',
@@ -61,6 +58,7 @@ const Login = () => {
 
             <div className="wrap-input">
               <input
+                required 
                 className={email !== "" ? "has-val input" : "input"}
                 type="email"
                 value={email}
@@ -71,6 +69,8 @@ const Login = () => {
             </div>
             <div className="wrap-input">
               <input
+                required 
+                minlength="8"
                 className={password !== "" ? "has-val input" : "input"}
                 type="password"
                 value={password}
@@ -81,7 +81,7 @@ const Login = () => {
 
             <div className="container-login-form-btn">
               <Link to='/home'><p className="txt2">aa</p></Link>
-              <button onClick={getUsers} className="login-form-btn">Login</button>
+              <button onClick={getUsers}  type="submit" className="login-form-btn">Login</button>
             </div>
 
             <div className="text-center2">

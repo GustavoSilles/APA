@@ -20,10 +20,14 @@ console.log(props);
        <div className='postzao'>
                 <div className='posixion'>
                 <div className='box'>
+                
                     <div className='navbox'>
                         <div className='pika'>
                         <div className='fotopost2'></div>
-                        <div className='nominho'>Gustavin</div>
+                        <div className='divTextos'>
+                        <div className='nominho'></div>
+                        <div className='localizacao'>{props.localizacao}</div>
+                        </div>
                         </div>
                         <GoMegaphone className='megaphone' onClick={() => {setModal(true)}}/>
                     </div>
