@@ -9,8 +9,7 @@ import Modal3 from '../Modal-confirmacao/modal-confirmacao'
 const Posts2 = () => {
     const [modal, setModal] = useState(false);
     const handleModal = (state) => {
-        setModal(state)
-      }
+        setModal(state)}
     const [modalOpen, setModalOpen] = useState(false);
     return (
        

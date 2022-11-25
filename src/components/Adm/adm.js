@@ -12,10 +12,9 @@ const Adm = () => {
          
         <div className='feed'>
             <div className="container-feed">
-               
-               
+              
                 </div>
-                
+                <Posts2/>
             
              
            
