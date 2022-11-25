@@ -3,7 +3,7 @@ import './posts.css'
 import {BsFillChatLeftTextFill} from "react-icons/bs"
 import {BsFillShareFill} from "react-icons/bs"
 import Modal2 from '../Modal2/modal2'
-import Modal3 from '../Modal-confirmacao/modal-confirmacao'
+import Modal3 from '../Modal-report/modal-report'
 import { GoMegaphone } from "react-icons/go";
 const Posts = (props) => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -45,19 +45,7 @@ console.log(props);
                     </div>
                     <div className='ascoisas2'>
                     <BsFillShareFill className='iconbox'/>
-                    <button 
-                        className='textbox'
-                            onClick={
-                                () => { 
-                                    navigator.share({
-                                    title: 'Share', 
-                                    text:  'whatevs'   ,                  
-                                    url: this.state.link
-                                }
-                            )}
-                        }>
-                        Compartilhar
-                    </button>
+
                     </div>
                     </div>
                     <div className='comentario'></div>

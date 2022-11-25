@@ -29,11 +29,7 @@ const ModalPerfil =(props) => {
         <div className="vaza">Sair</div>
        
       </div>
-      <div className="sair">
-        <IoMdTrash className="iconSair" height={60}/>
-        <div className="vaza">Excluir conta</div>
-       
-      </div>
+      
       </div>
     
       
