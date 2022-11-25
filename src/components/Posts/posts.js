@@ -23,7 +23,7 @@ const Posts = (props) => {
                 
                     <div className='navbox'>
                         <div className='pika'>
-                        <div className='fotopost2'></div>
+                        <div className='fotopost2'>{props.imgURL2}</div>
                         <div className='divTextos'>
                         <div className='nominho'>{props.username}</div>
                         <div className='localizacao'>{props.localizacao}</div>
@@ -45,7 +45,7 @@ const Posts = (props) => {
                     </div>
                     <div className='ascoisas2'>
                     <BsFillShareFill className='iconbox'/>
-
+                    <div className='textbox'>Compartilhe</div>
                     </div>
                     </div>
                     <div className='comentario'></div>
