@@ -10,7 +10,7 @@ let loadfeed = 0
 const Perfil = () => {
   const [imgURL2, setImgURL2] = useState("");
   const [loggedUser, setLoggedUser] = useState({})
-  const [, setProgresspercent2] = useState(0);
+  const [setProgresspercent2] = useState(0);
    const [users, setUsers] = useState([])
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
@@ -26,13 +26,14 @@ const Perfil = () => {
         data.then(
             (val) => setLoggedUser(val.data)
         )   
+        setImgURL2(loggedUser.imgURL)
       }catch( error){
         console.log(error);
         setUsers([])
         
     }
 }
-if(loadfeed < 7){
+if(loadfeed < 4){
 loadfeed++
 getPerfil()
 }
@@ -78,15 +79,16 @@ const postPhoto = async (e) => {
               })
           }
           await fetch('http://localhost:3001/api/post', requestOptions)
-        }catch(error){
-          setImgURL2('')
+          //window.location.reload(false);
+          console.log(imgURL2);   
+        }catch(e){
       }
   }else{
     alert("preencha todos os campos")
       }
   }    
 
-    
+  
     const upPerfl = async() => { 
               try{
                   const requestOptions = {
@@ -101,7 +103,8 @@ const postPhoto = async (e) => {
                       
                   }
                   await fetch('http://localhost:3001/api/user/' + loggedUser.id,  requestOptions)
-                  //postPhoto()
+                  //window.location.reload(false);
+                  postPhoto()
                   }catch(e){
                     alert("erro")
                 }
@@ -152,7 +155,7 @@ const postPhoto = async (e) => {
             </div>
             </div>
             <div className='cantoEsquerdo'>
-          <button className='btn_perfil' onClick={upPerfl}>Salvar alterações</button>
+          <button className='btn_perfil' onClick={postPhoto}>Salvar alterações</button>
           </div>
          
           </div>
