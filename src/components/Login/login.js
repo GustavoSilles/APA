@@ -80,7 +80,6 @@ const Login = () => {
             </div>
 
             <div className="container-login-form-btn">
-              <Link to='/home'><p className="txt2">aa</p></Link>
               <button onClick={getUsers}  type="submit" className="login-form-btn">Login</button>
             </div>
 
