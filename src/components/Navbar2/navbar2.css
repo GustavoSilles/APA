@@ -15,7 +15,7 @@
 
 
 .fotopost3{
-    background: url('../../assets/fotoPadrão.png') no-repeat center center/cover;
+    background: url('../../assets/8.jpg') no-repeat center center/cover;
     content: '';
     width: 3rem;
     position: relative;
@@ -65,12 +65,7 @@
 .textlogo{
     margin-left: 120%;
 }
-.conteudo-principal-imagem{
-    content: '';
-    background: url('../../assets//LogoVerdadeira.png') no-repeat center center/cover;
-    height: 25rem;
-    width: 25rem;
-}
+
 
 .navbar .logo .icon {
     font-size: 3rem;

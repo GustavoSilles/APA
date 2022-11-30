@@ -7,12 +7,31 @@ import Modal from '../Modal/modal'
 let loadfeed = 0
 
 const Feed = () => {
-
+    
+    const [loggedUser, setLoggedUser] = useState({})
     const [posts, setPosts] = useState([])
     const [modalOpen, setModalOpen] = useState(false);
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
     const [localizacao, setLocalizacao] = useState("")
+    
+    const getUsers = async () => {
+
+        try{
+            if(JSON.parse(localStorage.getItem('dasiBoard') !== null)){
+
+                const responseUser = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('vapo')))
+                const dataUser = responseUser.json()
+                dataUser.then(
+                    (val) => {
+                        setLoggedUser(val.data) 
+                    }
+                )
+            }
+        }catch(e){
+            console.log("erro");
+        }
+    }
 
 
     const getPostagem = async () => {  
@@ -31,6 +50,7 @@ const Feed = () => {
     if(loadfeed < 7){
         loadfeed++
         getPostagem()
+        getUsers()
     }
     console.log(posts)
     return (
@@ -41,7 +61,7 @@ const Feed = () => {
             <div className="container-feed">
                 <div className='divpost'>
                     <div className='fotopost'>
-                    <div className='foto'></div>
+                    <div className='foto_DoFeed'></div>
                     <button  className="btnpost"  onClick={() => {setModalOpen(true)}}>Começar a publicação</button>
                    
                     </div>
@@ -51,12 +71,12 @@ const Feed = () => {
                 </div>
                 
                     { posts.map((posts) => {
-                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao} />
+                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao}  username = {posts.usuario} imgURL2 = {posts.imgURL2}/>
                     })}
                
             </div>
-          
-            
+       
+           
         </>
     )
 }

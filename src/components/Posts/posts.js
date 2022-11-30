@@ -3,15 +3,21 @@ import './posts.css'
 import {BsFillChatLeftTextFill} from "react-icons/bs"
 import {BsFillShareFill} from "react-icons/bs"
 import Modal2 from '../Modal2/modal2'
-import Modal3 from '../Modal-confirmacao/modal-confirmacao'
+import Modal3 from '../Modal-report/modal-report'
+import ModalCompartilhar from "../Modal-compartilhar/modal-compartilhar" 
 import { GoMegaphone } from "react-icons/go";
+
 const Posts = (props) => {
     const [modalOpen, setModalOpen] = useState(false);
     const [modal, setModal] = useState(false);
     const handleModal = (state) => {
         setModal(state)
       }
-console.log(props);
+    
+      const[modalCompartilhar, setModalCompartilhar] = useState(false)
+    const HandleModal =(state) => {
+        setModalCompartilhar(state)
+    }
 
     return (
        
@@ -23,9 +29,9 @@ console.log(props);
                 
                     <div className='navbox'>
                         <div className='pika'>
-                        <div className='fotopost2'></div>
+                        <div className='fotopost2'>{props.imgURL2}</div>
                         <div className='divTextos'>
-                        <div className='nominho'></div>
+                        <div className='nominho'>{props.username}</div>
                         <div className='localizacao'>{props.localizacao}</div>
                         </div>
                         </div>
@@ -39,19 +45,20 @@ console.log(props);
                         </div>
                     </div>
                     <div className='footerbox'>
-                    <div className='ascoisas'onClick={() => {setModalOpen(true)}}>
+                    <div className='ascoisas' onClick={() => {setModalOpen(true)}}>
                     <BsFillChatLeftTextFill className='iconbox' />
                     <div className='textbox'>Comente</div>
                     </div>
-                    <div className='ascoisas2'>
+                    <div className='ascoisas2' onClick={() => {setModalCompartilhar(true)}}>
                     <BsFillShareFill className='iconbox'/>
-                    <div className='textbox'>Compartilhe</div>
+                    <div className='textbox' >Compartilhe</div>
                     </div>
                     </div>
                     <div className='comentario'></div>
                 </div>
                 {modalOpen && <Modal2 setOpenModal={setModalOpen} />}
                 {modal &&(<Modal3 handleModal={handleModal}/>)} 
+                {modalCompartilhar &&(<ModalCompartilhar HandleModal={HandleModal}/>)} 
                
                 </div>
               

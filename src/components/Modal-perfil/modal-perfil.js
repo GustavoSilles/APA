@@ -1,13 +1,31 @@
-
 import "./modal-perfil.css";
-import React from "react";
+import React, { useState } from "react";
 import {MdArrowForwardIos} from 'react-icons/md'
 import {MdOutlineLogout} from 'react-icons/md'
 import {IoMdTrash} from "react-icons/io"
 import {Link} from 'react-router-dom'
+
+let loadfeed = 0
+
 const ModalPerfil =(props) => {
    const { handleModal } = props
-
+   const [loggedUser, setLoggedUser] = useState({})
+   const getPerfil = async () => {  
+    try {
+        const  response = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('vapo')))
+        const data = response.json()
+        data.then(
+            (val) => setLoggedUser(val.data)
+        )   
+      }catch( error){
+        console.log(error);
+        
+    }
+}
+if(loadfeed < 7){
+loadfeed++
+getPerfil()
+}
    
   return (
    
@@ -19,7 +37,7 @@ const ModalPerfil =(props) => {
       <Link to='/perfil'className="boxzinha"> 
             <div className="cosas">
            <div className="img-modal"></div>
-            <div className="nome">Gustavin</div>
+            <div className="nome">{loggedUser.username}</div>
             </div>
         <MdArrowForwardIos size={22} color='#532E1C' onClick={() => {handleModal(false) }} id="cancelBtn" className="iconmodal"/> 
         </Link>
@@ -29,11 +47,7 @@ const ModalPerfil =(props) => {
         <div className="vaza">Sair</div>
        
       </div>
-      <div className="sair">
-        <IoMdTrash className="iconSair" height={60}/>
-        <div className="vaza">Excluir conta</div>
-       
-      </div>
+      
       </div>
     
       
