@@ -8,16 +8,16 @@ import Navbar from '../Navbar/navbar'
 let loadfeed = 0
 
 const Perfil = () => {
-  const [imgURL, setImgURL] = useState("");
+  const [imgURL2, setImgURL2] = useState("");
   const [loggedUser, setLoggedUser] = useState({})
-  const [progressPorcent, setProgresspercent] = useState(0);
-  const [users, setUsers] = useState([])
+  const [, setProgresspercent2] = useState(0);
+   const [users, setUsers] = useState([])
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  console.log(imgURL);
+  console.log(imgURL2);
   
   const getPerfil = async () => {  
     try {
@@ -36,55 +36,56 @@ if(loadfeed < 7){
 loadfeed++
 getPerfil()
 }
-console.log(imgURL);
+console.log(imgURL2);
 
 
-   const formHandler = (e) => {
-    e.preventDefault()
-    const file = e.target.files[0]
+const formHandler2 = (e) => {
+  const file = e.target.files[0]
 
-    if(!file) return; 
-    
+  if(!file) return; 
+  
 
-    const storageRef = ref(storage, `files/${file.name}`);
-    const uploadTask = uploadBytesResumable(storageRef, file);
+  const storageRef = ref(storage, `perfil/${file.name}`);
+  const uploadTask = uploadBytesResumable(storageRef, file);
 
-    uploadTask.on("state_changed",
-      (snapshot) => {
-        const progress =
-          Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
-        setProgresspercent(progress);
-      },
-      (error) => {
-        alert(error);
-      },
-     () => {
-        getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          setImgURL(downloadURL)
-        });
+  uploadTask.on("state_changed",
+    (snapshot) => {
+      const progress =
+        Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100);
+      setProgresspercent2(progress);
+    },
+    (error) => {
+      alert(error);
+    },
+   () => {
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+        setImgURL2(downloadURL)
         
+      });
+      
+    }
+  );
+}
+
+const postPhoto = async (e) => {
+  if (imgURL2 !== "") {
+      try {
+          const requestOptions = {
+              method: 'POST',
+              headers: { 'Content-type': 'application/json' },
+              body: JSON.stringify({
+                  imgURL: imgURL2
+              })
+          }
+          await fetch('http://localhost:3001/api/post', requestOptions)
+        }catch(error){
+          setImgURL2('')
       }
-    );
-   }
-   const postPhoto = async (e) => {
-    if (imgURL !== ""){
-        try {
-            const requestOptions = {
-                method: 'POST',
-                headers: { 'Content-type': 'application/json' },
-                body: JSON.stringify({
-                    imgURL: imgURL
-                })
-            }
-            console.log(imgURL);
-           await fetch('http://localhost:3001/api/user', requestOptions)
-          }catch(error){
-            setImgURL('')
-        }
-    }else{
-      alert("preencha todos os campos")
-        }
-    }  
+  }else{
+    alert("preencha todos os campos")
+      }
+  }    
+
     
     const upPerfl = async() => { 
               try{
@@ -113,17 +114,16 @@ console.log(imgURL);
           <div className='box-perfil'>
           <div className='fundo-perfil'>
           <div className="foto-perfil">
-          {/* {imgURL && <img className="foto-perfil2" src={URL.createObjectURL(imgURL)}  alt="Imagem"  value={imgURL} onChange={(e) => imgURL(e)}/>} */}
-          {imgURL && <img className="foto-perfil2" src={URL.createObjectURL(imgURL)} alt="Imagem"  value={imgURL} onChange={(e) => setImgURL(e.target.value)}/>}
+          {!imgURL2 && <p>{}</p>}
+      {imgURL2 && <img className="foto-perfil2" src={imgURL2}  alt="Imagem"  value={imgURL2} onChange={(e) => setImgURL2(e.target.value)}/>}
           </div>
-          <form onSubmit={formHandler}className="">
+          <form onSubmit={formHandler2}className="">
         <label className="label-file2" for="input-file2">
           <BsCameraFill className="iconmodalimg2"size={30} color='#532E1C' />
         </label>
-        {/* <input type="file" id='input-file2' onChange={(e) => formHandler(e)}/>  */}
-      <input type="file" id='input-file2' onChange={e => setImgURL(e.target.files[0])}/> 
-     
+      <input type="file" id='input-file2' onChange={(e) => formHandler2(e)}/> 
        </form>
+
            
           </div>
           </div>

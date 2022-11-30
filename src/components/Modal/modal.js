@@ -5,13 +5,12 @@ import React, { useState } from "react";
 import {storage} from "../firebase";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
-let loadModal = 0
 
 const Modal =({ setOpenModal }) => {
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
     const [localizacao, setLocalizacao] = useState("");
-    const [progressPorcent, setProgresspercent] = useState(0);
+    const [,setProgresspercent] = useState(0);
 
     const [loggedUser, setLoggedUser] = useState({})
     console.log(loggedUser);
@@ -37,7 +36,7 @@ const Modal =({ setOpenModal }) => {
     if(!file) return; 
     
 
-    const storageRef = ref(storage, `files/${file.name}`);
+    const storageRef = ref(storage, `post/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on("state_changed",
@@ -60,7 +59,7 @@ const Modal =({ setOpenModal }) => {
   }
 
     const postPostagem = async (e) => {
-      if (descricao != "" && imgURL != "" && localizacao != "") {
+      if (descricao !== "" && imgURL !== "" && localizacao !== "") {
           try {
               const requestOptions = {
                   method: 'POST',
