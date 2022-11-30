@@ -6,6 +6,11 @@ import {IoMdTrash} from "react-icons/io"
 import {Link} from 'react-router-dom'
 
 let loadfeed = 0
+const logout = () => {
+  localStorage.removeItem('vapo')
+  window.location.href= "./login"
+
+}
 
 const ModalPerfil =(props) => {
    const { handleModal } = props
@@ -44,7 +49,7 @@ getPerfil()
        
         <div className="sair">
         <MdOutlineLogout className="iconSair" height={60}/>
-        <div className="vaza">Sair</div>
+        <div className="vaza" onClick={() => logout()}>Sair</div>
        
       </div>
       
