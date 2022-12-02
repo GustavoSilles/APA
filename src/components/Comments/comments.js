@@ -42,14 +42,14 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     });
   };
   const deleteComment = (commentId) => {
-    if (window.confirm("Tem certeza de que deseja remover o comentário?")) {
+   
       deleteCommentApi().then(() => {
         const updatedBackendComments = backendComments.filter(
           (backendComment) => backendComment.id !== commentId
         );
         setBackendComments(updatedBackendComments);
       });
-    }
+    
   };
 
   useEffect(() => {
