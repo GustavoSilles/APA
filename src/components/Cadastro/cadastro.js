@@ -4,20 +4,31 @@ import {Link} from 'react-router-dom'
 // import Modal3 from '../Modal-confirmacao/modal-confirmacao'
 
 const Cadastro = () => {
-
+    const [users, setUsers] = useState([])
     const [username, setUsername] = useState("");
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [modal, setModal] = useState(false)
-   
-    const handleModal = (state) => {
-      setModal(state)
-    }
 
+
+    const callAgentFinder = async() => {
+      try{
+          const response = await fetch('http://localhost:3001/api/user')
+          const data = response.json()
+          data.then(
+              (val) => {setUsers(val.data)
+
+              }
+          )
+      }catch(error){
+      }
+  }
     const postUser = async () => {
-      if (username != "" && name !="" && email != "" && password != "") {
-        console.log("n ta vazio");
+      callAgentFinder()
+      if (username !== "" && name !=="" && email !== "" && password !== "") {
+        // console.log("n ta vazio");
+        if(email.match(/([a-zA-Z0-9]+)([.{1}])?([a-zA-Z0-9]+)@gmail([.])com/g)){
+              if(password.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)){    
         try {
           const requestOptions = {
             method: 'POST',
@@ -39,11 +50,19 @@ const Cadastro = () => {
                   setEmail('')
                   setPassword('')
                 }
-              }else{
-                // setModal(true) 
-                
-              }
+            
+            } else {
+            
+            }
+          } else {
+            
+          }
+            } else {
+            
+            }
       }
+     
+  
     return (
       <div className="cadastro">
         <div className="container-cadastro">

@@ -77,7 +77,7 @@
     justify-content: center;
     
 }
-.foto{
+.foto_DoFeed{
     background: url('../../assets/fotoPadrão.png') no-repeat center center/cover;
     content: '';
     width: 3.5rem;

@@ -8,7 +8,6 @@ const Adm = () => {
     return (
         <>
           <Navbar2/>
-         
         <div className='feed'>
             <div className="container-feed">
             </div>
@@ -19,4 +18,3 @@ const Adm = () => {
 }
 
 export default Adm
-

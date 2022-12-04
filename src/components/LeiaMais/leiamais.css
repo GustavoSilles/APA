@@ -48,4 +48,10 @@
         width: 100%;
         padding: 1rem;
     }
+    h3{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 25px;
+    }
 }

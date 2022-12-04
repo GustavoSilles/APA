@@ -6,6 +6,11 @@ import {IoMdTrash} from "react-icons/io"
 import {Link} from 'react-router-dom'
 
 let loadfeed = 0
+const logout = () => {
+  localStorage.removeItem('vapo')
+  window.location.href= "./login"
+
+}
 
 const ModalPerfil =(props) => {
    const { handleModal } = props
@@ -36,7 +41,7 @@ getPerfil()
       <div className="navmodalPerfil">
       <Link to='/perfil'className="boxzinha"> 
             <div className="cosas">
-           <div className="img-modal"></div>
+           <div className="img-modal"><img className='fotopost2' src={loggedUser.imgURL2}></img></div>
             <div className="nome">{loggedUser.username}</div>
             </div>
         <MdArrowForwardIos size={22} color='#532E1C' onClick={() => {handleModal(false) }} id="cancelBtn" className="iconmodal"/> 
@@ -44,7 +49,7 @@ getPerfil()
        
         <div className="sair">
         <MdOutlineLogout className="iconSair" height={60}/>
-        <div className="vaza">Sair</div>
+        <div className="vaza" onClick={() => logout()}>Sair</div>
        
       </div>
       

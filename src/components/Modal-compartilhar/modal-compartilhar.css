@@ -1,0 +1,54 @@
+.modalBackground3 {
+    width: 100%;
+    height: auto;
+    top: 190px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    color: #532E1C;
+    align-items: center;
+  }
+  
+  .modalContainer3 {
+    width: 30%;
+    height: 200px;
+    margin-top: 16px;
+    border-radius: 12px;
+    background-color: #E6E6E6;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .navmodal {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    justify-content: space-between;
+    background-color: #E6E6E6;
+  
+  }
+  .titlemodalCompartilhar{
+     margin-left: 5%;
+    color: black;
+  }
+  
+ 
+  
+  
+
+  @media screen and (max-width:940px) {
+    .modalContainer3 {
+      width: 95%;
+      height: auto;
+      margin-top: 16px;
+      border-radius: 12px;
+      background-color: #E6E6E6;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      display: flex;
+      flex-direction: column;
+    }
+  }

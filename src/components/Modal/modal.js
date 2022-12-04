@@ -5,16 +5,17 @@ import React, { useState } from "react";
 import {storage} from "../firebase";
 import { ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
-let loadModal = 0
+let loadfeed = 0
 
 const Modal =({ setOpenModal }) => {
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
+    const [imgURL2, setImgURL2] = useState("");
     const [localizacao, setLocalizacao] = useState("");
-    const [progressPorcent, setProgresspercent] = useState(0);
+    const [,setProgresspercent] = useState(0);
 
     const [loggedUser, setLoggedUser] = useState({})
-    console.log(loggedUser);
+    // console.log(loggedUser);
     const getUsers = async () => {
 
         try{
@@ -37,7 +38,7 @@ const Modal =({ setOpenModal }) => {
     if(!file) return; 
     
 
-    const storageRef = ref(storage, `files/${file.name}`);
+    const storageRef = ref(storage, `post/${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
 
     uploadTask.on("state_changed",
@@ -60,7 +61,7 @@ const Modal =({ setOpenModal }) => {
   }
 
     const postPostagem = async (e) => {
-      if (descricao != "" && imgURL != "" && localizacao != "") {
+      if (descricao !== "" && imgURL !== "" && localizacao !== "") {
           try {
               const requestOptions = {
                   method: 'POST',
@@ -69,7 +70,8 @@ const Modal =({ setOpenModal }) => {
                       imgURL: imgURL,
                       descricao: descricao,
                       localizacao: localizacao,
-                      usuario: loggedUser.username
+                      usuario: loggedUser.username,
+                      photo: loggedUser.imgURL2
                   })
               }
              await fetch('http://localhost:3001/api/post', requestOptions)
@@ -82,8 +84,12 @@ const Modal =({ setOpenModal }) => {
       }else{
         alert("preencha todos os campos")
           }
-      }    
+      }
+
+  if(loadfeed < 7){
+        loadfeed++
         getUsers()
+    }  
   return (
    
     <div className="modalBackground">
