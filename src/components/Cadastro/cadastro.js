@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import "./cadastro.css";
 import {Link} from 'react-router-dom'
 // import Modal3 from '../Modal-confirmacao/modal-confirmacao'
+let loadfeed = 0
 
 const Cadastro = () => {
     const [users, setUsers] = useState([])
@@ -24,7 +25,6 @@ const Cadastro = () => {
       }
   }
     const postUser = async () => {
-      callAgentFinder()
       if (username !== "" && name !=="" && email !== "" && password !== "") {
         // console.log("n ta vazio");
         if(email.match(/([a-zA-Z0-9]+)([.{1}])?([a-zA-Z0-9]+)@gmail([.])com/g)){
@@ -41,7 +41,6 @@ const Cadastro = () => {
                     })
                   }
                   await fetch('http://localhost:3001/api/user', requestOptions)
-                  //await fetch('https://jovens-db.herokuapp.com/pessoa', requestOptions)
                   window.location.href= "./login"
                 }catch( error){
                   console.log(error)
@@ -50,19 +49,14 @@ const Cadastro = () => {
                   setEmail('')
                   setPassword('')
                 }
-            
-            } else {
-            
-            }
-          } else {
-            
-          }
-            } else {
-            
-            }
+            }else{alert("vazio")}
+          }else{alert("email errado")}
+            }else{alert("senha fraca")}
       }
-     
-  
+      if(loadfeed < 4){
+        loadfeed++
+        callAgentFinder()
+    }
     return (
       <div className="cadastro">
         <div className="container-cadastro">

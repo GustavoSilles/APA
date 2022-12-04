@@ -2,16 +2,29 @@ import "./login.css";
 import {Link} from 'react-router-dom'
 import React, { useState } from "react";
 // import GoogleLogin from '@leecheuk/react-google-login'
-
+let loadfeed = 0
 const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [users, setUsers] = useState([])
+
 
   // const responseGoogle = (response) => {
   //   console.log(response);
   // }
+  const callAgentFinder = async() => {
+    try{
+        const response = await fetch('http://localhost:3001/api/user')
+        const data = response.json()
+        data.then(
+            (val) => {setUsers(val.data)
 
+            }
+        )
+    }catch(error){
+    }
+}
   const getUsers = async () => {
     if (email === "adm@gmail.com" && password === "123") {
       window.location.href = "./adm"
@@ -45,6 +58,11 @@ const Login = () => {
      localStorage.setItem('vapo', JSON.stringify(dataLogin))
      window.location.href= "./home"
     }
+
+    if(loadfeed < 4){
+      loadfeed++
+      callAgentFinder()
+  }
 
   return (
     <div className="login">
