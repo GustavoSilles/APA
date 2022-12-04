@@ -57,7 +57,7 @@ const Posts = (props) => {
                     <div className='comentario'></div>
                 </div>
                 {modalOpen && <Modal2 setOpenModal={setModalOpen} />}
-                {modal &&(<Modal3 handleModal={handleModal}/>)} 
+                {modal &&(<Modal3 handleModal={handleModal}id = {props.id}/>)} 
                 {modalCompartilhar &&(<ModalCompartilhar HandleModal={HandleModal}/>)} 
                
                 </div>
