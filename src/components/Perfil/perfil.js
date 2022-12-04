@@ -11,22 +11,20 @@ const Perfil = () => {
   const [imgURL2, setImgURL2] = useState("");
   const [loggedUser, setLoggedUser] = useState({})
   const [setProgresspercent2] = useState(0);
-   const [users, setUsers] = useState([])
+  const [users, setUsers] = useState([])
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  console.log(imgURL2);
   
   const getPerfil = async () => {  
     try {
         const  response = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('vapo')))
         const data = response.json()
         data.then(
-            (val) => setLoggedUser(val.data)
+            (val) =>{setLoggedUser(val.data)
+            setImgURL2(val.data.imgURL2)}
         )   
-        setImgURL2(loggedUser.imgURL)
       }catch( error){
         console.log(error);
         setUsers([])
@@ -37,7 +35,6 @@ if(loadfeed < 4){
 loadfeed++
 getPerfil()
 }
-console.log(imgURL2);
 
 
 const formHandler2 = (e) => {
@@ -68,27 +65,44 @@ const formHandler2 = (e) => {
   );
 }
 
-const postPhoto = async (e) => {
-  if (imgURL2 !== "") {
-      try {
-          const requestOptions = {
-              method: 'POST',
-              headers: { 'Content-type': 'application/json' },
-              body: JSON.stringify({
-                  imgURL: imgURL2
-              })
-          }
-          await fetch('http://localhost:3001/api/post', requestOptions)
-          //window.location.reload(false);
-          console.log(imgURL2);   
-        }catch(e){
+// const postPhoto = async (e) => {
+//   if (imgURL2 !== "") {
+//       try {
+//           const requestOptions = {
+//               method: 'POST',
+//               headers: { 'Content-type': 'application/json' },
+//               body: JSON.stringify({
+//                   imgURL2: imgURL2,
+//                   id: loggedUser.id
+//               })
+//           }
+//           await fetch('http://localhost:3001/api/user', requestOptions)
+//           //window.location.reload(false);
+//           await getPerfil()
+//           console.log(imgURL2);  
+//         }catch(e){
+//       }
+//   }else{
+//     alert("preencha todos os campos")
+//       }
+//   }
+const upPhoto = async() => { 
+  try{
+      const requestOptions = {
+          method: 'PUT',
+          headers: {'Content-type': 'application/json'},
+          body: JSON.stringify({
+            imgURL2: imgURL2
+          })
+          
       }
-  }else{
-    alert("preencha todos os campos")
-      }
-  }    
+      await fetch('http://localhost:3001/api/user/' + loggedUser.id,  requestOptions)
+      //window.location.reload(false);
+      }catch(e){
+        alert("erro")
+    }
+  }
 
-  
     const upPerfl = async() => { 
               try{
                   const requestOptions = {
@@ -98,13 +112,13 @@ const postPhoto = async (e) => {
                         username: username,
                         name: name,
                         email: email,
-                        password: password
+                        password: password,
+                        imgURL2: imgURL2
                       })
                       
                   }
                   await fetch('http://localhost:3001/api/user/' + loggedUser.id,  requestOptions)
                   //window.location.reload(false);
-                  postPhoto()
                   }catch(e){
                     alert("erro")
                 }
@@ -155,7 +169,9 @@ const postPhoto = async (e) => {
             </div>
             </div>
             <div className='cantoEsquerdo'>
-          <button className='btn_perfil' onClick={postPhoto}>Salvar alterações</button>
+          <button className='btn_perfil' onClick={upPhoto}>Salvar Foto</button>
+          <button className='btn_perfil' onClick={upPerfl}>Salvar alterações</button>
+
           </div>
          
           </div>

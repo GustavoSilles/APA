@@ -13,15 +13,17 @@ const Feed = () => {
     const [modalOpen, setModalOpen] = useState(false);
     const [descricao, setDescricao] = useState("");
     const [imgURL, setImgURL] = useState("");
+    const [imgURL2, setImgURL2] = useState("");
     const [localizacao, setLocalizacao] = useState("")
     
     const getUsers = async () => {
 
         try{
-            if(JSON.parse(localStorage.getItem('dasiBoard') !== null)){
+           {
 
                 const responseUser = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('vapo')))
                 const dataUser = responseUser.json()
+                console.log(dataUser);
                 dataUser.then(
                     (val) => {
                         setLoggedUser(val.data) 
@@ -32,15 +34,15 @@ const Feed = () => {
             console.log("erro");
         }
     }
-
-
     const getPostagem = async () => {  
             try {
                 const  response = await fetch('http://localhost:3001/api/post')
                 const data = response.json()
                 data.then(
                     (val) => setPosts(val.data)
+                   
                 )   
+                console.log(data);
               }catch( error){
                 console.log(error);
                 setPosts([])
@@ -52,7 +54,6 @@ const Feed = () => {
         getPostagem()
         getUsers()
     }
-    console.log(posts)
     return (
         <>
           <Navbar/>
@@ -61,7 +62,7 @@ const Feed = () => {
             <div className="container-feed">
                 <div className='divpost'>
                     <div className='fotopost'>
-                    <div className='foto_DoFeed'></div>
+                    <div className='foto_DoFeed'><img className='fotopost2' src={loggedUser.imgURL2}></img></div>
                     <button  className="btnpost"  onClick={() => {setModalOpen(true)}}>Começar a publicação</button>
                    
                     </div>
@@ -71,7 +72,7 @@ const Feed = () => {
                 </div>
                 
                     { posts.map((posts) => {
-                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao}  username = {posts.usuario} imgURL2 = {posts.imgURL2}/>
+                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao}  username = {posts.usuario} imgURL2 = {posts.photo} />
                     })}
                
             </div>

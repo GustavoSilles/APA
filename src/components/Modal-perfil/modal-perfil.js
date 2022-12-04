@@ -41,7 +41,7 @@ getPerfil()
       <div className="navmodalPerfil">
       <Link to='/perfil'className="boxzinha"> 
             <div className="cosas">
-           <div className="img-modal"></div>
+           <div className="img-modal"><img className='fotopost2' src={loggedUser.imgURL2}></img></div>
             <div className="nome">{loggedUser.username}</div>
             </div>
         <MdArrowForwardIos size={22} color='#532E1C' onClick={() => {handleModal(false) }} id="cancelBtn" className="iconmodal"/> 
