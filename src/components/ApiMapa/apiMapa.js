@@ -100,8 +100,10 @@ const localizacao20 = {
 const ApiMapa = () => {
 
   return (
+    <>
+     <Navbar/>
     <div className="Map">
-      <Navbar />
+   
       <LoadScript
         googleMapsApiKey="AIzaSyDrTIZQcdJFV8sv5VwV-S4v2YOgtO3AcfU"
 
@@ -569,9 +571,9 @@ const ApiMapa = () => {
 
 
         </GoogleMap>
-        <></>
       </LoadScript>
     </div>
+    </>
   )
 }
 

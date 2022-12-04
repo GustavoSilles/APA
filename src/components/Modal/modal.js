@@ -15,6 +15,7 @@ const Modal =({ setOpenModal }) => {
     const [,setProgresspercent] = useState(0);
 
     const [loggedUser, setLoggedUser] = useState({})
+    // console.log(loggedUser);
     const getUsers = async () => {
 
         try{
