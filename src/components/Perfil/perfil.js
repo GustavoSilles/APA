@@ -97,7 +97,7 @@ const upPhoto = async() => {
           
       }
       await fetch('http://localhost:3001/api/user/' + loggedUser.id,  requestOptions)
-      //window.location.reload(false);
+      window.location.reload(false);
       }catch(e){
         alert("erro")
     }
@@ -118,7 +118,7 @@ const upPhoto = async() => {
                       
                   }
                   await fetch('http://localhost:3001/api/user/' + loggedUser.id,  requestOptions)
-                  //window.location.reload(false);
+                  window.location.reload(false);
                   }catch(e){
                     alert("erro")
                 }

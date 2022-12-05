@@ -14,12 +14,21 @@
 }
 
 
-.fotopost8{
-    background: url('../../assets/fotoPadrão.png') no-repeat center center/cover;
+.fotonav2{
+    background: url('../../assets/fotoPadrão.png') cover;
     content: '';
     width: 3rem;
     position: relative;
     height: 3rem;
+    cursor: pointer;
+    border-radius:50%;
+}
+.fotonav{
+    object-fit: cover;
+    content: '';
+    width: 3.1rem;
+    position: relative;
+    height: 3.1rem;
     cursor: pointer;
     border-radius:50%;
 }

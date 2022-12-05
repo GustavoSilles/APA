@@ -4,10 +4,11 @@ import Navbar from '../Navbar/navbar'
 import Posts   from "../Posts/posts"
 import Modal from '../Modal/modal'
 
+
 let loadfeed = 0
 
 const Feed = () => {
-    
+    useEffect(()=>{getPostagem()},[])
     const [loggedUser, setLoggedUser] = useState({})
     const [posts, setPosts] = useState([])
     const [modalOpen, setModalOpen] = useState(false);
@@ -54,6 +55,7 @@ const Feed = () => {
         getPostagem()
         getUsers()
     }
+   
     return (
         <>
           <Navbar/>
@@ -62,7 +64,7 @@ const Feed = () => {
             <div className="container-feed">
                 <div className='divpost'>
                     <div className='fotopost'>
-                    <div className='foto_DoFeed'><img className='fotopost2' src={loggedUser.imgURL2}></img></div>
+                    <div className='foto_DoFeed'><img className='foto_DoFeed2' src={loggedUser.imgURL2}></img></div>
                     <button  className="btnpost"  onClick={() => {setModalOpen(true)}}>Começar a publicação</button>
                    
                     </div>

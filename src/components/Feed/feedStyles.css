@@ -85,6 +85,14 @@
     cursor: pointer;
     border-radius:50%;
 }
+.foto_DoFeed2{
+   object-fit: cover;
+    content: '';
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    border-radius:50%;
+}
 @media screen and (max-width: 940px) {
     .divpost{
         width: 95%;
