@@ -1,5 +1,5 @@
 import "./modal-perfil.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {MdArrowForwardIos} from 'react-icons/md'
 import {MdOutlineLogout} from 'react-icons/md'
 import {IoMdTrash} from "react-icons/io"
@@ -15,6 +15,7 @@ const logout = () => {
 const ModalPerfil =(props) => {
    const { handleModal } = props
    const [loggedUser, setLoggedUser] = useState({})
+   useEffect(()=>{getPerfil()},[])
    const getPerfil = async () => {  
     try {
         const  response = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('vapo')))

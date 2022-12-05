@@ -15,7 +15,7 @@ const Adm = () => {
 
     const getPostagem = async () => {  
         try {
-            const  response = await fetch('http://localhost:3001/api/post/reports')
+            const  response = await fetch('http://localhost:3001/api/post')
             const data = response.json()
             data.then(
                 (val) => setPosts(val.data)
@@ -28,11 +28,10 @@ const Adm = () => {
             
         }
     }
-    if(loadfeed < 7){
-        loadfeed++
-        getPostagem()
-   
-    }
+if(loadfeed < 7){
+    loadfeed++
+    getPostagem()
+}
 
     return (
         <>

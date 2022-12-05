@@ -9,6 +9,7 @@ let loadfeed = 0
 
 const Feed = () => {
     useEffect(()=>{getPostagem()},[])
+    useEffect(()=>{ getUsers()},[])
     const [loggedUser, setLoggedUser] = useState({})
     const [posts, setPosts] = useState([])
     const [modalOpen, setModalOpen] = useState(false);

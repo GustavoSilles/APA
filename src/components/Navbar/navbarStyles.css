@@ -15,7 +15,7 @@
 
 
 .fotonav2{
-    background: url('../../assets/fotoPadrão.png') cover;
+    background: url('../../assets/fotoPadrão.png') no-repeat center center/cover;
     content: '';
     width: 3rem;
     position: relative;
@@ -26,9 +26,9 @@
 .fotonav{
     object-fit: cover;
     content: '';
-    width: 3.1rem;
+    width: 3rem;
     position: relative;
-    height: 3.1rem;
+    height: 3rem;
     cursor: pointer;
     border-radius:50%;
 }
