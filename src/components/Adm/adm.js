@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import './adm.css'
 import Navbar2 from '../Navbar2/navbar2'
 import Posts   from "../Posts/posts"

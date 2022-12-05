@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import "./cadastro.css";
 import {Link} from 'react-router-dom'
 // import Modal3 from '../Modal-confirmacao/modal-confirmacao'
-let loadfeed = 0
+// let loadfeed = 0
 
 const Cadastro = () => {
     const [users, setUsers] = useState([])
@@ -12,21 +12,20 @@ const Cadastro = () => {
     const [password, setPassword] = useState("");
 
 
-    const callAgentFinder = async() => {
-      try{
-          const response = await fetch('http://localhost:3001/api/user')
-          const data = response.json()
-          data.then(
-              (val) => {setUsers(val.data)
+  //   const callAgentFinder = async() => {
+  //     try{
+  //         const response = await fetch('http://localhost:3001/api/user')
+  //         const data = response.json()
+  //         data.then(
+  //             (val) => {setUsers(val.data)
 
-              }
-          )
-      }catch(error){
-      }
-  }
+  //             }
+  //         )
+  //     }catch(error){
+  //     }
+  // }
     const postUser = async () => {
       if (username !== "" && name !=="" && email !== "" && password !== "") {
-        // console.log("n ta vazio");
         if(email.match(/([a-zA-Z0-9]+)([.{1}])?([a-zA-Z0-9]+)@gmail([.])com/g)){
               if(password.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)){    
         try {
@@ -53,10 +52,10 @@ const Cadastro = () => {
           }else{alert("email errado")}
             }else{alert("senha fraca")}
       }
-      if(loadfeed < 4){
-        loadfeed++
-        callAgentFinder()
-    }
+    //   if(loadfeed < 4){
+    //     loadfeed++
+    //     callAgentFinder()
+    // }
     return (
       <div className="cadastro">
         <div className="container-cadastro">

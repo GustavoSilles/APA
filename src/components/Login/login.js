@@ -1,8 +1,7 @@
 import "./login.css";
 import {Link} from 'react-router-dom'
 import React, { useState } from "react";
-// import GoogleLogin from '@leecheuk/react-google-login'
-let loadfeed = 0
+// let loadfeed = 0
 const Login = () => {
 
   const [email, setEmail] = useState("");
@@ -10,21 +9,19 @@ const Login = () => {
   const [users, setUsers] = useState([])
 
 
-  // const responseGoogle = (response) => {
-  //   console.log(response);
-  // }
-  const callAgentFinder = async() => {
-    try{
-        const response = await fetch('http://localhost:3001/api/user')
-        const data = response.json()
-        data.then(
-            (val) => {setUsers(val.data)
+ 
+//   const callAgentFinder = async() => {
+//     try{
+//         const response = await fetch('http://localhost:3001/api/user')
+//         const data = response.json()
+//         data.then(
+//             (val) => {setUsers(val.data)
 
-            }
-        )
-    }catch(error){
-    }
-}
+//             }
+//         )
+//     }catch(error){
+//     }
+// }
   const getUsers = async () => {
     if (email === "adm@gmail.com" && password === "123") {
       window.location.href = "./adm"
@@ -59,10 +56,10 @@ const Login = () => {
      window.location.href= "./home"
     }
 
-    if(loadfeed < 4){
-      loadfeed++
-      callAgentFinder()
-  }
+  //   if(loadfeed < 4){
+  //     loadfeed++
+  //     callAgentFinder()
+  // }
 
   return (
     <div className="login">
@@ -102,12 +99,7 @@ const Login = () => {
             </div>
 
             <div className="text-center2">
-              {/* <div className="google"><GoogleLogin
-                clientId="1097643803374-c7g4t2g4i8kitlmo3uamagsub95cilo5.apps.googleusercontent.com"
-                buttonText="Continuar com o google"
-                onSuccess={responseGoogle}
-                onFailure={responseGoogle}
-              /></div> */}
+
               <div className="possui">
                 <span className="txt1">Não possui conta? </span>
 
