@@ -8,7 +8,7 @@ import Modal4 from '../Modal-excluir/modal-excluir'
 
 
 
-const Posts2 = () => {
+const Posts2 = (props) => {
     const [modal, setModal] = useState(false);
     const handleModal = (state) => {
         setModal(state)}
@@ -22,17 +22,19 @@ const Posts2 = () => {
                 <div className='box'>
                     <div className='navbox2'>
                         <div className='abilio'>
-                        <div className='fotopost2'></div>
-                        <div className='nominho'>Admin</div>
+                        <div className='fotopost2'><img className='fotopost2' src={props.imgURL2}></img></div>
+                        <div className='nominho'>{props.username}</div>
+                        <div className='localizacao'>{props.localizacao}</div>
                         </div><div className='lixoxo'>
                         <IoMdTrash className='lixo' onClick={() => {setModal(true)}}/>
                         </div>
                     </div>
                     <div className='descricao'>
-                        <p className='descrison'>oia que gatinho bunitu</p>
+                         <p className='descrison'>{props.descricao}</p>
                     </div>
                     <div className='imgbox'>
-                        <div className='propriafoto'></div>
+                    <div className='propriafoto' style={{background: `url(${props.imgURL}) no-repeat center center/cover`}}>
+                        </div>
                     </div>
                     <div className='footerbox'>
                     <div className='ascoisas'onClick={() => {setModalOpen(true)}}>

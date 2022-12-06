@@ -14,7 +14,18 @@
 }
 
 
-
+.divpost{
+    width: 50%;
+    display: flex;
+    border-radius:12px;
+    color: #532E1C;
+    height: 7rem;
+    background: #E6E6E6;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+}
 .fotopost{
     display: flex;
     align-items: center;
@@ -33,12 +44,7 @@
 .btnpost:hover{
     background-color: #c5a880c0;
 }
-.bagulhinhos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
+
 
 .localização{
     flex-direction: row;
@@ -65,19 +71,42 @@
     flex-direction: row;
 }
 
-.container-feed{
+.container-feed2{
     padding-top: 104px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     
 }
-.foto{
-    background: url('../../assets/8.jpg') no-repeat center center/cover;
+.foto_DoFeed{
+    background: url('../../assets/fotoPadrão.png') no-repeat center center/cover;
     content: '';
     width: 3.5rem;
     height: 3.5rem;
     cursor: pointer;
     border-radius:50%;
 }
-
+.foto_DoFeed2{
+   object-fit: cover;
+    content: '';
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    border-radius:50%;
+}
+@media screen and (max-width: 940px) {
+    .divpost{
+        width: 95%;
+        display: flex;
+        border-radius:12px;
+        color: #532E1C;
+        height: 7rem;
+        background: #E6E6E6;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
 

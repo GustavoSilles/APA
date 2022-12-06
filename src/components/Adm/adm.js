@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import './adm.css'
 import Navbar2 from '../Navbar2/navbar2'
-import Posts   from "../Posts/posts"
+import Posts2 from "../Posts2/posts2"
 
 
 let loadfeed = 0
@@ -12,10 +12,10 @@ const Adm = () => {
     const [imgURL, setImgURL] = useState("");
     const [imgURL2, setImgURL2] = useState("");
     const [localizacao, setLocalizacao] = useState("")
-
-    const getPostagem = async () => {  
+    useEffect(()=>{getAdm()},[])
+    const getAdm = async () => {  
         try {
-            const  response = await fetch('http://localhost:3001/api/post')
+            const  response = await fetch('http://localhost:3001/api/post/reports')
             const data = response.json()
             data.then(
                 (val) => setPosts(val.data)
@@ -23,23 +23,21 @@ const Adm = () => {
             )   
             console.log(data);
           }catch( error){
-            console.log(error);
-            setPosts([])
-            
+            console.log(error);            
         }
     }
 if(loadfeed < 7){
     loadfeed++
-    getPostagem()
+    getAdm()
 }
 
     return (
         <>
           <Navbar2/>
         <div className='feed'>
-            <div className="container-feed">
+            <div className="container-feed2">
             { posts.map((posts) => {
-                        return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao}  username = {posts.usuario} imgURL2 = {posts.photo} id = {posts.id} />
+                        return <Posts2 descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao}  username = {posts.usuario} imgURL2 = {posts.photo} id = {posts.id} />
                     })}
             </div>
          </div>  

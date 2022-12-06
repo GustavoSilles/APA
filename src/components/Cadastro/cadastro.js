@@ -25,9 +25,9 @@ const Cadastro = () => {
   //     }
   // }
     const postUser = async () => {
-      if (username !== "" && name !=="" && email !== "" && password !== "") {
-        if(email.match(/([a-zA-Z0-9]+)([.{1}])?([a-zA-Z0-9]+)@gmail([.])com/g)){
-              if(password.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)){    
+      // if (username !== "" && name !=="" && email !== "" && password !== "") {
+        // if(email.match(/([a-zA-Z0-9]+)([.{1}])?([a-zA-Z0-9]+)@gmail([.])com/g)){
+        //       if(password.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)){    
         try {
           const requestOptions = {
             method: 'POST',
@@ -48,9 +48,9 @@ const Cadastro = () => {
                   setEmail('')
                   setPassword('')
                 }
-            }else{alert("vazio")}
-          }else{alert("email errado")}
-            }else{alert("senha fraca")}
+            // }else{alert("vazio")}
+          // }else{alert("email errado")}
+          //   }else{alert("senha fraca")}
       }
     //   if(loadfeed < 4){
     //     loadfeed++

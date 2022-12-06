@@ -17,6 +17,7 @@ const Perfil = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   useEffect(()=>{getPerfil()},[])
+  
 
   const getPerfil = async () => {  
     try {
