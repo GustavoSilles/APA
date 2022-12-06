@@ -30,7 +30,7 @@ const Modal4 =(props) => {
         method:'DELETE',
     }
     try {
-       await fetch(`http://localhost:3001/api/post/${posts.id}`, requestOptions)
+       await fetch(`http://localhost:3001/api/post/${posts[0].id}`, requestOptions)
       }catch(error){
         console.log(error);
     }
@@ -53,7 +53,7 @@ const Modal4 =(props) => {
       
         <div className="footermodal">
         <button className="btn-confirmacao"onClick={() => {handleModal(false) }}>Não</button>
-        <button className="btn-confirmacao2" onClick={() => {deletePostagem(posts.id)}}>Sim</button>
+        <button className="btn-confirmacao2" onClick={deletePostagem}>Sim</button>
        </div>
        
       

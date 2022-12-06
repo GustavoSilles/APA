@@ -20,12 +20,25 @@ const Posts2 = (props) => {
        <div className='postzao'>
                 <div className='posixion'>
                 <div className='box'>
-                    <div className='navbox2'>
+                    {/* <div className='navbox2'>
                         <div className='abilio'>
                         <div className='fotopost2'><img className='fotopost2' src={props.imgURL2}></img></div>
                         <div className='nominho'>{props.username}</div>
                         <div className='localizacao'>{props.localizacao}</div>
-                        </div><div className='lixoxo'>
+                        </div>
+                        <div className='lixoxo'>
+                        <IoMdTrash className='lixo' onClick={() => {setModal(true)}}/>
+                        </div>
+                    </div> */}
+                      <div className='navbox2'>
+                        <div className='pika'>
+                        <div className='fotopost2'><img className='fotopost2' src={props.imgURL2}></img></div>
+                        <div className='divTextos'>
+                        <div className='nominho'>{props.username}</div>
+                        <div className='localizacao'>{props.localizacao}</div>
+                        </div>
+                        </div>
+                        <div className='lixoxo'>
                         <IoMdTrash className='lixo' onClick={() => {setModal(true)}}/>
                         </div>
                     </div>
