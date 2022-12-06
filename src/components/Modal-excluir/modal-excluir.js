@@ -1,5 +1,5 @@
 import "./modal-excluir.css";
-import {React, useState} from "react";
+import {React, useState, useEffect} from "react";
 import {CgClose} from 'react-icons/cg'
 
 let loadfeed = 0
@@ -11,7 +11,7 @@ const Modal4 =(props) => {
    const [imgURL, setImgURL] = useState("");
    const [imgURL2, setImgURL2] = useState("");
    const [localizacao, setLocalizacao] = useState("")
-
+   useEffect(()=>{getAdm()},[])
    const getAdm = async () => {  
     try {
         const  response = await fetch('http://localhost:3001/api/post/reports')
@@ -31,6 +31,8 @@ const Modal4 =(props) => {
     }
     try {
        await fetch(`http://localhost:3001/api/post/${posts[0].id}`, requestOptions)
+      window.location.reload(false);
+      handleModal(false)
       }catch(error){
         console.log(error);
     }
