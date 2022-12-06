@@ -1,7 +1,8 @@
-
 import "./modal-excluir.css";
 import {React, useState} from "react";
 import {CgClose} from 'react-icons/cg'
+
+let loadfeed = 0
 
 const Modal4 =(props) => {
    const { handleModal } = props
@@ -11,23 +12,33 @@ const Modal4 =(props) => {
    const [imgURL2, setImgURL2] = useState("");
    const [localizacao, setLocalizacao] = useState("")
 
-   
-   const deletePostagem = async deleteId => {
+   const getAdm = async () => {  
+    try {
+        const  response = await fetch('http://localhost:3001/api/post/reports')
+        const data = response.json()
+        data.then(
+            (val) => setPosts(val.data)
+           
+        )   
+        console.log(data);
+      }catch( error){
+        console.log(error);            
+    }
+}
+   const deletePostagem = async() =>{
     const requestOptions = {
         method:'DELETE',
-        headers:{'Content-type': 'application/json'}    
     }
-    try{
-        await fetch('http://localhost:3001/post/:id' + deleteId, requestOptions)
-        setPosts(posts.filter(posts => posts.id != deleteId))
-        } catch(error){
-            console.log(error);
-            alert('error')
-        }
+    try {
+       await fetch(`http://localhost:3001/api/post/${posts.id}`, requestOptions)
+      }catch(error){
+        console.log(error);
     }
-
-
-   
+  }
+  if(loadfeed < 7){
+    loadfeed++
+    getAdm()
+}
   return (
    
     <div className="modalBackground3">
@@ -42,7 +53,7 @@ const Modal4 =(props) => {
       
         <div className="footermodal">
         <button className="btn-confirmacao"onClick={() => {handleModal(false) }}>Não</button>
-        <button className="btn-confirmacao2" onClick={deletePostagem}>Sim</button>
+        <button className="btn-confirmacao2" onClick={() => {deletePostagem(posts.id)}}>Sim</button>
        </div>
        
       

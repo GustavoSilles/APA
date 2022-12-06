@@ -25,7 +25,6 @@ const Feed = () => {
 
                 const responseUser = await fetch('http://localhost:3001/api/user/' + JSON.parse(localStorage.getItem('vapo')))
                 const dataUser = responseUser.json()
-                console.log(dataUser);
                 dataUser.then(
                     (val) => {
                         setLoggedUser(val.data) 
@@ -44,19 +43,18 @@ const Feed = () => {
                     (val) => setPosts(val.data)
                    
                 )   
-                console.log(data);
-              }catch( error){
+                  }catch( error){
                 console.log(error);
                 setPosts([])
                 
             }
         }
+    console.log(posts);
     if(loadfeed < 7){
         loadfeed++
         getPostagem()
         getUsers()
     }
-   
     return (
         <>
           <Navbar/>
