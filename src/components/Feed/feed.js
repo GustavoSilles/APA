@@ -8,6 +8,7 @@ import Modal from '../Modal/modal'
 let loadfeed = 0
 
 const Feed = () => {
+   
     useEffect(()=>{getPostagem()},[])
     useEffect(()=>{ getUsers()},[])
     const [loggedUser, setLoggedUser] = useState({})
@@ -17,7 +18,7 @@ const Feed = () => {
     const [imgURL, setImgURL] = useState("");
     const [imgURL2, setImgURL2] = useState("");
     const [localizacao, setLocalizacao] = useState("")
-    
+   
     const getUsers = async () => {
 
         try{
@@ -36,6 +37,7 @@ const Feed = () => {
             console.log("erro");
         }
     }
+   
     const getPostagem = async () => {  
             try {
                 const  response = await fetch('http://localhost:3001/api/post')
@@ -48,7 +50,7 @@ const Feed = () => {
               }catch( error){
                 console.log(error);
                 setPosts([])
-                
+              
             }
         }
     if(loadfeed < 7){
@@ -74,7 +76,7 @@ const Feed = () => {
                 {modalOpen && (<Modal setOpenModal={setModalOpen} />)}
                 </div>
                 
-                    { posts.map((posts) => {
+                    {posts.sort((a,b) => b.id - a.id).map((posts) => {
                         return <Posts descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao}  username = {posts.usuario} imgURL2 = {posts.photo} id = {posts.id} />
                     })}
                

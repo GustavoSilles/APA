@@ -17,12 +17,13 @@ const Modal3 =(props) => {
             
         }
         await fetch('http://localhost:3001/api/post/' + props.id,  requestOptions)
+        handleModal(false)
         }catch(e){
           alert("erro")
       }
     }
   
-   
+  
   return (
    
     <div className="modalBackground3">

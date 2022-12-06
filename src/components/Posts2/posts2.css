@@ -87,6 +87,11 @@
     width: 110px;
     margin-left: 2%;
 }
+.pika{
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
 .lixo{
     color: red;
     height: 25px;

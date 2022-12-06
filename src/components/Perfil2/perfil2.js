@@ -17,7 +17,7 @@ const Perfil2 = () => {
           <div className='box-perfil2'>
             
            
-            <p className='gustavin'>Admin</p>
+            <p className='gustavin2'>Admin</p>
          
             <div className='inputes'>
               <div className='inpt'>

@@ -20,14 +20,12 @@ const Modal4 =(props) => {
     try{
         await fetch('http://localhost:3001/post/:id' + deleteId, requestOptions)
         setPosts(posts.filter(posts => posts.id != deleteId))
+        handleModal(false)
         } catch(error){
             console.log(error);
             alert('error')
         }
     }
-
-
-   
   return (
    
     <div className="modalBackground3">
