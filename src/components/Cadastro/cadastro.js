@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom'
 // let loadfeed = 0
 
 const Cadastro = () => {
-    const [users, setUsers] = useState([])
     const [username, setUsername] = useState("");
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -25,7 +24,7 @@ const Cadastro = () => {
   //     }
   // }
     const postUser = async () => {
-      // if (username !== "" && name !=="" && email !== "" && password !== "") {
+       if (username !== "" && name !=="" && email !== "" && password !== "") {
         // if(email.match(/([a-zA-Z0-9]+)([.{1}])?([a-zA-Z0-9]+)@gmail([.])com/g)){
         //       if(password.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)){    
         try {
@@ -48,7 +47,9 @@ const Cadastro = () => {
                   setEmail('')
                   setPassword('')
                 }
-            // }else{alert("vazio")}
+             }else{
+              // alert("vazio")
+            }
           // }else{alert("email errado")}
           //   }else{alert("senha fraca")}
       }
@@ -90,7 +91,7 @@ const Cadastro = () => {
                 required 
                   className={email !== "" ? "has-val input" : "input"}
                   value={email}
-                  type="email"
+                  type="text"
                   onChange={(e) => setEmail(e.target.value)}
                 />
                 <span className="focus-input" data-placeholder="Email"></span>

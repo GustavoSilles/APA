@@ -6,7 +6,6 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [users, setUsers] = useState([])
 
 
  
@@ -23,7 +22,7 @@ const Login = () => {
 //     }
 // }
   const getUsers = async () => {
-    if (email === "adm@gmail.com" && password === "123") {
+    if (email === "adm@gmail.com" && password === "12345678") {
       window.location.href = "./adm"
     } else {
       if (email !== "" && password !== "") {
@@ -75,7 +74,7 @@ const Login = () => {
               <input
                 required 
                 className={email !== "" ? "has-val input" : "input"}
-                type="email"
+                type="text"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
 
