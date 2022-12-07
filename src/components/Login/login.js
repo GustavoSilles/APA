@@ -22,7 +22,7 @@ const Login = () => {
 //     }
 // }
   const getUsers = async () => {
-    if (email === "adm@gmail.com" && password === "12345678") {
+    if (email === "adm@gmail.com" && password === "adm123@") {
       window.location.href = "./adm"
     } else {
       if (email !== "" && password !== "") {
