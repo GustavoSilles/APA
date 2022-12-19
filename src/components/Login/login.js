@@ -94,7 +94,8 @@ const Login = () => {
             </div>
 
             <div className="container-login-form-btn">
-              <button onClick={getUsers}  type="submit" className="login-form-btn">Login</button>
+               {/* <button onClick={getUsers}  type="submit" className="login-form-btn">Login</button>  */}
+              <Link className="login-form-btn" to='/home'><button className="login-form-btn">Login</button></Link>
             </div>
 
             <div className="text-center2">
