@@ -1,5 +1,5 @@
 import CommentForm from "./commentForm";
-import './commentsStyles.css'
+import "./commentsStyles.css";
 const Comment = ({
   comment,
   replies,
@@ -30,7 +30,7 @@ const Comment = ({
   return (
     <div key={comment.id} className="comment">
       <div className="comment-image-container">
-      <div className="foto-comentario"></div>
+        <div className="foto-comentario"></div>
       </div>
       <div className="comment-right-part">
         <div className="comment-content">

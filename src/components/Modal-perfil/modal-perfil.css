@@ -1,123 +1,115 @@
 .modalBackgroundPerfil {
-    width: 100%;
-    height: auto;
-    top: 190px;
-    position: fixed;
-    display: flex;
-    margin-top: -130px;
-    justify-content: flex-end;
-    color: #532E1C;
+  width: 100%;
+  height: auto;
+  top: 190px;
+  position: fixed;
+  display: flex;
+  margin-top: -130px;
+  justify-content: flex-end;
+  color: #532e1c;
+}
+
+.modalContainerPerfil {
+  width: 20%;
+  height: 160px;
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: 12px;
+  margin-right: 32px;
+  background-color: #e6e6e6;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navmodalPerfil {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.iconSair {
+  height: 25px;
+  width: 25px;
+  margin-left: 12px;
+}
+.vaza {
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 8px;
+}
+.cosas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.boxzinha {
+  width: 95%;
+  height: 5rem;
+  background-color: #e6e6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.boxzinha:hover {
+  background-color: #c5a880c0;
+}
+.img-modal {
+  background: url("../../assets/fotoPadrão.png") no-repeat center center/cover;
+  content: "";
+  width: 3rem;
+  position: relative;
+  height: 3rem;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.nome {
+  margin-left: 0.5rem;
+  font-size: 18px;
+  font-weight: 400;
+  color: #532e1c;
+}
+
+.sair {
+  display: flex;
+  cursor: pointer;
+  width: 95%;
+  border-radius: 10px;
+  align-items: center;
+  height: 2rem;
+  margin-top: 20px;
+}
+.sair:hover {
+  background-color: #c5a880c0;
+}
+
+.fadeIn {
+  animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+
+  to {
+    opacity: 10;
+  }
+}
+
+@media screen and (max-width: 940px) {
   .modalContainerPerfil {
-    width: 20%;
-    height: 160px;
+    width: 85%;
+    height: auto;
     margin-top: 16px;
-    padding: 10px;
     border-radius: 12px;
-    margin-right: 32px;
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;
   }
-  
-  .navmodalPerfil {
-   display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  
-  }
-  .iconSair{
-    height: 25px;
-    width: 25px;
-    margin-left: 12px;
-  }
-  .vaza{
-    font-size: 15px;
-    font-weight: 400;
-    margin-left: 8px;
-  }
-  .cosas{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-  .boxzinha{
-    width: 95%;
-    height: 5rem;
-    background-color: #E6E6E6;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-   cursor: pointer;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
-  .boxzinha:hover{
-    background-color:#c5a880c0 ;
-  }
-  .img-modal{
-    background: url('../../assets/fotoPadrão.png') no-repeat center center/cover;
-    content: '';
-    width: 3rem;
-    position: relative;
-    height: 3rem;
-    margin-left: 10px;
-    cursor: pointer;
-    border-radius:50%;
-  }
-  .nome{
-    margin-left: 0.5rem;
-    font-size: 18px;
-    font-weight: 400;
-    color: #532E1C;
-  }
-  
-  
-  .sair{
- display: flex;
- cursor: pointer;
- width: 95%;
- border-radius: 10px;
- align-items: center;
- height: 2rem;
- margin-top: 20px;
-  }
-  .sair:hover{
-    background-color: #c5a880c0;
-  }
-  
-  
-  
-  
-  
-  .fadeIn {
-    animation: fadeIn 1s linear;
-  
-  }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-  
-    to {
-      opacity: 10;
-    }
-  }
-  
-  
-  @media screen and (max-width:940px) {
-    .modalContainerPerfil {
-      width: 85%;
-      height: auto;
-      margin-top: 16px;
-      border-radius: 12px;
-      background-color: #E6E6E6;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      display: flex;
-      flex-direction: column;
-    }
-  }
+}

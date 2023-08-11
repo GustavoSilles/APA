@@ -5,34 +5,32 @@
   position: fixed;
   display: flex;
   justify-content: center;
-  color: #532E1C;
+  color: #532e1c;
   align-items: center;
 }
 .modalContainer::-webkit-scrollbar-track {
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
 }
 .modalContainer::-webkit-scrollbar {
   width: 8px;
-  
+
   background: #000000;
 }
-.modalContainer::-webkit-scrollbar-thumb{
+.modalContainer::-webkit-scrollbar-thumb {
   background: #000000;
   border-radius: 7px;
- 
 }
 
- .imgmodal {
+.imgmodal {
   width: 95%;
   border-radius: 5px;
   height: 100%;
-} 
+}
 
 .imgcontainer {
   justify-content: center;
   display: flex;
 }
-
 
 .modalContainer {
   width: 40%;
@@ -40,7 +38,7 @@
   margin-top: 16px;
   overflow-y: scroll;
   border-radius: 12px;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
@@ -54,8 +52,7 @@
   flex-direction: row;
   margin-top: 2rem;
   justify-content: space-between;
-  background-color: #E6E6E6;
-
+  background-color: #e6e6e6;
 }
 
 .titlemodal {
@@ -77,7 +74,7 @@
   padding-top: 20px;
   padding-left: 15px;
   box-shadow: none;
-  background-color: #E6E6E6;
+  background-color: #e6e6e6;
   resize: none;
 }
 
@@ -109,20 +106,17 @@
 
 #input-file {
   display: none;
-
 }
 
 .label-file {
   margin-left: 5%;
-
 }
-
 
 .iconmodalimg:hover {
   color: #5f3d2b;
   cursor: pointer;
   transition-duration: 0.3s;
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .btnpostar {
@@ -136,12 +130,11 @@
 .btnpostar:hover {
   background-color: #5f3d2b;
   color: white;
-  transform: scale(1.05)
+  transform: scale(1.05);
 }
 
 .fadeIn {
   animation: fadeIn 1s linear;
-
 }
 
 @keyframes fadeIn {
@@ -154,14 +147,13 @@
   }
 }
 
-
-@media screen and (max-width:940px) {
+@media screen and (max-width: 940px) {
   .modalContainer {
     width: 95%;
     height: auto;
     margin-top: 16px;
     border-radius: 12px;
-    background-color: #E6E6E6;
+    background-color: #e6e6e6;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     flex-direction: column;

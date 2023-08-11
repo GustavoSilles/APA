@@ -1,45 +1,46 @@
-
 import "./modal-confirmacao.css";
 import React from "react";
-import {CgClose} from 'react-icons/cg'
+import { CgClose } from "react-icons/cg";
 
-const Modal3 =(props) => {
-   const { handleModal } = props
+const Modal3 = (props) => {
+  const { handleModal } = props;
 
-   
   return (
-   
     <div className="modalBackground3">
-     
       <div className="modalContainer3">
-      <div className="fadeIn">
-      <div className="navmodal">
-        <p className="titlemodal">Realmente deseja realizar essa ação?</p>
-     
-        <CgClose size={22} color='#532E1C' onClick={() => {handleModal(false) }} id="cancelBtn" className="iconmodal"/>
-      </div>
-      
-        <div className="footermodal">
-        <button className="btn-confirmacao"onClick={() => {handleModal(false) }}>Não</button>
-        <button className="btn-confirmacao2">Sim</button>
-       </div>
-       
-      
-     
-      </div>
+        <div className="fadeIn">
+          <div className="navmodal">
+            <p className="titlemodal">Realmente deseja realizar essa ação?</p>
+
+            <CgClose
+              size={22}
+              color="#532E1C"
+              onClick={() => {
+                handleModal(false);
+              }}
+              id="cancelBtn"
+              className="iconmodal"
+            />
+          </div>
+
+          <div className="footermodal">
+            <button
+              className="btn-confirmacao"
+              onClick={() => {
+                handleModal(false);
+              }}
+            >
+              Não
+            </button>
+            <button className="btn-confirmacao2">Sim</button>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
 export default Modal3;
-
-
-
-
-
-
-
 
 // import React, {useState} from "react";
 // import "./modal.css";
@@ -47,8 +48,7 @@ export default Modal3;
 // import {HiPhotograph} from "react-icons/hi"
 
 // export const Modal = ({ setOpenModal, onAddPost }) => {
-  
-   
+
 //   const [fotoPerfil, setFotoPerfil] = useState('')
 //   const [nomeUsuario, setNomeUsuario] = useState('')
 //   const [descricao, setDescricao] = useState('')
@@ -56,25 +56,24 @@ export default Modal3;
 
 //   function handleSavePost(){
 //       const data = {
-//           fotoPerfil, 
-//           nomeUsuario, 
+//           fotoPerfil,
+//           nomeUsuario,
 //           descricao,
-//           fotoPost 
+//           fotoPost
 //       }
 //       console.log(data)
 //       onAddPost(data)
 //   }
-  
-  
+
 //   return (
-   
+
 //     <div className="modalBackground">
-     
+
 //       <div className="modalContainer">
 //       <div className="fadeIn">
 //       <div className="navmodal">
 //         <p className="titlemodal">Criar publicação</p>
-     
+
 //         <CgClose size={22} color='#532E1C' onClick={() => {setOpenModal(false) }} id="cancelBtn" className="iconmodal"/>
 //       </div>
 //       <div className="descricaomodal">
@@ -84,18 +83,18 @@ export default Modal3;
 //       </textarea>
 //       </div>
 //       <div className="imgcontainer">
-//       <div className="imgmodal"  
+//       <div className="imgmodal"
 //             // value={fotoPost}
-//             // onChange={e => setFotoPost(e.target.value)} 
+//             // onChange={e => setFotoPost(e.target.value)}
 //             >
 //       </div>
 //       </div>
-      
+
 //       <div className="footermodal">
-//        <HiPhotograph className = 'iconmodalimg'size={22} color='#532E1C' /> 
+//        <HiPhotograph className = 'iconmodalimg'size={22} color='#532E1C' />
 //       <button className="btnpostar" onClick={handleSavePost}>Postar</button>
 //        </div>
-     
+
 //       </div>
 //       </div>
 //     </div>

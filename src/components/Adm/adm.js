@@ -1,49 +1,54 @@
-import React, {useState, useEffect} from "react";
-import './adm.css'
-import Navbar2 from '../Navbar2/navbar2'
-import Posts2 from "../Posts2/posts2"
+import React, { useState, useEffect } from "react";
+import "./adm.css";
+import Navbar2 from "../Navbar2/navbar2";
+import Posts2 from "../Posts2/posts2";
 
-
-let loadfeed = 0
+let loadfeed = 0;
 const Adm = () => {
-
-    const [posts, setPosts] = useState([])
-    const [descricao, setDescricao] = useState("");
-    const [imgURL, setImgURL] = useState("");
-    const [imgURL2, setImgURL2] = useState("");
-    const [localizacao, setLocalizacao] = useState("")
-    useEffect(()=>{getAdm()},[])
-    const getAdm = async () => {  
-        try {
-            const  response = await fetch('http://localhost:3001/api/post/reports')
-            const data = response.json()
-            data.then(
-                (val) => setPosts(val.data)
-               
-            )   
-            console.log(data);
-          }catch( error){
-            console.log(error);            
-        }
+  const [posts, setPosts] = useState([]);
+  const [descricao, setDescricao] = useState("");
+  const [imgURL, setImgURL] = useState("");
+  const [imgURL2, setImgURL2] = useState("");
+  const [localizacao, setLocalizacao] = useState("");
+  useEffect(() => {
+    getAdm();
+  }, []);
+  const getAdm = async () => {
+    try {
+      const response = await fetch("http://localhost:3001/api/post/reports");
+      const data = response.json();
+      data.then((val) => setPosts(val.data));
+      console.log(data);
+    } catch (error) {
+      console.log(error);
     }
-if(loadfeed < 7){
-    loadfeed++
-    getAdm()
-}
+  };
+  if (loadfeed < 7) {
+    loadfeed++;
+    getAdm();
+  }
 
-    return (
-        <>
-          <Navbar2/>
-        <div className='feed'>
-            <div className="container-feed2">
-            { posts.map((posts) => {
-                        return <Posts2 descricao = {posts.descricao} imgURL = {posts.imgURL} localizacao = {posts.localizacao}  username = {posts.usuario} imgURL2 = {posts.photo} id = {posts.id} />
-                    })}
-            </div>
-         </div>  
-         
-        </>
-    )
-}
+  return (
+    <>
+      <Navbar2 />
+      <div className="feed">
+        <div className="container-feed2">
+          {posts.map((posts) => {
+            return (
+              <Posts2
+                descricao={posts.descricao}
+                imgURL={posts.imgURL}
+                localizacao={posts.localizacao}
+                username={posts.usuario}
+                imgURL2={posts.photo}
+                id={posts.id}
+              />
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default Adm
+export default Adm;

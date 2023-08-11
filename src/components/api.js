@@ -1,8 +1,5 @@
 export const getComments = async () => {
-  return [
-    
-    
-  ];
+  return [];
 };
 
 export const createComment = async (text, parentId = null) => {

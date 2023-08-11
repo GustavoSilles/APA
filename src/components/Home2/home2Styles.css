@@ -1,56 +1,46 @@
 .home2 {
-    width: 100%;
-    height: 100vh;
-    scroll-snap-align: center;
-    position: relative;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: center;
+  position: relative;
 }
 .home2 h2 {
-    color: #E6E6E6;
+  color: #e6e6e6;
 }
 
 .home2 p {
-    color: #E6E6E6;
-    margin: 1rem 0;
+  color: #e6e6e6;
+  margin: 1rem 0;
 }
 
 .home2:before {
-    content: '';
-    position: absolute;
-    background: url('../../assets/Cavalobonito.jpg')no-repeat center center/cover;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+  content: "";
+  position: absolute;
+  background: url("../../assets/Cavalobonito.jpg") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .home2 .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    width: 50%;
-    text-shadow: 1px 1px 1px  black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: 50%;
+  text-shadow: 1px 1px 1px black;
 }
 
 .home2 .content p {
-    margin: 1rem 0;
+  margin: 1rem 0;
 }
 
 @media screen and (max-width: 940px) {
-    .home2 .content {
-        left: 0;
-        width: 100%;
-        padding: 1rem;
-    }
+  .home2 .content {
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
 }
-
-
-
-
-
-
-
-
-
-

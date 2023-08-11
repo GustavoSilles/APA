@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import CommentForm from "./commentForm";
 import Comment from "./comment";
-import './commentsStyles.css'
+import "./commentsStyles.css";
 import {
   getComments as getCommentsApi,
   createComment as createCommentApi,
@@ -42,14 +42,12 @@ const Comments = ({ commentsUrl, currentUserId }) => {
     });
   };
   const deleteComment = (commentId) => {
-   
-      deleteCommentApi().then(() => {
-        const updatedBackendComments = backendComments.filter(
-          (backendComment) => backendComment.id !== commentId
-        );
-        setBackendComments(updatedBackendComments);
-      });
-    
+    deleteCommentApi().then(() => {
+      const updatedBackendComments = backendComments.filter(
+        (backendComment) => backendComment.id !== commentId
+      );
+      setBackendComments(updatedBackendComments);
+    });
   };
 
   useEffect(() => {
@@ -61,7 +59,7 @@ const Comments = ({ commentsUrl, currentUserId }) => {
   return (
     <div className="comments">
       <h3 className="comments-title">Comentário</h3>
-      <CommentForm submitLabel="comentar"  handleSubmit={addComment}/>
+      <CommentForm submitLabel="comentar" handleSubmit={addComment} />
       <div className="comments-container">
         {rootComments.map((rootComment) => (
           <Comment
