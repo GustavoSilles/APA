@@ -81,7 +81,7 @@ const Footer = () => {
               </Link>
             </p>
             <p>
-              <Link className="textoFooter" to="/home">
+              <Link className="textoFooter" to="/leiamais">
                 Leia mais
               </Link>
             </p>
