@@ -16,16 +16,13 @@ const Feed = () => {
   const [loggedUser, setLoggedUser] = useState({});
   const [posts, setPosts] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
-  const [descricao, setDescricao] = useState("");
-  const [imgURL, setImgURL] = useState("");
-  const [imgURL2, setImgURL2] = useState("");
-  const [localizacao, setLocalizacao] = useState("");
+
 
   const getUsers = async () => {
     try {
       {
         const responseUser = await fetch(
-          "http://localhost:3001/api/user/" +
+          "https://apa-server.onrender.com/api/user/" +
             JSON.parse(localStorage.getItem("vapo"))
         );
         const dataUser = responseUser.json();
@@ -40,7 +37,7 @@ const Feed = () => {
 
   const getPostagem = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/post");
+      const response = await fetch("https://apa-server.onrender.com/api/post");
       const data = response.json();
       data.then((val) => setPosts(val.data));
     } catch (error) {

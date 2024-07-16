@@ -1,73 +1,62 @@
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import React, { useState } from "react";
-// let loadfeed = 0
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  //   const callAgentFinder = async() => {
-  //     try{
-  //         const response = await fetch('http://localhost:3001/api/user')
-  //         const data = response.json()
-  //         data.then(
-  //             (val) => {setUsers(val.data)
+  const getUsers = async (e) => {
+    e.preventDefault();
 
-  //             }
-  //         )
-  //     }catch(error){
-  //     }
-  // }
-  const getUsers = async () => {
-    if (email == "adm@gmail.com" && password == "adm123") {
+    if (!email || !password) {
+      setError("Todos os campos são obrigatórios.");
+      return;
+    }
+
+    if (email === "adm@gmail.com" && password === "adm123456") {
       window.location.href = "./adm";
-    } else {
-      if (email !== "" && password !== "") {
-        try {
-          const requestOptions = {
-            method: "POST",
-            headers: { "Content-type": "application/json" },
-            body: JSON.stringify({
-              email: email,
-              password: password,
-            }),
-          };
-          const response = await fetch(
-            "http://localhost:3001/api/login/user",
-            requestOptions
-          );
+      return;
+    }
 
-          if (response.status === 400) {
-            alert("Erro!, Usuário não encontrado");
-          } else {
-            const data = await response.json();
-            console.log(data.data);
-            find(data.data.id);
-          }
-        } catch (error) {
-          console.log(error);
-        }
+    try {
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          password: password
+        })
+      };
+      const response = await fetch('https://apa-server.onrender.com/api/login/user', requestOptions);
+
+      if (response.status === 400) {
+        setError("Erro! Usuário não encontrado");
+      } else {
+        const data = await response.json();
+        console.log(data.data);
+        find(data.data.id);
       }
+    } catch (error) {
+      console.log(error);
+      setError("Erro ao fazer login. Tente novamente.");
     }
   };
+
   const find = (dataLogin) => {
-    localStorage.setItem("vapo", JSON.stringify(dataLogin));
+    localStorage.setItem('vapo', JSON.stringify(dataLogin));
     window.location.href = "./home";
   };
-
-  //   if(loadfeed < 4){
-  //     loadfeed++
-  //     callAgentFinder()
-  // }
 
   return (
     <div className="login">
       <div className="container-login">
         <div className="wrap-login">
-          <form className="login-form">
-            <span className="login-form-title"> Login </span>
+          <form className="login-form" onSubmit={getUsers}>
+            <span className="login-form-title">Login</span>
 
-            <span className="login-form-title"></span>
+            {error && <div className="error-message">{error}</div>}
 
             <div className="wrap-input">
               <input
@@ -79,10 +68,11 @@ const Login = () => {
               />
               <span className="focus-input" data-placeholder="Email"></span>
             </div>
+
             <div className="wrap-input">
               <input
                 required
-                minlength="8"
+                minLength="8"
                 className={password !== "" ? "has-val input" : "input"}
                 type="password"
                 value={password}
@@ -92,19 +82,13 @@ const Login = () => {
             </div>
 
             <div className="container-login-form-btn">
-              {/* <button onClick={getUsers}  type="submit" className="login-form-btn">Login</button>  */}
-              <Link className="login-form-btn" to="/home">
-                <button className="login-form-btn">Login</button>
-              </Link>
+              <button type="submit" className="login-form-btn">Login</button>
             </div>
 
             <div className="text-center2">
               <div className="possui">
                 <span className="txt1">Não possui conta? </span>
-
-                <Link to="/cadastro">
-                  <p className="txt2">Criar conta</p>
-                </Link>
+                <Link to='/cadastro'><p className="txt2">Criar conta</p></Link>
               </div>
             </div>
           </form>

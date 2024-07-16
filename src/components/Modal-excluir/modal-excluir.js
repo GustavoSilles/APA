@@ -7,16 +7,13 @@ let loadfeed = 0;
 const Modal4 = (props) => {
   const { handleModal } = props;
   const [posts, setPosts] = useState([]);
-  const [descricao, setDescricao] = useState("");
-  const [imgURL, setImgURL] = useState("");
-  const [imgURL2, setImgURL2] = useState("");
-  const [localizacao, setLocalizacao] = useState("");
+
   useEffect(() => {
     getAdm();
   }, []);
   const getAdm = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/post/reports");
+      const response = await fetch("https://apa-server.onrender.com/api/post/reports");
       const data = response.json();
       data.then((val) => setPosts(val.data));
       console.log(data);
@@ -30,7 +27,7 @@ const Modal4 = (props) => {
     };
     try {
       await fetch(
-        `http://localhost:3001/api/post/${posts[0].id}`,
+        `https://apa-server.onrender.com/api/post/${posts[0].id}`,
         requestOptions
       );
       window.location.reload(false);

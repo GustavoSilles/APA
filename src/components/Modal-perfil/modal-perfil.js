@@ -2,7 +2,6 @@ import "./modal-perfil.css";
 import React, { useState, useEffect } from "react";
 import { MdArrowForwardIos } from "react-icons/md";
 import { MdOutlineLogout } from "react-icons/md";
-import { IoMdTrash } from "react-icons/io";
 import { Link } from "react-router-dom";
 
 let loadfeed = 0;
@@ -20,7 +19,7 @@ const ModalPerfil = (props) => {
   const getPerfil = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3001/api/user/" +
+        "https://apa-server.onrender.com/api/user/" +
           JSON.parse(localStorage.getItem("vapo"))
       );
       const data = response.json();

@@ -14,7 +14,7 @@ const Modal3 = (props) => {
           denuncia: true,
         }),
       };
-      await fetch("http://localhost:3001/api/post/" + props.id, requestOptions);
+      await fetch("https://apa-server.onrender.com/api/post/" + props.id, requestOptions);
       handleModal(false);
     } catch (e) {
       alert("erro");

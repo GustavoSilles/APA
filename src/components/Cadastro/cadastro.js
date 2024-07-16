@@ -1,67 +1,63 @@
 import React, { useState } from "react";
 import "./cadastro.css";
 import { Link } from "react-router-dom";
-// import Modal3 from '../Modal-confirmacao/modal-confirmacao'
-// let loadfeed = 0
 
 const Cadastro = () => {
   const [username, setUsername] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  //   const callAgentFinder = async() => {
-  //     try{
-  //         const response = await fetch('http://localhost:3001/api/user')
-  //         const data = response.json()
-  //         data.then(
-  //             (val) => {setUsers(val.data)
+  const postUser = async (e) => {
+    e.preventDefault();
 
-  //             }
-  //         )
-  //     }catch(error){
-  //     }
-  // }
-  const postUser = async () => {
-    if (username !== "" && name !== "" && email !== "" && password !== "") {
-      // if(email.match(/([a-zA-Z0-9]+)([.{1}])?([a-zA-Z0-9]+)@gmail([.])com/g)){
-      //       if(password.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)){
-      try {
-        const requestOptions = {
-          method: "POST",
-          headers: { "Content-type": "application/json" },
-          body: JSON.stringify({
-            username: username,
-            name: name,
-            email: email,
-            password: password,
-          }),
-        };
-        await fetch("http://localhost:3001/api/user", requestOptions);
-        window.location.href = "./login";
-      } catch (error) {
-        console.log(error);
-        setUsername("");
-        setName("");
-        setEmail("");
-        setPassword("");
-      }
-    } else {
-      // alert("vazio")
+    if (!username || !name || !email || !password) {
+      setError("Todos os campos são obrigatórios.");
+      return;
     }
-    // }else{alert("email errado")}
-    //   }else{alert("senha fraca")}
+
+    if (!email.match(/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/)) {
+      setError("Email inválido.");
+      return;
+    }
+
+    if (!password.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)) {
+      setError("A senha deve ter no mínimo 8 caracteres, incluindo letras e números.");
+      return;
+    }
+
+    try {
+      const requestOptions = {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify({
+          username: username,
+          name: name,
+          email: email,
+          password: password,
+        }),
+      };
+      await fetch("https://apa-server.onrender.com/api/user", requestOptions);
+      window.location.href = "./login";
+    } catch (error) {
+      console.log(error);
+      setError("Erro ao cadastrar. Tente novamente.");
+      setUsername("");
+      setName("");
+      setEmail("");
+      setPassword("");
+    }
   };
-  //   if(loadfeed < 4){
-  //     loadfeed++
-  //     callAgentFinder()
-  // }
+
   return (
     <div className="cadastro">
       <div className="container-cadastro">
         <div className="wrap-login">
-          <form className="login-form">
-            <span className="login-form-title"> Cadastro </span>
+          <form className="login-form" onSubmit={postUser}>
+            <span className="login-form-title">Cadastro</span>
+
+            {error && <div className="error-message">{error}</div>}
 
             <div className="wrap-input">
               <input
@@ -100,7 +96,7 @@ const Cadastro = () => {
               <input
                 required
                 className={password !== "" ? "has-val input" : "input"}
-                minlength="8"
+                minLength="8"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
@@ -109,21 +105,15 @@ const Cadastro = () => {
             </div>
 
             <div className="container-login-form-btn">
-              <button
-                type="submit"
-                onClick={postUser}
-                className="login-form-btn"
-              >
+              <button type="submit" className="login-form-btn">
                 Cadastre-se
               </button>
             </div>
 
             <div className="text-center2">
-              {/* {modal &&(<Modal3 handleModal={handleModal}/>)}  */}
               <div className="possui">
-                <span className="txt1">já possui conta? </span>
+                <span className="txt1">Já possui conta? </span>
                 <Link to="/login">
-                  {" "}
                   <p className="txt2">Fazer login</p>
                 </Link>
               </div>
@@ -134,4 +124,5 @@ const Cadastro = () => {
     </div>
   );
 };
+
 export default Cadastro;

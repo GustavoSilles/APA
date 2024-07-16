@@ -10,7 +10,7 @@ let loadfeed = 0;
 const Modal = ({ setOpenModal }) => {
   const [descricao, setDescricao] = useState("");
   const [imgURL, setImgURL] = useState("");
-  const [imgURL2, setImgURL2] = useState("");
+
   const [localizacao, setLocalizacao] = useState("");
   const [, setProgresspercent] = useState(0);
 
@@ -19,7 +19,7 @@ const Modal = ({ setOpenModal }) => {
   const getUsers = async () => {
     try {
       const responseUser = await fetch(
-        "http://localhost:3001/api/user/" +
+        "https://apa-server.onrender.com/api/user/" +
           JSON.parse(localStorage.getItem("vapo"))
       );
       const dataUser = responseUser.json();
@@ -72,7 +72,7 @@ const Modal = ({ setOpenModal }) => {
             photo: loggedUser.imgURL2,
           }),
         };
-        await fetch("http://localhost:3001/api/post", requestOptions);
+        await fetch("https://apa-server.onrender.com/api/post", requestOptions);
       } catch (error) {
         setImgURL("");
         setDescricao("");

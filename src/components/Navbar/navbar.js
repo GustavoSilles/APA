@@ -15,7 +15,7 @@ const Navbar = () => {
   const getPerfil = async () => {
     try {
       const response = await fetch(
-        "http://localhost:3001/api/user/" +
+        "https://apa-server.onrender.com/api/user/" +
           JSON.parse(localStorage.getItem("vapo"))
       );
       const data = response.json();

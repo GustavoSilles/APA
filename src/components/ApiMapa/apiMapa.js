@@ -33,10 +33,7 @@ const localizacao5 = {
   lat: -27.55143,
   lng: -48.496244,
 };
-// const localizacao6 = {
-//   lat: -27.575065,
-//   lng: -48.513914
-// }
+
 const localizacao7 = {
   lat: -27.600989,
   lng: -48.500515,

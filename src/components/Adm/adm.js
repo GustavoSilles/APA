@@ -6,16 +6,13 @@ import Posts2 from "../Posts2/posts2";
 let loadfeed = 0;
 const Adm = () => {
   const [posts, setPosts] = useState([]);
-  const [descricao, setDescricao] = useState("");
-  const [imgURL, setImgURL] = useState("");
-  const [imgURL2, setImgURL2] = useState("");
-  const [localizacao, setLocalizacao] = useState("");
+
   useEffect(() => {
     getAdm();
   }, []);
   const getAdm = async () => {
     try {
-      const response = await fetch("http://localhost:3001/api/post/reports");
+      const response = await fetch("https://apa-server.onrender.com/api/post/reports");
       const data = response.json();
       data.then((val) => setPosts(val.data));
       console.log(data);
