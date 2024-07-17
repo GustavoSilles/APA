@@ -8,7 +8,7 @@ const Adm = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    getAdm();
+    getAdm(); 
   }, []);
   const getAdm = async () => {
     try {

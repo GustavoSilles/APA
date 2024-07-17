@@ -17,19 +17,14 @@ const Feed = () => {
   const [posts, setPosts] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
 
-
   const getUsers = async () => {
     try {
-      {
-        const responseUser = await fetch(
-          "https://apa-server.onrender.com/api/user/" +
-            JSON.parse(localStorage.getItem("vapo"))
-        );
-        const dataUser = responseUser.json();
-        dataUser.then((val) => {
-          setLoggedUser(val.data);
-        });
-      }
+      const responseUser = await fetch(
+        "https://apa-server.onrender.com/api/user/" +
+          JSON.parse(localStorage.getItem("vapo"))
+      );
+      const dataUser = await responseUser.json();
+      setLoggedUser(dataUser.data);
     } catch (e) {
       console.log("erro");
     }
@@ -38,29 +33,35 @@ const Feed = () => {
   const getPostagem = async () => {
     try {
       const response = await fetch("https://apa-server.onrender.com/api/post");
-      const data = response.json();
-      data.then((val) => setPosts(val.data));
+      const data = await response.json();
+      setPosts(data.data);
     } catch (error) {
       console.log(error);
       setPosts([]);
     }
   };
+
   console.log(posts);
+
   if (loadfeed < 7) {
     loadfeed++;
     getPostagem();
     getUsers();
   }
+
   return (
     <>
       <Navbar />
-
       <div className="feed">
         <div className="container-feed">
           <div className="divpost">
             <div className="fotopost">
               <div className="foto_DoFeed">
-                <img className="foto_DoFeed2" src={loggedUser.imgURL2}></img>
+                <img
+                  className="foto_DoFeed2"
+                  src={loggedUser.imgURL2}
+                  alt="User Profile"
+                />
               </div>
               <button
                 className="btnpost"
@@ -74,12 +75,12 @@ const Feed = () => {
           </div>
           {modalOpen && <Modal setOpenModal={setModalOpen} />}
         </div>
-
         {posts
           .sort((a, b) => b.id - a.id)
           .map((posts) => {
             return (
               <Posts
+                key={posts.id}
                 descricao={posts.descricao}
                 imgURL={posts.imgURL}
                 localizacao={posts.localizacao}

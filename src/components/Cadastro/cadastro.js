@@ -11,7 +11,7 @@ const Cadastro = () => {
 
   const postUser = async (e) => {
     e.preventDefault();
-
+ 
     if (!username || !name || !email || !password) {
       setError("Todos os campos são obrigatórios.");
       return;

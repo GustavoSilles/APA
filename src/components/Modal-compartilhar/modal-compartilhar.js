@@ -44,7 +44,7 @@ const ModalCompartilhar = (props) => {
               <div className="nomes-icons4">E-mail</div>
             </div>
           </div>
-          <div className="final">
+          <div className="final"> 
             <input
               type="email"
               className="copy"

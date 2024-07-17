@@ -57,7 +57,7 @@ const Navbar = () => {
                 setModal(!modal);
               }}
             >
-              <img className="fotonav" src={loggedUser.imgURL2}></img>
+              <img className="fotonav" src={loggedUser.imgURL2} alt=""></img>
             </div>
           </li>
         </ul>

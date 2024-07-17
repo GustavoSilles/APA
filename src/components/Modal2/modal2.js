@@ -18,7 +18,7 @@ const Modal2 = ({ setOpenModal }) => {
               id="cancelBtn"
               className="iconmodal"
             />
-            <div>
+            <div> 
               <Comments
                 commentsUrl="http://localhost:3004/Comments"
                 currentUserId="1"

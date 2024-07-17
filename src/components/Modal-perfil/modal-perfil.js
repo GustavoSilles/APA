@@ -32,7 +32,6 @@ const ModalPerfil = (props) => {
     loadfeed++;
     getPerfil();
   }
-
   return (
     <div className="modalBackgroundPerfil">
       <div className="modalContainerPerfil">
@@ -41,7 +40,7 @@ const ModalPerfil = (props) => {
             <Link to="/perfil" className="boxzinha">
               <div className="cosas">
                 <div className="img-modal">
-                  <img className="fotonav" src={loggedUser.imgURL2}></img>
+                  <img className="fotonav" src={loggedUser.imgURL2} alt=""></img>
                 </div>
                 <div className="nome">{loggedUser.username}</div>
               </div>

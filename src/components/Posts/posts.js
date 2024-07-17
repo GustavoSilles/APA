@@ -27,7 +27,7 @@ const Posts = (props) => {
             <div className="navbox">
               <div className="pika">
                 <div className="fotopost">
-                  <img className="fotopost2" src={props.imgURL2}></img>
+                  <img className="fotopost2" src={props.imgURL2} alt=""></img>
                 </div>
                 <div className="divTextos">
                   <div className="nominho">{props.username}</div>
@@ -84,5 +84,4 @@ const Posts = (props) => {
     </>
   );
 };
-
 export default Posts;

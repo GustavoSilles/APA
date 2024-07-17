@@ -15,7 +15,7 @@ const Modal3 = (props) => {
             <CgClose
               size={22}
               color="#532E1C"
-              onClick={() => {
+              onClick={() => { 
                 handleModal(false);
               }}
               id="cancelBtn"

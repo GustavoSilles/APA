@@ -19,7 +19,6 @@ const Login = () => {
       window.location.href = "./adm";
       return;
     }
-
     try {
       const requestOptions = {
         method: 'POST',

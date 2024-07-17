@@ -48,5 +48,4 @@ const Perfil2 = () => {
         </>
     )
 }
-
 export default Perfil2

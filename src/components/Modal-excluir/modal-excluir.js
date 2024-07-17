@@ -35,7 +35,8 @@ const Modal4 = (props) => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }; 
+
   if (loadfeed < 7) {
     loadfeed++;
     getAdm();

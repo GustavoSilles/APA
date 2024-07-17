@@ -10,7 +10,6 @@ let loadfeed = 0;
 const Modal = ({ setOpenModal }) => {
   const [descricao, setDescricao] = useState("");
   const [imgURL, setImgURL] = useState("");
-
   const [localizacao, setLocalizacao] = useState("");
   const [, setProgresspercent] = useState(0);
 
@@ -30,7 +29,6 @@ const Modal = ({ setOpenModal }) => {
       console.log("erro");
     }
   };
-
   const formHandler = (e) => {
     const file = e.target.files[0];
 

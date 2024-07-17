@@ -12,7 +12,7 @@ const Modal3 = (props) => {
         headers: { "Content-type": "application/json" },
         body: JSON.stringify({
           denuncia: true,
-        }),
+        }), 
       };
       await fetch("https://apa-server.onrender.com/api/post/" + props.id, requestOptions);
       handleModal(false);

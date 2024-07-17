@@ -13,7 +13,6 @@ const Navbar2 = () => {
         <div className="logo">
           <h1 className="textlogo">APA</h1>
         </div>
-
         <ul className={nav ? "nav-menu active" : "nav-menu"}>
           <li>
             <Link className="l2" to="/Adm">
