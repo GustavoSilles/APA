@@ -60,7 +60,7 @@ const Feed = () => {
                 <img
                   className="foto_DoFeed2"
                   src={loggedUser.imgURL2}
-                  alt="User Profile"
+                  alt=""
                 />
               </div>
               <button
