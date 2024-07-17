@@ -30,7 +30,7 @@ const Posts2 = (props) => {
             <div className="navbox2">
               <div className="pika">
                 <div className="fotopost2">
-                  <img className="fotopost2" src={props.imgURL2}></img>
+                  <img className="fotopost2" src={props.imgURL2} alt=""></img>
                 </div>
                 <div className="divTextos">
                   <div className="nominho">{props.username}</div>
