@@ -16,13 +16,13 @@
 .foto-perfil {
   content: "";
   width: 7rem;
-  background: url("../../assets/fotoPadrão.png") no-repeat center center/cover;
+  background: url("../../assets/eu.jpeg") no-repeat center center/cover;
   object-fit: cover;
   background-color: #e6e6e6;
   height: 7rem;
   border: 4px solid #fff;
-  margin-top: 115px;
-  margin-left: 3%;
+  margin-top: 45px;
+  margin-left: 20px;
   cursor: pointer;
   border-radius: 50%;
 }
@@ -46,12 +46,14 @@
 #input-file2 {
   display: none;
 }
-.label-file2 {
-  left: 14%;
-  position: relative;
-  bottom: 35px;
-  color: #e6e6e6;
+
+  .label-file2 {
+    left: 100px;
+    position: relative;
+    bottom: 35px;
+    color: #e6e6e6;
 }
+
 .iconmodalimg2 {
   color: #c5a880 !important;
   cursor: pointer;
@@ -78,7 +80,7 @@
 }
 .gustavin {
   margin-top: 28px;
-  margin-left: 5.3%;
+  margin-left: 18px;
   font-size: 20px;
   font-weight: 500;
 }

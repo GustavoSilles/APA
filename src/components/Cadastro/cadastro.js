@@ -105,9 +105,10 @@ const Cadastro = () => {
             </div>
 
             <div className="container-login-form-btn">
-              <button type="submit" className="login-form-btn">
+              <Link to='/login' type="submit" className="login-form-btn">
                 Cadastre-se
-              </button>
+              </Link>
+
             </div>
 
             <div className="text-center2">

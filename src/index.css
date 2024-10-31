@@ -89,10 +89,10 @@ button:hover {
 
 @media screen and (max-width: 940px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 }

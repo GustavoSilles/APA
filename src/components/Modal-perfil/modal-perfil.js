@@ -42,7 +42,7 @@ const ModalPerfil = (props) => {
                 <div className="img-modal">
                   <img className="fotonav" src={loggedUser.imgURL2} alt=""></img>
                 </div>
-                <div className="nome">{loggedUser.username}</div>
+                <div className="nome">{loggedUser.username}Gustavo Silles</div>
               </div>
               <MdArrowForwardIos
                 size={22}

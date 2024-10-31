@@ -8,7 +8,7 @@ export const createComment = async (text, parentId = null) => {
     body: text,
     parentId,
     userId: "1",
-    username: "Basitt",
+    username: "Gustavo Silles",
     createdAt: new Date().toISOString(),
   };
 };

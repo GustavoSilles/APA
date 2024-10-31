@@ -49,8 +49,11 @@ const Navbar = () => {
             <Link className="l3" to="/apimapa">
               Locais de Ajuda
             </Link>
+           
           </li>
+          
           <li>
+          
             <div
               className="fotonav2"
               onClick={() => {
@@ -58,9 +61,13 @@ const Navbar = () => {
               }}
             >
               <img className="fotonav" src={loggedUser.imgURL2} alt=""></img>
+             
             </div>
+            
           </li>
+          <div className="nominhoo">Gustavo Silles</div>
         </ul>
+        
         <div className="hamburger" onClick={handleNav}>
           {!nav ? <FaBars className="icon" /> : <FaTimes className="icon" />}
         </div>

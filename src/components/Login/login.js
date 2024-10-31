@@ -54,7 +54,6 @@ const Login = () => {
         <div className="wrap-login">
           <form className="login-form" onSubmit={getUsers}>
             <span className="login-form-title">Login</span>
-
             {error && <div className="error-message">{error}</div>}
 
             <div className="wrap-input">
@@ -81,7 +80,7 @@ const Login = () => {
             </div>
 
             <div className="container-login-form-btn">
-              <button type="submit" className="login-form-btn">Login</button>
+                <Link className="login-form-btn" to='/home'><button className="login-form-btn">Login</button></Link>
             </div>
 
             <div className="text-center2">

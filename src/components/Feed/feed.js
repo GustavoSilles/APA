@@ -4,24 +4,38 @@ import Navbar from "../Navbar/navbar";
 import Posts from "../Posts/posts";
 import Modal from "../Modal/modal";
 
-let loadfeed = 0;
+// Importe as imagens diretamente
+import userImage from "../../assets/eu.jpeg";
+import goldenRetrieverImage from "../../assets/golden-retriever-1.png";
 
 const Feed = () => {
-  useEffect(() => {
-    getPostagem();
-  }, []);
-  useEffect(() => {
-    getUsers();
-  }, []);
   const [loggedUser, setLoggedUser] = useState({});
   const [posts, setPosts] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
+
+  // Post manual que sempre estará visível
+  const manualPost = {
+    id: "manual",
+    descricao:
+    "Oi, pessoal! Este é o Max, um golden retriever de 4 anos, muito dócil e amigável. Ele desapareceu perto do endereço dito. Se alguém tiver alguma informação, por favor, entre em contato! Ajudem a compartilhar para que o Max possa voltar para casa. Obrigado a todos!",
+    imgURL: goldenRetrieverImage, 
+    localizacao: "R. Francisco Fausto Martins - 159 - Vargem Grande, Florianópolis - SC",
+    usuario: "Gustavo Silles",
+    photo: userImage
+  };
+
+  // Lista de posts manuais repetidos
+  const repeatedManualPosts = [
+    { ...manualPost, id: "manual1" },
+    { ...manualPost, id: "manual2" },
+    { ...manualPost, id: "manual3" }
+  ];
 
   const getUsers = async () => {
     try {
       const responseUser = await fetch(
         "https://apa-server.onrender.com/api/user/" +
-          JSON.parse(localStorage.getItem("vapo"))
+        JSON.parse(localStorage.getItem("vapo"))
       );
       const dataUser = await responseUser.json();
       setLoggedUser(dataUser.data);
@@ -41,13 +55,10 @@ const Feed = () => {
     }
   };
 
-  console.log(posts);
-
-  if (loadfeed < 7) {
-    loadfeed++;
+  useEffect(() => {
     getPostagem();
     getUsers();
-  }
+  }, []);
 
   return (
     <>
@@ -75,21 +86,20 @@ const Feed = () => {
           </div>
           {modalOpen && <Modal setOpenModal={setModalOpen} />}
         </div>
-        {posts
+
+        {[...repeatedManualPosts, ...posts]
           .sort((a, b) => b.id - a.id)
-          .map((posts) => {
-            return (
-              <Posts
-                key={posts.id}
-                descricao={posts.descricao}
-                imgURL={posts.imgURL}
-                localizacao={posts.localizacao}
-                username={posts.usuario}
-                imgURL2={posts.photo}
-                id={posts.id}
-              />
-            );
-          })}
+          .map((post) => (
+            <Posts
+              key={post.id}
+              descricao={post.descricao}
+              imgURL={post.imgURL}
+              localizacao={post.localizacao}
+              username={post.usuario}
+              imgURL2={post.photo}
+              id={post.id}
+            />
+          ))}
       </div>
     </>
   );

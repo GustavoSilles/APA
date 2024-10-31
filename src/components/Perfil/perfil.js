@@ -111,19 +111,19 @@ const Perfil = () => {
             </div>
           </div>
           <div className='box-perfil2'>
-            <p className='gustavin'>{loggedUser.username}</p>
+            <p className='gustavin'>{loggedUser.username}Gustavo Silles</p>
             <div className='inputes'>
               <div className='inpt'>
                 <label className='label'>Alterar nome:</label>
-                <input type="text" className='inp_perfil' placeholder={loggedUser.name} value={name} onChange={(e) => setName(e.target.value)} />
+                <input type="text" className='inp_perfil' placeholder="Gustavo Silles" value={name} onChange={(e) => setName(e.target.value)} />
               </div>
               <div className='inpt'>
                 <label className='label'>Alterar nome de usuário:</label>
-                <input type="text" className='inp_perfil' placeholder={loggedUser.username} value={username} onChange={(e) => setUsername(e.target.value)} />
+                <input type="text" className='inp_perfil' placeholder="Gustavo Silles" value={username} onChange={(e) => setUsername(e.target.value)} />
               </div>
               <div className='inpt'>
                 <label className='label'>Alterar e-mail:</label>
-                <input type="text" className='inp_perfil' placeholder={loggedUser.email} value={email} onChange={(e) => setEmail(e.target.value)} />
+                <input type="text" className='inp_perfil' placeholder="sillesgustavo05@gmail.com" value={email} onChange={(e) => setEmail(e.target.value)} />
               </div>
               <div className='inpt'>
                 <label className='label'>Alterar senha:</label>

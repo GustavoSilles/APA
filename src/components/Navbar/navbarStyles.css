@@ -12,9 +12,14 @@
   justify-content: space-between;
   align-items: center;
 }
+.nominhoo{
+  color: #e6e6e6;
+  text-decoration: none;
+  font-weight: 600;
+}
 
 .fotonav2 {
-  background: url("../../assets/fotoPadrão.png") no-repeat center center/cover;
+  background: url("../../assets/eu.jpeg") no-repeat center center/cover;
   content: "";
   width: 3rem;
   position: relative;
